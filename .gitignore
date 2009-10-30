@@ -1,0 +1,9 @@
+# Lines starting with '#' are considered comments.
+# Ignore any file named foo.txt.
+foo.txt
+# except foo.html which is maintained by hand.
+!foo.html
+# Ignore objects and archives.
+*.[oa]
+# Ignore files ending with '_'
+*_
