@@ -1,0 +1,59 @@
+#!/bin/bash
+
+declare -a cnfs
+dirdb="/usr/local/itvision/model/db"
+dirhis="$dirdb/history"
+files="db_applications.lua db_checkcmds.lua db_contacts.lua db_ics.lua db_procedures.lua db_relations.lua"
+
+clear
+
+i=0
+for c in `ls -l $dirhis/db_ics.lua_* | cut -c90-105 `; do
+	cnfs[i]=$c
+	i=`expr $i + 1`
+done
+i=`expr $i - 1`
+
+for j in `seq 0 $i`; do
+	d=`echo ${cnfs[$j]} | cut -d- -f1`
+	h=`echo ${cnfs[$j]} | cut -d- -f2`
+	echo $j" -> " $d $h
+done
+
+ok=1
+while [ $ok ]; do
+	echo -n "Digite o numero que corresponde ao backup que voce deseja restaurar: "
+	read ans1
+	if [ $ans1 -gt $j ]; then
+		echo "Escolha um dos numeros apresentados antes das datas dos backup."
+	else
+		break
+	fi
+done
+echo Preparando para restaurar backup: ${cnfs[$ans1]}
+
+
+echo
+echo -n "Voce deseja salvar a configuracao corrente antes da restauracao [S/n]: "
+read ans2
+
+if [ "$ans2" != "n" ] || [ "$ans2" != "N" ]; then
+	echo SIM; echo
+	dt=`date +"%Y_%m_%d-%H:%M"`
+	for f in $files; do
+		mv $dirdb/$f $dirhis"_"$dt
+	done
+else
+	echo NAO; echo
+	for f in $files; do
+		rm $dirdb/$f
+	done
+fi
+
+for f in $files; do
+	mv $dirhis/$f"_"${cnfs[$ans1]} $dirdb
+done
+
+echo Restaturacao concluida.
+
+

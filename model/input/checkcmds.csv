@@ -1,0 +1,38 @@
+Cmd Ckeck Tipo;Command_Check
+PING;check_ping!100.0,20%!500.0,60%
+HTTP;check_http
+SSH;check_ssh
+DUMMY;check_dummy
+DUMMY_MESS;check_dummy_message!'Mensagem configuracao de teste'
+OWA;check_http
+HTTPs;check_http!-S
+SMTP;check_smtp
+IMAP;check_imap
+DNS-INT;check_dns!fenix.iag.puc-rio.br!139.82.51.24
+DNS-EXT;check_dns!vialactea.rdc.puc-rio.br!139.82.1.2
+MYSQL;check_mysql!root!iagsql123!moodle
+MSSQL;check_service!'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Binn\sqlservr.exe -sMSSQLSERVER'
+WMI;check_service!'svchost.exe -k netsvcs'
+ADOBE_CONNECT;check_service!'C:\breeze\appserv\win32\breezesvc.exe'
+DRIVE;check_drive!C:!90!95
+MEM;check_mem_phys!80!90
+PAGE;check_mem_page!80!90
+CPU;check_cpuload!50!80
+DHCP_client;check_service!'svchost.exe -k NetworkService'
+VMWare_server;check_service!'Tomcat6.exe //RS//VMwareServerWebAccess'
+NSClient;check_service!NSClient++.exe
+MSEXCHANGE;check_counter!'\\MSExchangeIS\\RPC Operations/sec'!300!400
+FLASH_ADM;check_service!C:\breeze\comserv\win32\fmsadmin.exe
+FLASH;check_service!C:\breeze\comserv\win32\fmsmaster.exe
+COLDFUSION;check_service!C:\CFusionMX7\runtime\bin\jrunsvc.exe
+WEBCT;check_service!d:\unibb\webct\webct\generic\admin\license.exe
+UNIBB;check_service!d:\uniBB\webct\webct\generic\admin\webctctl.exe
+ANTISPAN1;check_service!C:\Program Files\GFI\MailEssentials\listserv.exe
+ANTISPAN2;check_service!C:\Program Files\GFI\MailEssentials\mestrxsvc.exe
+ANTISPAN3;check_service!'C:\Program Files\GFI\MailEssentials\msecatt.exe -service'
+ANTISPAN4;check_service!'C:\Program Files\GFI\MailEssentials\MiddleLayer\contentsecurity.as.attendant.exe -service'
+ANTISPAN5;check_service!C:\Program Files\GFI\MailEssentials\pop2exch.exe
+CCM;check_service!C:\Program Files\Cisco\bin\CCM.exe
+CCM_TOMCAT;check_service!C:\PROGRA~1\Cisco\Tomcat\bin\tomcat.exe
+UNITY;check_service!C:\CommServer\AvCsMgr.exe
+UNITY_TOMCAT;check_service!C:\COMMSE~1\cscoserv\windows\service\jk_nt_service.exe Tomcat

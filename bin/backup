@@ -1,0 +1,12 @@
+#!/bin/bash
+
+DATE=$1
+ITVHOME=/usr/local/itvision
+MAIL=/etc/mail
+OUTPUT=/root/itvision_bkp-$DATE.tar
+
+FILES="$ITVHOME/model/db $ITVHOME/model/input $MAIL/sendmail.mc $MAIL/auth"
+
+tar cf $OUTPUT $FILES
+
+

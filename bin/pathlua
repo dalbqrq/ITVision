@@ -1,0 +1,3 @@
+#!/bin/bash
+
+export LUA_PATH="/usr/local/itvision/model/?.lua;/usr/local/itvision/view/?.lua;/usr/local/itvision/controler/?.lua;/usr/local/itvision/model/db/?.lua;/usr/local/itvision/www/?.lua;/usr/local/itvision/daemon/?.lua"

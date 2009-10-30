@@ -1,0 +1,118 @@
+/* Begin CSS Drop Down Menu */
+
+#menuj-container
+	{
+	height: 20px;
+	width:100%;
+	padding-top:0px;
+	padding-bottom:0px;
+	background-color:#445632; /* visible stripe */
+	margin-bottom:1px;
+	color:#FFFFFF;
+	text-align:center;
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif, Verdana, Helvetica,;
+	font-size:13px;
+	}
+
+#menuk
+	{
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	}
+
+
+#menuj
+	{
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif, Verdana, Helvetica,;
+	font-size:13px;
+	}
+		
+#menuj a
+	{
+	text-align: center;
+	display:block;
+	white-space:nowrap;
+	margin:0;
+	height: 18px;
+	border: 1px solid #445632; /* visible stripe */
+	}
+	
+#menuj a:link, #menuj a:visited, #menuj a:active	/* menu at rest */
+	{
+	color: white;
+	background-color:#445632; /* visible stripe */
+	text-decoration:none;
+	}
+	
+#menuj a:hover	/* menu at mouse-over  */
+	{
+	color: white;
+	background-color:#94AE62; /* selection */
+	text-decoration:none;
+	}	
+	
+#menuj a.top_parent, #menuj a.top_parent:hover  /* attaches down-arrow to all top-parents */
+	{
+	background-position: right center;
+	background-repeat: no-repeat;
+	}
+	
+#menuj a.parent, #menuj a.parent:hover 	/* attaches side-arrow to all parents */
+	{
+	background-position: right center;
+	background-repeat: no-repeat;
+	}
+
+#menuj ul
+	{
+	list-style:none;
+	margin:0;
+	padding:0;
+	float:left;
+	width:150px; /* menu item width */
+	}
+
+#menuj li
+	{
+	position:relative;
+	text-align: center;
+	font-weight:bold;
+	margin:0;
+	}
+
+#menuj ul ul
+	{
+	position:absolute;
+	z-index:500;
+	top:auto;
+	display:none;
+	padding: 1;
+	}
+
+#menuj ul ul ul
+	{
+	top:0;
+	left:100%;
+	}
+
+div#menuj li:hover
+	{
+	cursor:pointer;
+	background-color:#94AE62;
+	z-index:100;
+	}
+
+div#menuj li:hover ul ul,
+div#menuj li li:hover ul ul,
+div#menuj li li li:hover ul ul,
+div#menuj li li li li:hover ul ul
+{display:none;}
+
+div#menuj li:hover ul,
+div#menuj li li:hover ul,
+div#menuj li li li:hover ul,
+div#menuj li li li li:hover ul
+{display:block;}
+
+/* End CSS Drop Down Menu */

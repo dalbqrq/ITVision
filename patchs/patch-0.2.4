@@ -1,0 +1,49 @@
+#!/bin/bash
+
+### UPDATED FILES:
+#
+# model/test_metrics.lua
+# model/m_metrics.lua
+# model/m_read_log.lua
+# model/m_io_util.lua
+# model/m_import_csv.lua
+# model/m_alerts.lua
+# daemon/exec_eficiency.lua
+# daemon/d_daemon_conf.lua
+# daemon/d_eficiency.lua
+# daemon/d_daemon.lua
+# daemon/state_machine.lua
+# controler/c_monitor.lua
+# controler/c_disponibility.lua
+# controler/dis.lua
+# controler/test_c_monitor.lua
+# controler/c_date.lua
+# controler/t.lua
+# controler/c_metrics.lua
+# controler/c_eficiency.lua
+# view/v_spider_graph.lua
+# # view/v_monitor_inc.lua
+# view/v_monitor.lua
+# view/v_gviz.lua
+# release
+# 
+
+ITVIS=/usr/local/itvision
+ITVIS_TMP=/tmp/itvision-0.2.4
+FILES="model/test_metrics.lua model/m_metrics.lua model/m_read_log.lua model/m_io_util.lua model/m_import_csv.lua model/m_alerts.lua daemon/exec_eficiency.lua daemon/d_daemon_conf.lua daemon/d_eficiency.lua daemon/d_daemon.lua daemon/state_machine.lua controler/c_monitor.lua controler/c_disponibility.lua controler/dis.lua controler/test_c_monitor.lua controler/c_date.lua controler/t.lua controler/c_metrics.lua controler/c_eficiency.lua view/v_spider_graph.lua view/v_monitor_inc.lua view/v_monitor.lua view/v_gviz.lua release"
+
+mkdir -p $ITVIS_TMP
+mkdir -p $ITVIS/patchs/0.2.3
+
+for f in $FILES; do
+	\cp $ITVIS/$f $ITVIS/patchs/0.2.3
+done
+
+tail -n+50 $0 > $ITVIS_TMP/patch-0.2.4.tar
+tar ft $ITVIS_TMP/patch-0.2.4.tar
+tar xf $ITVIS_TMP/patch-0.2.4.tar -C $ITVIS
+
+\cp $0 $ITVIS/patchs
+service xavante restart
+exit
+

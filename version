@@ -1,0 +1,9 @@
+--
+-- IT Vision - Daniel Lins de Albuquerque - daniel.dalb@gmail.com
+--
+
+itvision_info = {
+	version = "0.2.5"
+	init-date = "2009-06-26"
+}
+

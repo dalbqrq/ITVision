@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ ! -f $1 ]; then
+	echo "usage: $0 <patch-file>"
+	exit
+fi
+
+cat $1 > $1-install
+[ -f $1.tar ] && cat $1.tar >> $1-install
+chmod 755 $1-install
+

@@ -1,0 +1,37 @@
+#!/bin/bash
+
+### UPDATED FILES:
+#
+# controler/c_monitor.lua
+# daemon/d_daemon.lua
+# model/m_read_log.lua
+# view/v_monitor_inc.lua
+# www/css/style.css
+# www/css/tables.css
+# www/report.lp
+# www/report_download.lp
+# www/report_show.lp
+# 
+
+ITVIS=/usr/local/itvision
+ITVIS_TMP=/tmp/itvision-0.2.1
+
+mkdir -p $ITVIS_TMP
+
+\cp $ITVIS/controler/c_monitor.lua	$ITVIS_TMP
+\cp $ITVIS/daemon/d_daemon.lua		$ITVIS_TMP
+\cp $ITVIS/daemon/d_daemon_conf.lua	$ITVIS_TMP
+\cp $ITVIS/model/m_read_log.lua		$ITVIS_TMP
+\cp $ITVIS/view/v_monitor_inc.lua	$ITVIS_TMP
+\cp $ITVIS/www/css/style.css		$ITVIS_TMP
+\cp $ITVIS/www/css/tables.css		$ITVIS_TMP
+\cp $ITVIS/www/report.lp			$ITVIS_TMP
+\mv $ITVIS/www/report_post.lp		$ITVIS_TMP
+
+tail -n+38 $0 > $ITVIS_TMP/patch-0.2_01.tar
+tar ft $ITVIS_TMP/patch-0.2_01.tar
+tar xf $ITVIS_TMP/patch-0.2_01.tar -C $ITVIS
+
+\cp $0 $ITVIS/patchs
+exit
+

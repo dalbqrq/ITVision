@@ -1,0 +1,16 @@
+#!/bin/bash
+
+yum -y update
+yum -y install openssl-devel
+
+cd /usr/local/src
+wget http://ufpr.dl.sourceforge.net/sourceforge/nagiosplug/nagios-plugins-1.4.12.tar.gz
+tar xzf nagios-plugins-1.4.12.tar.gz
+cd nagios-plugins-1.4.12
+./configure --prefix=/usr/local/itvision_monitor --with-nagios-user=itvision_monitor --with-nagios-group=itvision_monitor --with-openssl=/usr
+make
+make install
+
+# PARA TESTAR
+#cd plugins
+#./check_http -S -C 60 -H webmail.impa.br

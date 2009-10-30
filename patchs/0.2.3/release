@@ -1,0 +1,114 @@
+#
+#	ITVision - Versao 0.2.2
+#	daniel.dalb@gmail.com
+#
+
+DONE:
+- Alteracao do codigo nagios para geracao de informacoes de interfaceamento 
+- Design, logo, estilo (css e html) e menu para interface web
+- Pagina web com lista de 'hosts' e 'services' por aplicacao no estilo nagios
+- Pagina web com resumo do 'status' dos sistemas no estilo nagios (totalizacoes)
+       -- AQUI TERMINA O ESCOPO INICIAL PREVISTO --
+
+- Inclusao de agrupamento de ICs para composicao de 'aplicacao' (diferente do nagios 
+  que agrupa somente hosts ou services).
+- Pagina web com visao das aplicacoes
+- Criacao dinamica de diagramas tipo grafo das aplicacoes para visualizacao em tempo 
+  real de status
+- Representacao dos ICs atraves das chaves ao inves do hostname
+- configurar linux para mandar email para gmail e outros
+- implementar lista de contatos para envio de alertas em caso de falha nas aplicacoes.
+- importacao de aquivos CSV para a geracao automatica de configuracao (feito para 
+  nagios em para: hosts, services - e em itvision para: applications, relacionamentos 
+  contacts checkcmds)
+- criar daemon para verificar status e enviar mensagem em caso de falha na aplicacao. 
+  Falta ainda implementar escalonamento de mensagens. 
+- implantar novo sistema de menu (drop-down) para a interface web
+- incluir nas listas de hosts e services, links para procedimentos e para maiores 
+  informacoes sobre o IC
+- reorganizar navegacao no sistema. Ex: criar link na imagem dos diagramas que ligam 
+  com pagina contendo somente sistemas com problemas
+- criar pagina web de help para a usuarios
+- modificar script de importacao (impor-csv) para salvar csv antigos nao mostrar 'nagios'
+- remover todas as referencias (nomes) ao nagios (recompilar nagios)
+- implementar a funcao 'd_daemon.lua::log_dispatcher(new_state)' para registro
+  das mudancas de estado das aplicacoes
+- Inclusão do logo do Proderj
+- Sistema de autenticação basico
+- Geracao de relatorios atraves de criacao de interface (formulario web) que gera 
+  arquivo txt tipo csv para importacao no excel.
+- Melhora na apresentacao da pagina principal (automacao do no. de linhas) e da 
+  pagina de informacoes dos IC's com o almento do numero de campos
+- Plugins recompilados para uso do ssl em verificacao de serviços como https, imaps,
+  pops entre outros.
+- extensao do arquivo de download trocado de .txt para .csv
+- corrigir a imagem de calendario que nao aparece no InternetExplorer
+- incluir mais plugins do nagios, em particular o snmp
+
+
+
+
+TODO:
+- criar documentacao para a equipe da Verto
+- melhorar pagina web de help para a usuarios
+     -- DEVE SER FEITO ATEh AQUI ANTES DO DEPLOYMENT NO CLIENTE --
+
+- associar procedimentos as falhas. Os procedimentos deverao ser importados
+- importar aquivos para a geracao automatica de configuracao de contacts e 
+  dependencias para o nagios
+- mover o diretorio www para dentro do view (organizacao interna do sistema)
+- em 'm_import_csv.lua::make_host_cfg_file()', implementar verificacao forte
+  para os dados de entrada. Ex: verificar se IP está na forma correta ou se
+  'na' estah em maiusculo.
+- mover arquivo 'daemon/d_daemon_conf.lua' para dir model/db
+- Implementacao de ICs recundantes introduzindo o conceito de cluster
+- Deve incluir envio de mensagens com escalonamento. 
+- incluir resultado do plugin nos logs e nos relatorios de falhas 
+- a funcao de selecao da lista de alertas usada para a geracao de relatorios deve
+  incluir o alerta anterios a data selecionada (ultimo alerta emitido antes 
+  do periodo do relatorio) para a inicializacao de estado.
+
+
+
+
+COMENTARIOS:
+
+Oi Daniel, nos testes iniciais verifiquei alguns detalhes:
+ 
+- foi criada a aplicação Internet e ao desativar o link do provedor foi reportado a queda da aplicação. Como possui três objetos (host, serviço ping e serviço http) para a globo.com
+ 
+- O serviço http demora bem mais tempo do que os outros dois para mudar de status.
+Necessidade: avaliar os tempos dos checkcmds dos objetos usados na mesma aplicação para evitar que fiquem muito discrepantes.
+ 
+- refiz a configuração dos objetos da aplicação Infra-estrutura de forma a ficar tudo UP. Desconectei um servidor e a aplicação foi para DOWN porém não recebi o e-mail de alerta. Esperei uns 5 minutos e retornei com o servidor. A aplicação foi para UP e também não recebi o e-mail de alerta.
+Necessidade: verificar o mecanismo de envio de alertas.
+ 
+- servidor com o horário diferente
+Necessidade: verificar o mecanismo do relógio e horário nos alertas
+ 
+- Conforme conversamos a necessidade de usar nomes conhecidos do cliente para identificar os objetos.
+Necessidade: criar um campo LABEL para usar como referência na identificação dos objetos principalmente na tela gráfica. Se possível também incluir a "chave única" com um fonte reduzido.
+ 
+- O servidor enviado para a instalação do ITVision deve poder ser gerenciado de forma que não seja necessário instalar teclado/mouse/video. 
+Necessidade: como o servidor possui duas portas ETH seria configurar uma porta (100mb) como "porta de gerência", com ip fixo, permitindo ssh/http e a outra porta (1Gb) como "monitoração", IP DHCP Client, somente aceitando acesso http a porta do ITVision.
+ 
+Favor verificar/avaliar.
+ 
+[]s
+Jose Antonio
+
+
+
+BUGS ABERTOS:
+- O script de inicializacao do nagios ainda estah com o nome antigo do arquivo
+  de interface com o ITVision ('status_itvisio.lua'). Deve ser mudado na compilacao
+  do nagios apesar do nagios jah estar gerando este arquivo com outro nome 
+  ('db_monitor.lua')
+
+
+BUGS CORRIGIDOS:
+- Correcao do css para atender as paticularidades do IE.
+- Atualizacao imediata das informacoes de status atraves da imagem tipo grafo
+  no browser IE (corrigido com a criacao de uma imagem por aplicacao).
+
+

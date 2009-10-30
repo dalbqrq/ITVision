@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+ITVIS=/usr/local/itvision
+ITVIS_TMP=/tmp/itvision-0.2.3
+FILES="version bin/backup controler/c_monitor.lua daemon/d_daemon.lua model/m_read_log.lua model/db/db_users.lua view/v_auth.lua view/v_monitor_inc.lua www"
+
+mkdir -p $ITVIS_TMP
+for f in $FILES; do
+	\cp -r $ITVIS/$f $ITVIS_TMP
+done
+
+\rm -rf $ITVIS/www
+
+tail -n+24 $0 > $ITVIS_TMP/patch-0.2.3.tar
+tar ft $ITVIS_TMP/patch-0.2.3.tar
+tar xf $ITVIS_TMP/patch-0.2.3.tar -C $ITVIS
+mkdir $ITVIS/www/figs
+
+\cp $0 $ITVIS/patchs
+service xavante restart
+exit
+

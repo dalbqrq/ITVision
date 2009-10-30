@@ -1,0 +1,7 @@
+#!/bin/bash
+
+dot=$1
+png=`echo $dot | sed -e "s/\.gv/\.png/g"`
+map=`echo $dot | sed -e "s/\.gv/\.map/g"`
+
+circo -Gcharset=latin1 -Tcmapx -o$map -Tpng -o$png $dot
