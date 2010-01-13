@@ -1,14 +1,14 @@
 require "cgilua.cookies"
 
 function setcookie(user)
-	user = user or 'guest'
+	local user = user or 'guest'
 	cgilua.cookies.set('itvision_auth', 'AUTH')
 	cgilua.cookies.set('itvision_user', user)
 end
 
 function getcookie()
-	auth = cgilua.cookies.get ('itvision_auth')
-	user = cgilua.cookies.get ('itvision_user')
+	local auth = cgilua.cookies.get ('itvision_auth')
+	local user = cgilua.cookies.get ('itvision_user')
 	return auth, user
 end
 
@@ -19,23 +19,24 @@ end
 
 
 function checkauth(username)
-	auth, user = getcookie()
+	local auth, user = getcookie()
 
 	if auth ~= 'AUTH' then 
-		return false, 'NOT'
+		return false, 'NOT', user
 	elseif ( username ~= nil and username ~= user ) then 
-		return false, 'NOTUSER'
+		return false, 'NOTUSER', user
 	else
-		return true, 'OK'
+		return true, 'OK', user
 	end
 end
 
 function checkauth_redirect(username, url)
-	auth, mess = checkauth(username)
+	local auth, mess, user = checkauth(username)
 
 	if not auth then
-		url = url or '../login.lp?mess='..mess
+		local url = url or '../login.lp?mess='..mess
 		cgilua.redirect(url, nil)
 	end
+	return user
 end
 

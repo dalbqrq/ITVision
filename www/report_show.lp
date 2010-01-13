@@ -8,7 +8,12 @@ require "m_read_log"
 require "c_monitor"
 require "c_util"
 require "c_date"
-checkauth_redirect()
+require "v_monitor_html"
+require "m_users"
+
+local auth = checkauth_redirect()
+local u = get_user(auth)
+
 
 if ( cgilua.QUERY.applic ~= nil ) then
 	applic = cgilua.QUERY.applic
@@ -69,7 +74,7 @@ else
 end
 
 print(html_header)
-print(html_menui)
+print(do_html_menui(u.name))
 print(html_body)
 
 local t = {}

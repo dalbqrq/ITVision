@@ -1,10 +1,14 @@
 #!/usr/bin/env cgilua.cgi
 
 <?lua
+require "m_io_util"
 require "v_monitor_inc"
+require "v_monitor_html"
 require "v_auth"
 require "m_users"
-require "m_io_util"
+
+local auth = checkauth_redirect()
+local u = get_user(auth)
 
 
 local cmd = cgilua.QUERY.cmd
@@ -14,7 +18,7 @@ local log_filename = '/usr/local/itvision/model/db/system.log'
 local bkp_filename = '/usr/local/itvision/bin/backup '..date
 
 print(html_header)
-print(html_menui)
+print(do_html_menui(u.name))
 print(html_body)
 
 if not checkauth('admin') then

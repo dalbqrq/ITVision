@@ -2,6 +2,7 @@ require 'm_io_util'
 require 'm_applications'
 require 'c_date'
 
+
 -- List entries in ALERT-LOG limited by 'ini' and 'fin' dates, using 'sep' separator.
 -- If 'bFile' string specified, the result will be recorded in a file with this name.
 function alert_report_list(app, ini, fin, sep, bFile)

@@ -72,8 +72,8 @@ function select_status(clause)
 	t_servicedowntime = { }
 
 	--dofile ("/usr/local/itvision_monitor/var/status_gesti.lua")
-	--dofile ("/usr/local/itvision_monitor/var/db_monitor.lua")
-	dofile ("/usr/local/monitor/var/db_monitor.lua")
+	dofile ("/usr/local/itvision_monitor/var/db_monitor.lua")
+	--dofile ("/usr/local/monitor/var/db_monitor.lua")
 	--dofile ("db_monitor")
 	--require "db_monitor"
 

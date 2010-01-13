@@ -3,12 +3,21 @@
 <?lua
 require "v_monitor_inc"
 require "v_monitor"
-require "v_auth"
 require "m_read_log"
 require "c_monitor"
 require "c_util"
 require "c_date"
-checkauth_redirect()
+require "v_monitor_html"
+require "v_auth"
+require "m_users"
+
+
+local auth = checkauth_redirect()
+local u = get_user(auth)
+
+
+--print(do_html_menui(u.name))
+
 
 local app, app_name, applic, d1, d2, sep, s, l, i, t = {}
 
@@ -59,12 +68,13 @@ s, t = alert_report_list(app, d1, d2, sep)
 	print("\t\t\t\t<TH>software com problema</TH>")
 	print("\t\t\t</TR>")
 
+	local cor, estado
 	if t then
 		for i, l in ipairs(t) do
-			if l[4] == "UP" then cor = 'green'
-				elseif l[4] == "DOWN" then cor = 'red'
-				elseif l[4] == "WARNING" then cor = 'yellow'
-				elseif l[4] == "PENDING" then cor = 'blue'
+			if l[4] == "UP" then cor = 'green'; estado = "NORMALIZADO"
+				elseif l[4] == "DOWN" then cor = 'red'; estado = "CRITICO"
+				elseif l[4] == "WARNING" then cor = 'yellow'; estado = "ANORMAL"
+				elseif l[4] == "PENDING" then cor = 'blue'; estado = "PENDENTE"
 			end
 	
 			local a = string.gsub(l[3], " ", "%%20")
@@ -74,7 +84,8 @@ s, t = alert_report_list(app, d1, d2, sep)
 			print("\t\t\t<TR>")
 			print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><a href=applic_list.lp?app_name="..a..">" .. l[3] .. "</TD>")
 			print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. l[1] .. "</TD>")
-			print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\""..color[cor].."\">"..l[4] .."</TD>")
+			--print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\""..color[cor].."\">"..l[4] .."</TD>")
+			print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\""..color[cor].."\">"..estado .."</TD>")
 			print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. l[5] .. "</TD>")
 			print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. l[6] .. "</TD>")
 			print("\t\t\t</TR>")

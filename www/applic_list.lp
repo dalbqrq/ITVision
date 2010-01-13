@@ -2,12 +2,15 @@
 
 <?lua
 require "v_monitor_inc"
+require "v_monitor_html"
 require "v_gviz"
 require "c_monitor"
 require "m_dbs"
 require "v_auth"
+require "m_users"
 
-checkauth_redirect()
+local auth = checkauth_redirect()
+local u = get_user(auth)
 
 app_name = cgilua.QUERY.app_name
 
@@ -17,7 +20,7 @@ t_hosts, t_servs, h_alert, s_alert, status = get_status_resume()
 
 print(html_header)
 print(html_header_refresh)
-print(html_menui)
+print(do_html_menui(u.name))
 print(html_body)
 print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>aplica&ccedil;&atilde;o: ".. app_name .."</h1>")
 print("\t\t\t</div>")

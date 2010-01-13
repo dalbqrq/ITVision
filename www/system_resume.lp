@@ -5,11 +5,17 @@ require 'v_auth'
 require 'v_monitor_inc'
 require 'v_monitor'
 require 'v_spider_graph'
+require "m_users"
 require 'c_monitor'
 require 'c_metrics'
 require 'c_eficiency'
 require 'c_disponibility'
-checkauth_redirect()
+require "v_monitor_html"
+
+
+
+local auth = checkauth_redirect()
+local u = get_user(auth)
 
 if ( cgilua.QUERY.period ~= nil ) then
 	period = cgilua.QUERY.period
@@ -41,7 +47,7 @@ else
 	p = 'max_day'
 end
 
-apps = select_applications()
+apps = select_applications(u.apps)
 
 local filename = 'figs/spider'
 
@@ -65,7 +71,7 @@ factor = calc_factor(values)
 mk_spider_graph(factor, filename)
 
 print(html_header)
-print(html_menui)
+print(do_html_menui(u.name))
 print(html_body)
 print(www_period('system_resume.lp','',period))
 print('\n\t\t\t\t<h1><a name=\'intro\' id=\'intro\'></a>m&eacute;tricas globais</h1>')

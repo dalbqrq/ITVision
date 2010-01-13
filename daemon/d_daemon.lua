@@ -176,8 +176,12 @@ end
 
 function alert_dispatcher(app)
 	app.has_changed = 0
+	loca = os.setlocale('pt_BR')
 	date = os.date()
+	local hd = ''
+	local sd = ''
 
+--[[
 	if app.status == 0 then
 		state = 'UP'
 	elseif app.status == 1 then
@@ -187,10 +191,31 @@ function alert_dispatcher(app)
 	elseif app.status == 3 then
 		state = 'PENDING'
 	end
+]]--
+	if app.status == 0 then
+		state = 'NORMALIZADO'
+	elseif app.status == 1 then
+		state = 'CRITICO'
+	elseif app.status == 2 then
+		state = 'ANORMAL'
+	elseif app.status == 3 then
+		state = 'PENDENTE DE VERIFICACAO'
+	end
 
 	-- [[ DEBUG ]] print ('ALERT BY EMAIL FOR APP: '..app.name..' WITH STATUS: '..state)
 
+
+	-- List of the DOWN hosts and services
+	for i, h in ipairs(app.hosts_down) do hd = hd..'\t- '..ic_get_label(1,h[1],3)..'\n' end -- Serialize 'hosts_down'
+	for i, s in ipairs(app.services_down) do sd = sd..'\t- '..ic_get_label(1,s[2],3)..' (sendo executado em '..ic_get_label(1,s[1],3)..')\n' end -- Serialize 'services_down'
+	if app.status == 0 then
+		critical_ics = ''
+	else
+		critical_ics = 'Hardwares em estado STATE:\n'..hd..'\nServicos em estado STATE:\n'..sd..'\n'
+	end
+
 	e_msg = daemon_conf.notification_email
+	e_msg = string.gsub(e_msg, 'CRITICAL_ICS', critical_ics)
 	e_msg = string.gsub(e_msg, 'APPLIC_NAME', app.name)
 	e_msg = string.gsub(e_msg, 'STATE', state)
 	e_msg = string.gsub(e_msg, 'DATE', date)

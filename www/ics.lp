@@ -6,9 +6,13 @@ require "v_gviz"
 require "c_monitor"
 require "m_dbs"
 require "db_ics_profile"
+require "v_monitor_html"
 require "v_auth"
+require "m_users"
 
-checkauth_redirect()
+local auth = checkauth_redirect()
+local u = get_user(auth)
+
 
 ickey = cgilua.QUERY.ickey
 
@@ -42,7 +46,8 @@ if not found then
 end
 
 print(html_header)
-print(html_menui) print(html_body)
+print(do_html_menui(u.name))
+print(html_body)
 print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>".. ic[3] .."</h1>")
 
 print("\t\t\t</div>")

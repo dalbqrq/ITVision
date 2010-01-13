@@ -2,13 +2,17 @@
 
 <?lua
 require "v_monitor_inc"
+require "v_monitor_html"
 require "v_auth"
+require "m_users"
+
+local auth = checkauth_redirect()
+local u = get_user(auth)
 
 
-checkauth_redirect()
 
 print(html_header)
-print(html_menui)
+print(do_html_menui(u.name))
 print(html_confirm_window)
 print(html_body)
 print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>administra&ccedil;&atilde;o</h1>")

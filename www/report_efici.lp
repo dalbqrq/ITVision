@@ -3,13 +3,18 @@
 <?lua
 require 'v_auth'
 require 'v_monitor_inc'
+require "v_monitor_html"
 require 'v_monitor'
 require 'm_read_log'
 require 'c_monitor'
 require 'c_eficiency'
 require 'c_util'
 require 'c_date'
-checkauth_redirect()
+require "m_users"
+
+local auth = checkauth_redirect()
+local u = get_user(auth)
+
 
 if ( cgilua.QUERY.period ~= nil ) then
 	period = cgilua.QUERY.period
@@ -43,7 +48,7 @@ end
 
 
 	print(html_header)
-	print(html_menui)
+	print(do_html_menui(u.name))
 	print(html_body)
 
 	print(www_period('report_efici.lp','',period))
@@ -52,12 +57,12 @@ end
 	print("\t\t\t</div>")
 	print("\t\t\t</div>")
 	print("\t\t\t<p>")
-	print("\t\t<TABLE width=800px;>")
+	print("\t\t<TABLE width=600px;>")
 	print("\t\t\t<TR>")
 	print("\t\t\t\t<TH width=120px;>aplica&ccedil;&atilde;o</TH>")
 	print("\t\t\t\t<TH width=120px;>m&aacute;ximo</TH>")
 	print("\t\t\t\t<TH width=120px;>m&eacute;dia</TH>")
-	print("\t\t\t\t<TH width=120px;>contador</TH>")
+	--print("\t\t\t\t<TH width=120px;>contador</TH>")
 	print("\t\t\t</TR>")
 
 	e = read_applications_eficiency()
@@ -70,7 +75,7 @@ end
 
 		print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"#f2f2f2\">"..string.format('%.3f',l[n])  .." ms </TD>")
 		print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"#f2f2f2\">"..string.format('%.3f',l[n+5]).." ms </TD>")
-		print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"#f2f2f2\">"..l[n+9].." </TD>")
+	--	print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"#f2f2f2\">"..l[n+9].." </TD>")
 
 		print("\t\t\t</TR>")
 	end

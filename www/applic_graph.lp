@@ -1,19 +1,22 @@
 #!/usr/bin/env cgilua.cgi
 
 <?lua
-require "v_monitor_inc"
 require "v_gviz"
+require "v_monitor_inc"
+require "v_monitor_html"
 require "v_auth"
+require "m_users"
 require "m_io_util"
 
-checkauth_redirect()
+local auth = checkauth_redirect()
+local u = get_user(auth)
 
 app_name = cgilua.QUERY.app_name
 app_file_name = string.gsub(app_name, " ", "_")
 
 print(html_header)
 print(html_header_refresh)
-print(html_menui)
+print(do_html_menui(u.name))
 print(html_body)
 print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>"..app_name.."</h1>")
 print("\t\t\t</div>")

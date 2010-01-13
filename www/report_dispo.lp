@@ -3,12 +3,17 @@
 <?lua
 require 'v_auth'
 require 'v_monitor_inc'
+require "v_monitor_html"
 require 'v_monitor'
 require 'm_read_log'
 require 'c_monitor'
 require 'c_util'
 require 'c_date'
-checkauth_redirect()
+require "m_users"
+
+local auth = checkauth_redirect()
+local u = get_user(auth)
+
 
 if ( cgilua.QUERY.applic ~= nil ) then
 	applic = cgilua.QUERY.applic
@@ -48,7 +53,7 @@ end
 s, t = alert_report_resume_4(app, d1, d2)
 
 	print(html_header)
-	print(html_menui)
+	print(do_html_menui(u.name))
 	print(html_body)
 
 	print(www_period('report_dispo.lp','applic=_TODAS_',period))

@@ -3,9 +3,16 @@
 <?lua
 require "v_monitor_inc"
 require "c_monitor"
+require "v_monitor_html"
+require "v_auth"
+require "m_users"
+
+local auth = checkauth_redirect()
+local u = get_user(auth)
+
 
 print(html_header)
-print(html_menui)
+print(do_html_menui(u.name))
 print(html_body)
 print("\n<h1><a name=\"intro\" id=\"intro\"></a>introdu&ccedil;&atilde;o</h1></div>")
 ?>

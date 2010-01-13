@@ -1,4 +1,6 @@
 
+
+
 local t_users = { }
 
 
@@ -19,7 +21,7 @@ end
 
 
 function get_user(c_name)
-	users = select_users('all')
+	local users = select_users('all')
 
 	for i, v in ipairs(users) do
 		if c_name == v.name then
@@ -41,6 +43,16 @@ function auth_user(username, password)
 end
 
 
+function get_uniq_user(user_)
+	local apps_ = {} 
+
+	for i, v in ipairs(user_.hosts) do
+		table.insert(hosts_ , v)
+	end
+
+	return table.uniq(hosts_), services_
+end
+
 
 function show_users()
 	users = select_users('all')
@@ -48,8 +60,13 @@ function show_users()
 	print ('\n\nusers:\n-----------------')
 	for i, v in ipairs(users) do
 		print(i..' : '..v.name..' : '..v.password)
+		print("    apps: ")
+		for j, w in ipairs(users[i].apps) do
+			print("         "..w)
+		end
 	end
 	print()
 end
+
 
 

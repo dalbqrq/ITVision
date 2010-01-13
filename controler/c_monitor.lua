@@ -107,8 +107,9 @@ function get_status_resume()
 end
 
 
-function get_applications_resume()
-	local applic = select_applications("all")
+function get_applications_resume(apls)
+	apls = apls or "all"
+	local applic = select_applications(apls)
 	local status = select_status("all")
 	local app_resume = { }
 	local resume = { }
@@ -255,8 +256,9 @@ function extract_plugin_output(s)
 end
 
 
-function get_applications_eficiency()
-	local applic = select_applications("all")
+function get_applications_eficiency(apls)
+	apls = apls or "all"
+	local applic = select_applications(apls)
 	local status = select_status("all")
 
 	local app_resume = { }

@@ -3,9 +3,15 @@
 DATE=`date +%Y-%m-%d_%H:%M`
 OBJDIR=/usr/local/monitor/etc/objects
 MODELDIR=/usr/local/itvision/model
-MONITOR=/usr/local/monitor/bin/nagios
+#MONITOR=/usr/local/monitor/bin/nagios
+MONITOR=/usr/local/monitor/bin/itvision_monitor
 
 CFGS="hosts.cfg services.cfg"
+
+#cfg_file=$OBJDIR/coldfusion.cfg
+#cfg_file=$OBJDIR/nsclient.cfg
+#cfg_dir=/usr/lib/nagios/plugins
+
 
 cat << EOI > /tmp/cfgs
 cfg_file=$OBJDIR/history/hosts.cfg
@@ -14,12 +20,10 @@ cfg_file=$OBJDIR/commands.cfg
 cfg_file=$OBJDIR/contacts.cfg
 cfg_file=$OBJDIR/timeperiods.cfg
 cfg_file=$OBJDIR/templates.cfg
-cfg_file=$OBJDIR/nsclient.cfg
-cfg_file=$OBJDIR/coldfusion.cfg
-cfg_dir=/usr/lib/nagios/plugins
+cfg_dir=/usr/local/monitor/libexec
 EOI
 
-/usr/bin/fromdos $MODELDIR/input/*.csv
+/usr/bin/dos2unix $MODELDIR/input/*.csv
 /usr/local/bin/lua $MODELDIR/exec_import_csv.lua
 #/usr/sbin/invoke-rc.d nagios checkconfig 
 $MONITOR -v /tmp/cfgs
@@ -34,7 +38,8 @@ if [ "$ans" == "y" ]; then
 		mv $OBJDIR/$cfg $OBJDIR/history/$cfg.$DATE
 	done
 	mv $OBJDIR/history/*.cfg $OBJDIR
-	invoke-rc.d nagios restart
+	#invoke-rc.d nagios restart
+	service itvision_monitor restart
 else
 	echo "Re-generate csv files and repeat the operation!"
 fi

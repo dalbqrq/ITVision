@@ -2,7 +2,12 @@
 
 <%
 require "v_monitor_inc"
+require "v_monitor_html"
 require "v_auth"
+require "m_users"
+
+--local auth = checkauth_redirect()
+--local u = get_user(auth)
 
 auth, user = getcookie()
 
@@ -16,9 +21,8 @@ if mess == 'LOGOUT' then
     cgilua.redirect('../login.lp')
 end
 
-
 print(html_header)
-print(html_menui)
+print(do_html_menui())
 print(html_body)
 
 print("<h1><a name=\"intro\" id=\"intro\"></a>login</h1>")

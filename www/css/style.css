@@ -338,7 +338,7 @@ li {
 #red {
 	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
 	font-size: 18px;
-	color: #ffffff;
+	color: #000000;
 	text-align: center;
 	text-decoration: bold;
 	float: right;
@@ -353,16 +353,16 @@ li {
 }
 
 #red a {
-	color:#ffffff;
+	color:#000000;
 }
 #red a:hover {
-	color:#ffffff;
+	color:#000000;
 }
 
 #yellow {
 	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
 	font-size: 18px;
-	color: #ffffff;
+	color: #000000;
 	text-align: center;
 	text-decoration: bold;
 	float: right;
@@ -375,16 +375,16 @@ li {
 }
 
 #yellow a {
-	color:#ffffff;
+	color:#000000;
 }
 #yellow a:hover {
-	color:#ffffff;
+	color:#000000;
 }
 
 #green {
 	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
 	font-size: 18px;
-	color: #ffffff;
+	color: #000000;
 	text-align: center;
 	text-decoration: bold;
 	float: right;
@@ -403,16 +403,16 @@ li {
 }
 
 #green a {
-	color:#ffffff;
+	color:#000000;
 }
 #green a:hover {
-	color:#ffffff;
+	color:#000000;
 }
 
 #orange {
 	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
 	font-size: 18px;
-	color: #ffffff;
+	color: #000000;
 	text-align: center;
 	text-decoration: bold;
 	float: right;
@@ -426,16 +426,16 @@ li {
 }
 
 #orange a {
-	color:#ffffff;
+	color:#000000;
 }
 #orange a:hover {
-	color:#ffffff;
+	color:#000000;
 }
 
 #blue {
 	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
 	font-size: 18px;
-	color: #ffffff;
+	color: #000000;
 	text-align: center;
 	text-decoration: bold;
 	float: right;
@@ -448,16 +448,16 @@ li {
 }
 
 #blue a {
-	color:#ffffff;
+	color:#000000;
 }
 #blue a:hover {
-	color:#ffffff;
+	color:#000000;
 }
 
 #gray {
 	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
 	font-size: 18px;
-	color: #ffffff;
+	color: #000000;
 	text-align: center;
 	text-decoration: bold;
 	float: right;
@@ -470,10 +470,10 @@ li {
 }
 
 #gray a {
-	color:#ffffff;
+	color:#000000;
 }
 #gray a:hover {
-	color:#ffffff;
+	color:#000000;
 }
 
 #list {
