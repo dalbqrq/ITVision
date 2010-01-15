@@ -34,6 +34,23 @@ print("</form>")
 
 print("\t\t\t</div>")
 
+-- REINIT -----------------------------------
+print("<div id=\"content\">")
+print("<div id=\"mainbar\">")
+print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>reinicia subsistema monitor</h1>")
+print("\t\t\t</div>")
+print("Para re-inicializar o subsistema de monitora&ccedil;&atilde;o, clique no bot&atilde;o abaixo. Ap&oacute;s a confirma&ccedil;&atilde;o, o sistema ir&aacute; levar em torno de 1 minuto (ou mais dependendo a quantidade de verifica&ccedil;&otilde;es que s&atilde;o realizadas) para retomar a sua opera&ccedil;&atilde; normal.")
+
+question = "Confirma a re-inicializa&ccedil;&atilde;o da monitora&ccedil;&atilde;o?"
+url = "osexecute.lp?cmd=reinit"
+label = "reinicia monitor"
+print("<form>")
+print("<input type=\"button\" onclick=\"confirmation('"..question.."','"..url.."')\" value=\""..label.."\">")
+print("</form>")
+
+print("\t\t\t</div>")
+
+
 -- REBOOT -----------------------------------
 print("<div id=\"content\">")
 print("<div id=\"mainbar\">")

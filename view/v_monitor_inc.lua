@@ -56,9 +56,11 @@ html_menui = [[
 
 			<img src="images/logopurple_only.png" alt="Realistic IT Vision" height=34 border=0 class="logo" />
 
+			<!--
 			<a href=http://www.proderj.rj.gov.br>
 			<img src="images/logo_proderj1.jpg" alt="Proderj" height=34 border=0 class="logoproderj" />
 			</a>
+			-->
 
 			<a href=http://www.verto.com.br>
 			<img src="images/verto_1.jpg" alt="Verto" height=34 border=0 class="logoverto" />
@@ -114,7 +116,7 @@ html_menui = [[
 					<li	><a href="hosts.lp" >hardwares</a>
 					<li	><a href="services.lp" >softwares</a>
 					<li	><a href="report.lp" >eventos</a>
-			<!--		<li	><a href="#" >alertas</a> -->
+					<li	><a href="#" >alertas</a>
 				</ul>
 			</ul>
 

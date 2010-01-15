@@ -10,7 +10,8 @@ require "m_read_log"
 require "c_monitor"
 require "c_date"
 
-local auth = checkauth_redirect()
+-- REMOVE - para teste somente - REMOVER - local auth = checkauth_redirect()
+local auth = checkauth_redirect("admin", "")
 local u = get_user(auth)
 
 
@@ -51,6 +52,7 @@ if n_rows < 2 then n_rows = 2 end
 
 print(html_header)
 print(html_header_refresh)
+local u = get_user(auth)
 print(do_html_menui(u.name))
 print(html_body)
 

@@ -1,0 +1,45 @@
+#!/bin/bash
+
+if [ -f /etc/rc.d/init.d/functions ]; then
+	. /etc/rc.d/init.d/functions
+elif [ -f /etc/init.d/functions ]; then
+	. /etc/init.d/functions
+fi
+
+prefix=/usr/local/itvision_monitor
+exec_prefix=${prefix}
+NagiosBin=${exec_prefix}/bin/nagios
+NagiosCfgFile=${prefix}/etc/nagios.cfg
+NagiosStatusFile=${prefix}/var/status.dat
+NagiosLuaStatusFile=${prefix}/var/db_monitor.lua
+NagiosRetentionFile=${prefix}/var/retention.dat
+NagiosCommandFile=${prefix}/var/rw/nagios.cmd
+NagiosVarDir=${prefix}/var
+NagiosRunFile=${prefix}/var/nagios.lock
+NagiosLockDir=/var/lock/subsys
+NagiosLockFile=nagios
+NagiosCGIDir=${exec_prefix}/sbin
+NagiosUser=itvision
+NagiosGroup=itvision
+          
+
+#echo -n "Starting monitor:"
+$NagiosBin -v $NagiosCfgFile > /dev/null 2>&1;
+if [ $? -eq 0 ]; then
+	#su - $NagiosUser -c "touch $NagiosVarDir/nagios.log $NagiosRetentionFile"
+	touch $NagiosVarDir/nagios.log $NagiosRetentionFile
+	rm -f $NagiosCommandFile
+	touch $NagiosRunFile
+	chown $NagiosUser:$NagiosGroup $NagiosRunFile
+	$NagiosBin -d $NagiosCfgFile
+	if [ -d $NagiosLockDir ]; then touch $NagiosLockDir/$NagiosLockFile; fi
+	echo " done."
+	exit 0
+else
+	echo "CONFIG ERROR!  Start aborted.  Check your Nagios configuration."
+	exit 1
+fi
+
+
+
+

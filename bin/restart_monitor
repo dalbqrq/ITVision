@@ -1,0 +1,104 @@
+#!/bin/bash
+
+if [ -f /etc/rc.d/init.d/functions ]; then
+	. /etc/rc.d/init.d/functions
+elif [ -f /etc/init.d/functions ]; then
+	. /etc/init.d/functions
+fi
+
+prefix=/usr/local/itvision_monitor
+exec_prefix=${prefix}
+NagiosBin=${exec_prefix}/bin/nagios
+NagiosCfgFile=${prefix}/etc/nagios.cfg
+NagiosStatusFile=${prefix}/var/status.dat
+NagiosLuaStatusFile=${prefix}/var/db_monitor.lua
+NagiosRetentionFile=${prefix}/var/retention.dat
+NagiosCommandFile=${prefix}/var/rw/nagios.cmd
+NagiosVarDir=${prefix}/var
+NagiosRunFile=${prefix}/var/nagios.lock
+NagiosLockDir=/var/lock/subsys
+NagiosLockFile=nagios
+NagiosCGIDir=${exec_prefix}/sbin
+NagiosUser=itvision
+NagiosGroup=itvision
+pid_nagios () {
+	if test ! -f $NagiosRunFile; then
+		echo "No lock file found in $NagiosRunFile"
+		exit 1
+	fi
+	NagiosPID=`head -n 1 $NagiosRunFile`
+}
+
+killproc_nagios () {
+	kill $2 $NagiosPID
+}
+
+status_nagios () {
+	if test -x $NagiosCGI/daemonchk.cgi; then
+		if $NagiosCGI/daemonchk.cgi -l $NagiosRunFile; then
+		        return 0
+		else
+			return 1
+		fi
+	else
+		if ps -p $NagiosPID > /dev/null 2>&1; then
+		        return 0
+		else
+			return 1
+		fi
+	fi
+	return 1
+}
+
+
+
+#
+# STOP
+#
+
+echo -n "Stopping nagios: "
+pid_nagios
+killproc_nagios nagios
+
+for i in 1 2 3 4 5 6 7 8 9 10 ; do
+	if status_nagios > /dev/null; then
+		echo -n '.'
+		sleep 1
+	else
+		break
+	fi
+done
+
+if status_nagios > /dev/null; then
+	echo ''
+	echo 'Warning - nagios did not exit in a timely manner'
+else
+	echo 'done.'
+fi
+
+rm -f $NagiosStatusFile $NagiosRunFile $NagiosLockDir/$NagiosLockFile $NagiosCommandFile $NagiosLuaStatusFile
+          
+
+#
+# START
+#
+echo -n "Starting monitor:"
+$NagiosBin -v $NagiosCfgFile > /dev/null 2>&1;
+if [ $? -eq 0 ]; then
+	#su - $NagiosUser -c "touch $NagiosVarDir/nagios.log $NagiosRetentionFile"
+	touch $NagiosVarDir/nagios.log $NagiosRetentionFile
+	rm -f $NagiosCommandFile
+	touch $NagiosRunFile
+	chown $NagiosUser:$NagiosGroup $NagiosRunFile
+	$NagiosBin -d $NagiosCfgFile
+	if [ -d $NagiosLockDir ]; then touch $NagiosLockDir/$NagiosLockFile; fi
+	echo " done."
+	exit 0
+else
+	echo "CONFIG ERROR!  Start aborted.  Check your Nagios configuration."
+	exit 1
+fi
+
+
+
+

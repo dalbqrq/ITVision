@@ -15,18 +15,18 @@ color = {
 }
 
 host_alert = {   
-	{ name= "up", 			status = HOST_UP,		num = 0, color = color.green.name },
-	{ name= "down", 		status = HOST_DOWN,		num = 0, color = color.red.name },
+	{ name= "up", 		status = HOST_UP,		num = 0, color = color.green.name },
+	{ name= "down", 	status = HOST_DOWN,		num = 0, color = color.red.name },
 	{ name= "unreachable", 	status = HOST_UNRRACHABLE,	num = 0, color = color.yellow.name },
-	{ name= "pending",	 	status = 0,			num = 0, color = color.blue.name }
+	{ name= "pending", 	status = 0,			num = 0, color = color.blue.name }
 }
 
 service_alert = {
-	{ name= "ok", 			status = STATE_OK,		num = 0, color = color.green.name },
-	{ name= "warning", 		status = STATE_WARNING,		num = 0, color = color.orange.name },
-	{ name= "critial", 		status = STATE_CRITICAL,	num = 0, color = color.red.name },
-	{ name= "unknown", 		status = STATE_UNKNOWN,		num = 0, color = color.yellow.name },
-	{ name= "pending",		status = 0,			num = 0, color = color.blue.name }
+	{ name= "ok", 		status = STATE_OK,		num = 0, color = color.green.name },
+	{ name= "warning", 	status = STATE_WARNING,		num = 0, color = color.orange.name },
+	{ name= "critial", 	status = STATE_CRITICAL,	num = 0, color = color.red.name },
+	{ name= "unknown", 	status = STATE_UNKNOWN,		num = 0, color = color.yellow.name },
+	{ name= "pending",	status = 0,			num = 0, color = color.blue.name }
 }
 
 
@@ -34,9 +34,7 @@ service_alert = {
 
 color = {
 	blue =   "0066ff",	-- blue color used by peding hosts and services
-	--green =  "33ff00",	-- green color used by up hosts and ok services
 	green =  "00f200",	-- green color used by up hosts and ok services
-	--green =  "00cc00",	-- green color used by up hosts and ok services
 	yellow = "f2f200",	-- yellow color used by unreachable hosts and unknown services
 	orange = "ff9900",	-- orange color used by warning services
 	red =    "d90000",	-- red color used by down hosts and critical services
@@ -58,24 +56,24 @@ function get_status_resume()
 	status = select_status("all")
 
 	host_alert = {   
-		{ name= "up", 			status = HOST_UP,			num = 0, color = "green" },
-		{ name= "down", 		status = HOST_DOWN,			num = 0, color = "red" },
-		{ name= "unreachable",  status = HOST_UNREACHABLE,	num = 0, color = "yellow" },
-		{ name= "pending",	 	status = 0,					num = 0, color = "blue" }
+		{ name= "up", 		status = HOST_UP,		num = 0, color = "green" },
+		{ name= "down", 	status = HOST_DOWN,		num = 0, color = "red" },
+		{ name= "unreachable",	status = HOST_UNREACHABLE,	num = 0, color = "yellow" },
+		{ name= "pending", 	status = 0,			num = 0, color = "blue" }
 	}
 
 	service_alert = {
-		{ name= "ok", 			status = STATE_OK,			num = 0, color = "green" },
-		{ name= "warning", 		status = STATE_WARNING,		num = 0, color = "orange" },
-		{ name= "critial", 		status = STATE_CRITICAL,	num = 0, color = "red" },
-		{ name= "unknown", 		status = STATE_UNKNOWN,		num = 0, color = "yellow" },
-		{ name= "pending",		status = 0,					num = 0, color = "blue" }
+		{ name= "ok", 		status = STATE_OK,		num = 0, color = "green" },
+		{ name= "warning", 	status = STATE_WARNING,		num = 0, color = "orange" },
+		{ name= "critial", 	status = STATE_CRITICAL,	num = 0, color = "red" },
+		{ name= "unknown", 	status = STATE_UNKNOWN,		num = 0, color = "yellow" },
+		{ name= "pending",	status = 0,			num = 0, color = "blue" }
 	}
 
 	applic_alert = {   
-		{ name= "up", 		status = APPLIC_UP,			color = "green" },
+		{ name= "up", 		status = APPLIC_UP,		color = "green" },
 		{ name= "down", 	status = APPLIC_DOWN,		color = "red" },
-		{ name= "warning",  status = APPLIC_WARNING,	color = "yellow" },
+		{ name= "warning",	status = APPLIC_WARNING,	color = "yellow" },
 		{ name= "pending",	status = APPLIC_PENDING,	color = "blue" }
 	}
 
@@ -135,7 +133,10 @@ function get_applications_resume(apls)
 				if ( z.host_name == ap_h ) then
 					-- ------------------
 					host_status = z.current_state
+					host_enable = z.active_checks_enabled
 					--if app_status == APPLIC_UP or app_status == APPLIC_PENDING or app_status == APPLIC_WARNING then
+--print(z.host_name, z.current_state, z.active_checks_enabled)
+					if host_enable == 1 then
 						if host_status == HOST_DOWN or host_status == HOST_UNREACHEBLE then
 							app_status = APPLIC_DOWN
 							table.insert(hosts_list, {z.host_name, z.plugin_output} )
@@ -143,6 +144,7 @@ function get_applications_resume(apls)
 						elseif host_status == HOST_PENDING then
 							app_status = APPLIC_PENDING
 						end
+					end
 					--end
 					-- ------------------
 				end
@@ -155,7 +157,10 @@ function get_applications_resume(apls)
 				if (( z.host_name == ap_s[2] ) and ( z.service_description == ap_s[1] )) then
 					-- ------------------
 					service_status = z.current_state
+					service_enable = z.active_checks_enabled
 					--if app_status == APPLIC_UP or app_status == APPLIC_WARNING or app_status == APPLIC_PENDING then
+--print(z.host_name, z.current_state, z.active_checks_enabled)
+					if service_enable == 1 then
 						if service_status == STATE_CRITICAL or service_status == STATE_UNKOWN then
 							app_status = APPLIC_DOWN
 							table.insert(services_list, {z.host_name, z.service_description, z.plugin_output })
@@ -167,6 +172,7 @@ function get_applications_resume(apls)
 							app_status = APPLIC_WARNING
 							table.insert(services_list, {z.host_name, z.service_description, z.plugin_output })
 						end
+					end
 					--end
 					-- ------------------
 				end
@@ -378,3 +384,22 @@ function get_applications_eficiency(apls)
 	return resume
 end
 
+
+--[[
+res = get_applications_resume()
+showtable(res)
+s = res[1].services_down
+if s ~= nil then
+	showtable(s)
+else 
+	print("s is nil")
+end
+
+s = res[1].hosts_down
+if s ~= nil then
+	showtable(s)
+else 
+	print("s is nil")
+end
+
+]]--

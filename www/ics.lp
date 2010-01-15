@@ -2,6 +2,7 @@
 
 <?lua
 require "v_monitor_inc"
+require "v_monitor"
 require "v_gviz"
 require "c_monitor"
 require "m_dbs"
@@ -9,20 +10,47 @@ require "db_ics_profile"
 require "v_monitor_html"
 require "v_auth"
 require "m_users"
+require "m_disableds"
+require "m_import_csv"
+
 
 local auth = checkauth_redirect()
 local u = get_user(auth)
 
-
 ickey = cgilua.QUERY.ickey
+enable = cgilua.QUERY.enable
+
+local x = "ihh"
+local x = enable
+local x = ickey
+
+if enable ~= nil then
+	-- TODO: change_active_checks_enabled of ickey
+
+	if enable == "0" then
+		insert_disableds(ickey)
+x = "hi"..enable..ickey
+	elseif enable == "1" then
+		delete_disableds(ickey)
+x = "ho"..enable..ickey
+	end
+
+	make_cfg_file()
+	s = os.capture("sudo -u root /etc/init.d/nagios restart")
+	s = os.capture("sleep 3")
+	local url = '../ics.lp'
+	local args = { ickey = ickey }
+--	cgilua.redirect(url, args)
+
+end
 
 local found
 local ic = ic_get_table(1, ickey)
 local t_hosts, t_servs, h_alert, s_alert, status
 local state_color, state_name, state_plugin
-t_hosts, t_servs, h_alert, s_alert, status = get_status_resume()
+local t_hosts, t_servs, h_alert, s_alert, status = get_status_resume()
 	
--- procura a chave me hosts
+-- procura a chave em hosts
 for i, s in ipairs(status.hoststatus) do
 	if s.host_name == ic[1] then
 		found = true
@@ -30,6 +58,7 @@ for i, s in ipairs(status.hoststatus) do
 		state_name   = h_alert[s.current_state+1].name
 		state_cmd    = s.check_command
 		state_plugin = s.plugin_output
+		state_enable = s.active_checks_enabled
 	end
 end
 
@@ -41,15 +70,25 @@ if not found then
 			state_name   = s_alert[s.current_state+1].name
 			state_cmd    = s.check_command
 			state_plugin = s.plugin_output
+			state_enable = s.active_checks_enabled
 		end
 	end
 end
 
+if state_enable == 0 then
+	state_color = "purple"
+end
+
 print(html_header)
 print(do_html_menui(u.name))
+print(html_confirm_window)
 print(html_body)
-print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>".. ic[3] .."</h1>")
 
+
+if enable ~= nil then
+print(x)
+end
+print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>".. ic[3] .."</h1>")
 print("\t\t\t</div>")
 print("\t\t\t<div id=\"content\">")
 -- -------------------------------------------------
@@ -156,8 +195,11 @@ print("\t\t\t<div id=\"content\">")
 		print("\t\t\t</TR>")
 
 	print("\t\t</TABLE>")
-	print("\t<br>")
+
+	print(www_enable_ic(ickey, state_enable))
+--	print("\t<br>")
 -- -------------------------------------------------
+
 
 -- -------------------------------------------------
 print("\t\t\t</div>")
