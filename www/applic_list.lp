@@ -44,11 +44,26 @@ print("\t\t\t</div>")
 for i, s in ipairs(status.hoststatus) do
 	fh = table.find_entry(hosts, s.host_name)
 	if fh > 0 then
+
+	local status = s.current_state
+	local state = 'NORMAL'
+
+        if status == 0 then
+                state = 'NORMAL'
+        elseif status == 1 then
+                state = 'CRITICO'
+        elseif status == 2 then
+                state = 'ANORMAL'
+        elseif status == 3 then
+                state = 'PENDENTE'
+        end
+
 		print("\t\t\t<TR>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><a href=ics.lp?ickey="..s.host_name..">" 
 				.. ic_get_label(1,s.host_name,3) .. "</a></TD>")
 		print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"" .. color[h_alert[s.current_state+1].color] .. "\">"
-				..h_alert[s.current_state+1].name .. "</TD>")
+				..state .. "</TD>")
+		--		..h_alert[s.current_state+1].name .. "</TD>")
 		--print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. s.plugin_output .. "</TD>")
 		print("\t\t\t</TR>")
 	end
@@ -75,6 +90,22 @@ print("\t\t\t</TR>")
 for i, s in ipairs(status.servicestatus) do
 	for j, w in ipairs(app.services) do
 		if w[1] == s.service_description and w[2] == s.host_name then
+
+			local status = s.current_state
+			local state = 'NORMAL'
+	
+        		if status == 0 then
+                		state = 'NORMAL'
+        		elseif status == 1 then
+                		state = 'ANORMAL'
+        		elseif status == 2 then
+                		state = 'CRITICO'
+        		elseif status == 3 then
+                		state = 'PENDENTE'
+        		elseif status == 4 then
+                		state = 'PENDENTE'
+        		end
+
 			print("\t\t\t<TR>")
 			print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><a href=ics.lp?ickey="..s.service_description..">" 
 					.. ic_get_label(1,s.service_description,3) .. "</a></TD>")
@@ -82,7 +113,8 @@ for i, s in ipairs(status.servicestatus) do
 					.. ic_get_label(1,s.host_name,3) .. "</a></TD>")
 
 			print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"" .. color[s_alert[s.current_state+1].color]  
-					.."\" TEXT=\"FFFFFF\" >" ..s_alert[s.current_state+1].name .. "</TD>")
+					.."\" TEXT=\"FFFFFF\" >" ..state .. "</TD>")
+--					.."\" TEXT=\"FFFFFF\" >" ..s_alert[s.current_state+1].name .. "</TD>")
 --			print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"#f2f2f2\">" .. s.current_attempt .. "/" 
 --					.. s.max_attempts .. "</TD>")
 			--print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. s.plugin_output .. "</TD>")
