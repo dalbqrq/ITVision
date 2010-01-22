@@ -112,12 +112,17 @@ function make_host_cfg_file()
 	for i,v in ipairs(lines) do
 		if i ~= 1 then
 			e = fromCSV(v)
---showtable(e)
+			--showtable(e)
 			table.insert(ic, e)
 			if e[6] ~= 'NA' and e[6] ~= 'na' and e[6] ~= '' and e[6] ~= '-' then
-				host_cfg = host_cfg .. '# Key: '..e[1]..'; Hostname: '..e[4]..'; IP: '..e[6]..'\n'
+			--host_cfg = host_cfg .. '# Key: '..e[1]..'; Hostname: '..e[4]..'; IP: '..e[6]..'\n'
+				if e[22] == 'SEMPRE OK' then
+					host_template = 'dummy-server\n'
+				else
+					host_template = 'generic-server\n'
+				end
 				host_cfg = host_cfg .. [[define host{
-  use                    generic-server            ; Name of host template to use
+  use                    ]].. host_template ..[[
   host_name              ]].. e[1] ..[[ 
   alias                  ]].. e[1] ..[[ 
   address                ]].. e[6] ..[[ 
