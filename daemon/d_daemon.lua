@@ -96,7 +96,7 @@ function compare_app_state2(old_state, new_state)
 					-- from 'down' to 'up'
 					elseif o.status == APPLIC_DOWN and n.status == APPLIC_UP then
 						--print('down to up')
-						alert_dispatcher(n)
+						alert_dispatcher(n,o) -- pass 'old_state' to show what came up
 						log_dispatcher(n)
 						n.attempts = 0
 
@@ -174,7 +174,7 @@ function compare_app_state(old_state, new_state)
 end
 
 
-function alert_dispatcher(app)
+function alert_dispatcher(app, old)
 	app.has_changed = 0
 	loca = os.setlocale('pt_BR')
 	date = os.date()
@@ -205,11 +205,21 @@ function alert_dispatcher(app)
 	-- [[ DEBUG ]] print ('ALERT BY EMAIL FOR APP: '..app.name..' WITH STATUS: '..state)
 
 
+	if app.status == 0 then -- this is a DOWN to UP change, so show what hosts/services came up
+		hosts_down = old.hosts_down
+		services_down = old.services_down
+	else
+		hosts_down = app.hosts_down
+		services_down = app.services_down
+	end
+
 	-- List of the DOWN hosts and services
-	for i, h in ipairs(app.hosts_down) do hd = hd..'\t- '..ic_get_label(1,h[1],3)..'\n' end -- Serialize 'hosts_down'
-	for i, s in ipairs(app.services_down) do sd = sd..'\t- '..ic_get_label(1,s[2],3)..' (sendo executado em '..ic_get_label(1,s[1],3)..')\n' end -- Serialize 'services_down'
+	for i, h in ipairs(hosts_down) do hd = hd..'\t- '..ic_get_label(1,h[1],3)..'\n' end -- Serialize 'hosts_down'
+	for i, s in ipairs(services_down) do sd = sd..'\t- '..ic_get_label(1,s[2],3)..' (sendo executado em '..ic_get_label(1,s[1],3)..')\n' end -- Serialize 'services_down'
+
 	if app.status == 0 then
-		critical_ics = ''
+		critical_ics = 'Hardwares que se encontravam em estado CRITICO:\n'..hd..
+				'\nServicos que se encontravam em estado CRITICO:\n'..sd..'\n'
 	else
 		critical_ics = 'Hardwares em estado STATE:\n'..hd..'\nServicos em estado STATE:\n'..sd..'\n'
 	end
@@ -227,6 +237,7 @@ function alert_dispatcher(app)
 
 	contacts = get_contacts(function() return true end)
 	--showtable(contacts)
+	--print(e_msg)
 
 	for _,v in ipairs(contacts) do
 		for _,w in ipairs(v.applications) do

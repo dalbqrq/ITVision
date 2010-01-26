@@ -5,6 +5,7 @@ require "v_monitor_inc"
 require "v_monitor_html"
 require "v_gviz"
 require "c_monitor"
+require "c_util"
 require "m_dbs"
 require "v_auth"
 require "m_users"
@@ -13,6 +14,7 @@ local auth = checkauth_redirect()
 local u = get_user(auth)
 
 app_name = cgilua.QUERY.app_name
+--app_name = 'DBServer'
 
 local app = get_application(app_name)
 hosts, services = get_uniq_hosts_and_services(app)
@@ -41,8 +43,16 @@ print("\t\t\t\t<TH width=120px;>status</TH>")
 print("\t\t\t</TR>")
 print("\t\t\t</div>")
 
+
+table.sort(hosts)
+
+for i, h in ipairs(hosts) do
+	fh = table.find_entry(status.hoststatus, h, 'host_name')
+	s = status.hoststatus[fh]
+--[[
 for i, s in ipairs(status.hoststatus) do
 	fh = table.find_entry(hosts, s.host_name)
+]]--
 	if fh > 0 then
 
 	local status = s.current_state
@@ -87,9 +97,17 @@ print("\t\t\t\t<TH width=60px;>status</TH>")
 --print("\t\t\t\t<TH>status info</TH>")
 print("\t\t\t</TR>")
 
+
+table.sort(app.services, sort_services)
+
+for j, w in ipairs(app.services) do
+	for i, s in ipairs(status.servicestatus) do
+		if w[1] == s.service_description and w[2] == s.host_name then
+--[[
 for i, s in ipairs(status.servicestatus) do
 	for j, w in ipairs(app.services) do
 		if w[1] == s.service_description and w[2] == s.host_name then
+]]--
 
 			local status = s.current_state
 			local state = 'NORMAL'
