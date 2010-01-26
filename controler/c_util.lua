@@ -15,14 +15,24 @@ end
 
 
 -- Used in applic_list.lp !!!
-function sort_services(a, b)
-        if (a[2] < b[2]) then
-                return true
-        elseif (a[2] == b[2]) and (a[1] < b[1]) then
-                return true
+function sort_hosts(a, b)
+	if (a[1] < b[1]) then
+		return true
 	else
-                return false
-        end
+		return false
+	end
+end
+
+
+-- Used in applic_list.lp !!!
+function sort_services(a, b)
+	if (a[1] < b[1]) then
+		return true
+	elseif (a[1] == b[1]) and (a[2] < b[2]) then
+		return true
+	else
+		return false
+	end
 end
 
 
