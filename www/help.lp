@@ -32,36 +32,9 @@ servi&ccedil;os que comp&otilde;e
 
 <?lua
 print("<div id=\"mainbar\">")
-print("\n<h1><a name=\"intro\" id=\"intro\"></a>alertas</h1></div>")
+print("\n<h1><a name=\"intro\" id=\"intro\"></a>documenta&ccedil;&atilde;o</h1></div>")
 ?>
-Os alertas visuais s&atilde;o apresentados em diversas telas da interface web do sistema. Em todas
-elas, as cores possuem o mesmo segnificado, conforme descrito a seguir:
-<br>
-<br>
-<!--<div id="alert"> <div id="semialert"></div></div>-->
-<div id="semialert"></div>
-<!--<div id="alert"> <div id="green">aplica&ccedil;&atilde;o </div>ok</div>-->
-<div id="alert"> <div id="green">nome aplic</div>ok</div>
-<div id="alert"> <div id="red">nome aplic</div>down</div>
-<div id="alert"> <div id="yellow">nome aplic</div>warning</div>
-<div id="alert"> <div id="blue">nome aplic</div>pending</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-A cor VERDE indica funcionamento correto da aplica&ccedil;&atilde;o ou de um item de configura&ccedil;&atilde;o.
-<br>
-A cor VERMELHA indica mal funcionamento da aplica&ccedil;&atilde;o ou de um item de configura&ccedil;&atilde;o.
-<br>
-A cor AMARELA indica que determinada aplica&ccedil;&atilde;o ou item de configura&ccedil;&atilde;o funcionam precariamente.
-<br>
-A cor AZUL indica que algum item de configura&ccedil;&atilde;o de determinada aplica&ccedil;&atilde;o ainda
-n&atilde;o foi testado pelo sistema
+Para ter acesso a documenta&ccedil;&atilde;o, baixe o arquivo pdf neste <a href="manual/Manual_ITVision_Geral.pdf">link</a>.
 <br>
 <br>
 
