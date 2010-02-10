@@ -4,8 +4,8 @@ require "m_io_util"
 
 local t_disableds = { }
 
-local db_name = "/usr/local/itvision/model/db/db_disableds.lua"
 local db_name = "../model/db/db_disableds.lua"
+local db_name = "/usr/local/itvision/model/db/db_disableds.lua"
 
 
 function disabled (_table)
@@ -62,11 +62,13 @@ function is_disableds(ic)
 	local ret = select_disableds()
 	local result = nil
 
+	if ret then
 	for i,v in ipairs(ret) do
 		if ic == v then 
 			result = i 
 			return result
 		end
+	end
 	end
 
 	return result
@@ -121,6 +123,14 @@ delete_disableds("host ic "..arg[1])
 ret = select_disableds()
 showtable(ret)
 
-]]--
 
+for i,v in ipairs(ret) do
+	if is_disableds(v) then
+		print ("hi :"..v)
+	else
+		print("OUT!")
+	end
+
+end
+]]--
 

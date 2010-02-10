@@ -9,7 +9,7 @@ local config = {
 
 ------- NOVA ROTINA - formato mais compacto ------
 
-function make_graphviz_img(app_name)   -- app_name is a string
+function make_graphviz_img_new(app_name)   -- app_name is a string
 
 	local fsz = 8
 	local h = 0.3
@@ -38,7 +38,7 @@ function make_graphviz_img(app_name)   -- app_name is a string
 				if s.active_checks_enabled == 1 then
 					c = h_alert[s.current_state+1].color
 				else
-					c = "purple"
+					c = "#FF6600"
 				end
 				l = ic_get_label(1,v,3)
 				graphviz_file = graphviz_file .. "\t\""..v.."\" ["..box_shape.. 
@@ -56,7 +56,7 @@ function make_graphviz_img(app_name)   -- app_name is a string
 				if s.active_checks_enabled == 1 then
 					c = s_alert[s.current_state+1].color
 				else
-					c = "purple"
+					c = "#FF6600"
 				end
 				l = ic_get_label(1,v[1],3)
 				if not l then l = 'NO_LABEL' end
@@ -89,7 +89,7 @@ end
 
 ------- VELHA ROTINA - formato mais aberto ------
 
-function make_graphviz_img_old(app_name)
+function make_graphviz_img(app_name)
 	-- app_name is a string
 	local app = get_application(app_name)
 	local app_file_name = string.gsub(app_name, " ", "_")
@@ -105,7 +105,11 @@ function make_graphviz_img_old(app_name)
 	for i, v in ipairs(hosts) do
 		for j, s in ipairs(status.hoststatus) do
 			if s.host_name == v then
-				c = h_alert[s.current_state+1].color
+				if s.active_checks_enabled == 1 then
+					c = h_alert[s.current_state+1].color
+				else
+					c = "#FF6600"
+				end
 				l = ic_get_label(1,v,3)
 				graphviz_file = graphviz_file .. "\t\""..v.."\"\t\t["..box_shape.. 
 					"label=\""..l.."\", \

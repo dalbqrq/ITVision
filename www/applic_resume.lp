@@ -1,4 +1,4 @@
-#!/usr/bin/env cgilua.cgi
+#!/usr/bin/env /usr/local/bin/cgilua.cgi
 
 <?lua
 require "v_monitor"
@@ -10,8 +10,7 @@ require "m_read_log"
 require "c_monitor"
 require "c_date"
 
--- REMOVE - para teste somente - REMOVER - local auth = checkauth_redirect()
-local auth = checkauth_redirect("admin", "")
+local auth = checkauth_redirect()
 local u = get_user(auth)
 
 

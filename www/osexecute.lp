@@ -1,4 +1,4 @@
-#!/usr/bin/env cgilua.cgi
+#!/usr/bin/env /usr/local/bin/cgilua.cgi
 
 <?lua
 require "m_io_util"
@@ -43,10 +43,10 @@ if ( cmd ) then
 	elseif ( cmd == "reinit" ) then
 		-- Nagios restart requires sudo password!
 		-- Using my own script to start (but the init.d to stop!)
-		s = os.capture("sudo -u root /etc/init.d/nagios restart")
+		s = os.capture("/etc/init.d/itvision_monitor restart")
 		print("<p>")
 		--print(s)
-		print("check sudoers!")
+		--print("check sudoers!")
 		print("<p>")
 		print("O sistema ir&aacute reiniciar o sub-sistema monitor...")
 

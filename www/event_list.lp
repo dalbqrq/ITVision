@@ -1,4 +1,4 @@
-#!/usr/bin/env cgilua.cgi
+#!/usr/bin/env /usr/local/bin/cgilua.cgi
 
 <?lua
 require "v_monitor_inc"
@@ -50,7 +50,7 @@ s, t = alert_report_list(app, d1, d2, sep)
 	print(html_menui)
 	print(html_body)
 
-	print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>lista de eventos</h1>")
+	print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>lista de eventos de alerta</h1>")
 	print("<div id=\"links\"><a href=report_download.lp?applic="..app.."&date1="..d1.."&date2="..d2.."&sep="..sep
 		..">[ salvar como CSV ]</a>")
 	print(" | ")

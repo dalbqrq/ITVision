@@ -1,4 +1,4 @@
-#!/usr/bin/env cgilua.cgi
+#!/bin/env /usr/local/bin/cgilua.cgi
 
 <%
 require "v_monitor_inc"

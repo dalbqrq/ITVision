@@ -1,4 +1,4 @@
-#!/usr/bin/env cgilua.cgi
+#!/usr/bin/env /usr/local/bin/cgilua.cgi
 
 <?lua
 require "v_monitor_inc"
@@ -17,31 +17,25 @@ require "m_import_csv"
 local auth = checkauth_redirect()
 local u = get_user(auth)
 
-ickey = cgilua.QUERY.ickey
+ickey  = cgilua.QUERY.ickey
 enable = cgilua.QUERY.enable
 
-local x = "ihh"
-local x = enable
-local x = ickey
-
-if enable ~= nil then
-	-- TODO: change_active_checks_enabled of ickey
-
+-- Change "active_checks_enabled" of ickey on monitor cfg files
+if enable and u.name == "admin" then
 	if enable == "0" then
 		insert_disableds(ickey)
-x = "hi"..enable..ickey
 	elseif enable == "1" then
 		delete_disableds(ickey)
-x = "ho"..enable..ickey
 	end
 
+	config = get_import_config()
 	make_cfg_file()
-	s = os.capture("sudo -u root /etc/init.d/nagios restart")
-	s = os.capture("sleep 3")
+	s = os.capture("mv -f "..config.object_dir.."/*.cfg "..config.object_dir.."/..")
+	s = os.capture("/etc/init.d/itvision_monitor restart")
+	s = os.capture("sleep 2")
 	local url = '../ics.lp'
 	local args = { ickey = ickey }
---	cgilua.redirect(url, args)
-
+	cgilua.redirect(url, args)
 end
 
 local found
@@ -76,7 +70,7 @@ if not found then
 end
 
 if state_enable == 0 then
-	state_color = "purple"
+	state_color = "#FF6600"
 end
 
 print(html_header)
@@ -85,9 +79,6 @@ print(html_confirm_window)
 print(html_body)
 
 
-if enable ~= nil then
-print(x)
-end
 print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>".. ic[3] .."</h1>")
 print("\t\t\t</div>")
 print("\t\t\t<div id=\"content\">")
@@ -196,7 +187,9 @@ print("\t\t\t<div id=\"content\">")
 
 	print("\t\t</TABLE>")
 
-	print(www_enable_ic(ickey, state_enable))
+	if u.name == "admin" then
+		print(www_enable_ic(ickey, state_enable))
+	end
 --	print("\t<br>")
 -- -------------------------------------------------
 
@@ -252,7 +245,6 @@ print("\n\t<h2><a name=\"intro\" id=\"intro\"></a>informa&ccedil;&otilde;es extr
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		print("\t\t\t</TR>")
 
---[[
 		print("\t\t\t<TR>"); 
 		i = 25 --  extra1
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
@@ -279,6 +271,7 @@ print("\n\t<h2><a name=\"intro\" id=\"intro\"></a>informa&ccedil;&otilde;es extr
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		print("\t\t\t</TR>")
+--[[
 ]]--
 
 

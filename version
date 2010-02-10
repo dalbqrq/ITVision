@@ -3,7 +3,7 @@
 --
 
 itvision_info = {
-	version = "0.2.7"
-	init-date = "2010-01-11"
+	version = "0.2.8"
+	init-date = "2010-01-31"
 }
 

@@ -24,6 +24,8 @@ end
 function hoststatus (_table)
 	if _table.has_been_checked == 0 then
 		_table.current_state = HOST_PENDING
+	elseif _table.active_checks_enabled == 0 then
+		_table.current_state = HOST_DISABLE
 	end
 	table.insert(t_hoststatus, _table)
 end
@@ -31,6 +33,8 @@ end
 function servicestatus (_table)
 	if _table.has_been_checked == 0 then
 		_table.current_state = STATE_PENDING
+	elseif _table.active_checks_enabled == 0 then
+		_table.current_state = STATE_DISABLE
 	end
 	table.insert(t_servicestatus, _table)
 end
@@ -71,11 +75,8 @@ function select_status(clause)
 	t_hostdowntime = { }
 	t_servicedowntime = { }
 
-	--dofile ("/usr/local/itvision_monitor/var/status_gesti.lua")
-	--dofile ("/usr/local/itvision_monitor/var/db_monitor.lua")
-	dofile ("/usr/local/monitor/var/db_monitor.lua")
-	--dofile ("db_monitor")
-	--require "db_monitor"
+	dofile ("/usr/local/itvision_monitor/var/db_monitor.lua")
+	--dofile ("/usr/local/monitor/var/db_monitor.lua")
 
 	t_status = {
 		info = t_info, 

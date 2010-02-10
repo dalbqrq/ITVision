@@ -11,20 +11,22 @@ end
 
 
 function select_applications(clause)
-	-- clause object (is a list) must be used to select status entries
+	-- clause object must be used to select status entries
 
 	if type(clause) == "string" then
-		clause = nil
+		select_clause = nil
+	else
+		select_clause = clause
 	end
 	t_app = { }
 	t_napp = { }
-        
+
 	dofile ("/usr/local/itvision/model/db/db_applications.lua")
-                                        
-	if clause then
+
+	if select_clause then
 		local found = false
 		for i, v in ipairs(t_app) do
-			for j, w in ipairs(clause) do
+			for j, w in ipairs(select_clause) do
 				if v.name == w then
 					found = true
 					table.insert(t_napp,v)

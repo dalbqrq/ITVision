@@ -14,12 +14,39 @@ function table.uniq(table_)
 end
 
 
-function table.find_entry(table_, entry_)
+-- Used in applic_list.lp !!!
+function sort_hosts(a, b)
+	if (a[1] < b[1]) then
+		return true
+	else
+		return false
+	end
+end
+
+
+-- Used in applic_list.lp !!!
+function sort_services(a, b)
+	if (a[1] < b[1]) then
+		return true
+	elseif (a[1] == b[1]) and (a[2] < b[2]) then
+		return true
+	else
+		return false
+	end
+end
+
+
+function table.find_entry(table_, entry_, field)
 	for i, v in ipairs(table_) do
-		if v == entry_ then return i end
+		if field then
+			if v[field] == entry_ then return i end
+		else
+			if v == entry_ then return i end
+		end
 	end
 	return 0
 end
+
 
 
 function os.splittime(time_)

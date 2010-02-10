@@ -44,23 +44,15 @@ html_header_refresh = [[
 
 html_menui = [[
 
-<body>
+<body  LANG="pt-BR" DIR="LTR">
 <a name="top" id="top"></a>
 <center>
 		<div id="header">
-			<!--
-			<a href=http://www.proderj.rj.gov.br>
-			<img src="images/logo_proderj2.jpg" alt="Proderj" border=0 class="logoverto" />
-			</a>
-			-->
-
 			<img src="images/logopurple_only.png" alt="Realistic IT Vision" height=34 border=0 class="logo" />
 
-			<!--
 			<a href=http://www.proderj.rj.gov.br>
 			<img src="images/logo_proderj1.jpg" alt="Proderj" height=34 border=0 class="logoproderj" />
 			</a>
-			-->
 
 			<a href=http://www.verto.com.br>
 			<img src="images/verto_1.jpg" alt="Verto" height=34 border=0 class="logoverto" />
@@ -72,51 +64,13 @@ html_menui = [[
 		<div id="menuh-container"> 
 			<div id="menug">
 			<div id="menuh">
-
-			<!-- MENU ORIGINAL ------------------------------------------
-			<ul>
-				<li	><a href="system_resume.lp" >m&eacute;tricas</a>
-			</ul>
-			<ul>
-				<li	><a href="applic_resume.lp" >aplica&ccedil;&otilde;es</a>
-			</ul>
-			<ul>
-				<li	><a href="report_show.lp?applic=_TODAS_&date1=01/11/2008&date2=01/12/2008&tipo=resumo&sep=;" >atividade</a>
-
-			</ul>
-			<ul>
-				<li	><a href="report.lp" >eventos</a>
-			</ul>
-			<ul>
-				<li	><a href="admin_auth.lp" >admin</a>
-			</ul>
-			<ul>
-				<li	><a href="help.lp" >ajuda</a>
-			</ul>
-			<ul>
-				<li	><a href="login.lp?mess=LOGOUT" >logout</a>
-			</ul>
-			-->
-
-			<!-- MENU COM SUB-MENUS
-			<ul>
-				<li	><a href="#" >relat&oacute;rios</a>
-				<ul>
-					<li><a href="#">eventos</a></li>
-					<li><a href="#">uptime</a></li>
-				</ul>
-			</ul>
-				<li	><a href="#">m&eacute;tricas</a>
-			---------------------------------------------------- -->
-		
 			<ul>
 				<li	><a href="applic_resume.lp?period=month" >monitora&ccedil;&atilde;o</a>
 				<ul>
 					<li	><a href="applic_resume.lp?period=month" >aplica&ccedil;&otilde;es</a>
 					<li	><a href="hosts.lp" >hardwares</a>
 					<li	><a href="services.lp" >softwares</a>
-					<li	><a href="report.lp" >eventos</a>
-					<li	><a href="#" >alertas</a>
+					<li	><a href="report.lp" >eventos de alerta</a>
 				</ul>
 			</ul>
 
@@ -124,31 +78,33 @@ html_menui = [[
 				<li	><a href="system_resume.lp?period=month" >m&eacute;tricas</a>
 				<ul>
 					<li	><a href="system_resume.lp?period=month" >globais</a>
+<!--
 					<li	><a href="report_dispo.lp?applic=_TODAS_&period=month" >disponibilidade</a>
 					<li	><a href="report_efici.lp?period=month" >efici&ecirc;ncia</a>
-					<li	><a href="#" >escalabilidade</a>
-					<li	><a href="#" >custo</a>
-					<li	><a href="#" >capacidade</a>
-					<li	><a href="#" >n&iacute;vel de servi&ccedil;o</a>
-					<li	><a href="#" >seguran&ccedil;a</a>
-					<li	><a href="#" >continuidade</a>
-					<li	><a href="#" >integridade</a>
-					<li	><a href="#" >gerenciabilidade</a>
+					<li	><a href="working.lp" >escalabilidade</a>
+					<li	><a href="working.lp" >custo</a>
+					<li	><a href="working.lp" >capacidade</a>
+					<li	><a href="working.lp" >n&iacute;vel de servi&ccedil;o</a>
+					<li	><a href="working.lp" >seguran&ccedil;a</a>
+					<li	><a href="working.lp" >continuidade</a>
+					<li	><a href="working.lp" >integridade</a>
+					<li	><a href="working.lp" >gerenciabilidade</a>
+-->
 				</ul>
 			</ul>
 		
 			<ul>
-				<li	><a href="#" >gerenciamento</a>
+				<li	><a href="working.lp" >gerenciamento</a>
 				<ul>
-					<li	><a href="#" >service desk</a>
+					<li	><a href="working.lp" >service desk</a>
 					<ul>
-						<li	><a href="#" >incidentes</a>
-						<li	><a href="#" >mudan&ccedil;a</a>
-						<li	><a href="#" >problema</a>
+						<li	><a href="working.lp" >incidentes</a>
+						<li	><a href="working.lp" >mudan&ccedil;a</a>
+						<li	><a href="working.lp" >problema</a>
 					</ul>
-					<li	><a href="#" >invent&aacute;rio/CMDB</a>
-					<li	><a href="#" >seguran&ccedil;a</a>
-					<li	><a href="#" >desempenho</a>
+					<li	><a href="working.lp" >invent&aacute;rio/CMDB</a>
+					<li	><a href="working.lp" >seguran&ccedil;a</a>
+					<li	><a href="working.lp" >desempenho</a>
 				</ul>
 			</ul>
 
@@ -177,7 +133,7 @@ html_body = [[
 
 html_footer = [[
 	<div id="footer">
-		Sponsored by <a href="http://www.verto.com.br">Verto</a> <!-- &AMP; <A HREF="http://www.atmax.com.br">Atmax</a> --> - version 0.2.6
+		Sponsored by <a href="http://www.verto.com.br">Verto</a> <!-- &AMP; <A HREF="http://www.atmax.com.br">Atmax</a> --> - version 0.2.8
 			
 	</div>
 </center>
