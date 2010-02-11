@@ -1,4 +1,4 @@
-#!/usr/bin/env cgilua.cgi
+#!/usr/bin/env /usr/local/bin/cgilua.cgi
 
 <?lua
 require "v_monitor_inc"
@@ -50,33 +50,11 @@ for i, h in ipairs(hosts) do
 	fh = table.find_entry(status.hoststatus, h, 'host_name')
 	s = status.hoststatus[fh]
 	if fh > 0 then
-
-		local status = s.current_state
-		local state = 'NORMAL'
-
-        	if status == 0 then
-                	state = 'NORMAL'
-        	elseif status == 1 then
-                	state = 'CRITICO'
-        	elseif status == 2 then
-                	state = 'ANORMAL'
-        	elseif status == 3 then
-                	state = 'PENDENTE'
-        	end
-
-		local ht = { ic_get_label(1,s.host_name,3), s.host_name, color[h_alert[s.current_state+1].color], state }
+		local ht = { ic_get_label(1,s.host_name,3), s.host_name, color[h_alert[s.current_state+1].color], 
+		h_alert[s.current_state+1].name }
 		table.insert(hosts_tab, ht)
 	end
 end
-
---[[
-	print("\t\t\t<TR>")
-	print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><a href=ics.lp?ickey="..s.host_name..">" 
-			.. ic_get_label(1,s.host_name,3) .. "</a></TD>")
-	print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"" .. color[h_alert[s.current_state+1].color] .. "\">"
-			..state .. "</TD>")
-	print("\t\t\t</TR>")
-]]--
 
 table.sort(hosts_tab, sort_hosts)
 for i,h in pairs(hosts_tab) do
@@ -99,7 +77,7 @@ print("\t\t\t</div>")
 print("\t\t<TABLE width=700px;>")
 print("\t\t\t<TR>")
 print("\t\t\t\t<TH width=120px;>software</TH>")
-print("\t\t\t\t<TH width=120px;>hardware onde roda</TH>")
+print("\t\t\t\t<TH width=120px;>hardware</TH>")
 print("\t\t\t\t<TH width=60px;>status</TH>")
 print("\t\t\t</TR>")
 
@@ -109,39 +87,14 @@ table.sort(app.services, sort_services)
 for j, w in ipairs(app.services) do
 	for i, s in ipairs(status.servicestatus) do
 		if w[1] == s.service_description and w[2] == s.host_name then
-			local status = s.current_state
-			local state = 'NORMAL'
-	
-        		if status == 0 then
-                		state = 'NORMAL'
-        		elseif status == 1 then
-                		state = 'ANORMAL'
-        		elseif status == 2 then
-                		state = 'CRITICO'
-        		elseif status == 3 then
-                		state = 'PENDENTE'
-        		elseif status == 4 then
-                		state = 'PENDENTE'
-        		end
-
 			st = { ic_get_label(1,s.service_description,3), ic_get_label(1,s.host_name,3), 
-				s.service_description, s.host_name, color[s_alert[s.current_state+1].color], state }
+				s.service_description, s.host_name, color[s_alert[s.current_state+1].color], 
+				s_alert[s.current_state+1].name }
 			table.insert(services_tab, st)
-
 			break
 		end
 	end
 end
---[[
-	print("\t\t\t<TR>")
-	print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><a href=ics.lp?ickey="..s.service_description..">" 
-			.. ic_get_label(1,s.service_description,3) .. "</a></TD>")
-	print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><a href=ics.lp?ickey="..s.host_name..">" 
-			.. ic_get_label(1,s.host_name,3) .. "</a></TD>")
-	print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"" .. color[s_alert[s.current_state+1].color]  
-			.."\" TEXT=\"FFFFFF\" >" ..state .. "</TD>")
-	print("\t\t\t</TR>")
-]]--
 
 
 table.sort(services_tab, sort_services)
@@ -153,6 +106,15 @@ for i, s in ipairs(services_tab) do
 	print("\t\t\t</TR>")
 end
 
+
+table.sort(services_tab, sort_services)
+for i, s in ipairs(services_tab) do
+	print("\t\t\t<TR>")
+	print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><a href=ics.lp?ickey="..s[3]..">" .. s[1] .. "</a></TD>")
+	print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><a href=ics.lp?ickey="..s[4]..">" .. s[2] .. "</a></TD>")
+	print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"" .. s[5] .."\" TEXT=\"FFFFFF\" >" .. s[6] .. "</TD>")
+	print("\t\t\t</TR>")
+end
 
 
 print("\t\t</TABLE>")

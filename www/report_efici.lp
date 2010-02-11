@@ -1,4 +1,4 @@
-#!/usr/bin/env cgilua.cgi
+#!/usr/bin/env /usr/local/bin/cgilua.cgi
 
 <?lua
 require 'v_auth'
@@ -57,12 +57,12 @@ end
 	print("\t\t\t</div>")
 	print("\t\t\t</div>")
 	print("\t\t\t<p>")
-	print("\t\t<TABLE width=600px;>")
+	print("\t\t<TABLE width=800px;>")
 	print("\t\t\t<TR>")
 	print("\t\t\t\t<TH width=120px;>aplica&ccedil;&atilde;o</TH>")
 	print("\t\t\t\t<TH width=120px;>m&aacute;ximo</TH>")
 	print("\t\t\t\t<TH width=120px;>m&eacute;dia</TH>")
-	--print("\t\t\t\t<TH width=120px;>contador</TH>")
+	print("\t\t\t\t<TH width=120px;>contador</TH>")
 	print("\t\t\t</TR>")
 
 	e = read_applications_eficiency()
@@ -75,7 +75,7 @@ end
 
 		print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"#f2f2f2\">"..string.format('%.3f',l[n])  .." ms </TD>")
 		print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"#f2f2f2\">"..string.format('%.3f',l[n+5]).." ms </TD>")
-	--	print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"#f2f2f2\">"..l[n+9].." </TD>")
+		print("\t\t\t\t<TD ALIGN=\"CENTER\" BGCOLOR=\"#f2f2f2\">"..l[n+9].." </TD>")
 
 		print("\t\t\t</TR>")
 	end

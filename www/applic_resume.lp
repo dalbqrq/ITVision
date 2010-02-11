@@ -1,4 +1,4 @@
-#!/usr/bin/env cgilua.cgi
+#!/usr/bin/env /usr/local/bin/cgilua.cgi
 
 <?lua
 require "v_monitor"
@@ -51,6 +51,7 @@ if n_rows < 2 then n_rows = 2 end
 
 print(html_header)
 print(html_header_refresh)
+local u = get_user(auth)
 print(do_html_menui(u.name))
 print(html_body)
 

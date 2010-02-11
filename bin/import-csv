@@ -39,7 +39,7 @@ if [ "$ans" == "y" ]; then
 	done
 	mv $OBJDIR/history/*.cfg $OBJDIR
 	#invoke-rc.d nagios restart
-	service itvision_monitor restart
+	/etc/init.d/itvision_monitor restart
 else
 	echo "Re-generate csv files and repeat the operation!"
 fi

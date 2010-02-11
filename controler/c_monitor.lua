@@ -2,45 +2,15 @@ require "m_applications"
 require "m_monitor"
 require "m_io_util"
 require "m_persistence_table"
---dofile("/usr/local/itvision/model/m_monitor.lua")
-
---[[
-color = {
-	blue =   { name = "blue",	rgb="#0066ff" },	-- blue color used by peding hosts and services
-	green =  { name = "green",	rgb="#33ff00" },	-- green color used by up hosts and ok services
-	yellow = { name = "yellow",	rgb="#f2f200" },	-- yellow color used by unreachable hosts and unknown services
-	orange = { name = "orange",	rgb="#ff9900" },	-- orange color used by warning services
-	red =    { name = "red",	rgb="#d90000" },	-- red color used by down hosts and critical services
-	gray =   { name = "gray",	rgb="#333333" }		-- gray color used by all non problem status
-}
-
-host_alert = {   
-	{ name= "up", 			status = HOST_UP,		num = 0, color = color.green.name },
-	{ name= "down", 		status = HOST_DOWN,		num = 0, color = color.red.name },
-	{ name= "unreachable", 	status = HOST_UNRRACHABLE,	num = 0, color = color.yellow.name },
-	{ name= "pending",	 	status = 0,			num = 0, color = color.blue.name }
-}
-
-service_alert = {
-	{ name= "ok", 			status = STATE_OK,		num = 0, color = color.green.name },
-	{ name= "warning", 		status = STATE_WARNING,		num = 0, color = color.orange.name },
-	{ name= "critial", 		status = STATE_CRITICAL,	num = 0, color = color.red.name },
-	{ name= "unknown", 		status = STATE_UNKNOWN,		num = 0, color = color.yellow.name },
-	{ name= "pending",		status = 0,			num = 0, color = color.blue.name }
-}
-
-
-]]--
 
 color = {
 	blue =   "0066ff",	-- blue color used by peding hosts and services
-	--green =  "33ff00",	-- green color used by up hosts and ok services
 	green =  "00f200",	-- green color used by up hosts and ok services
-	--green =  "00cc00",	-- green color used by up hosts and ok services
 	yellow = "f2f200",	-- yellow color used by unreachable hosts and unknown services
-	orange = "ff9900",	-- orange color used by warning services
+	orange = "ff6600",	-- orange color used by warning services
 	red =    "d90000",	-- red color used by down hosts and critical services
-	gray =   "333333"	-- gray color used by all non problem status
+	gray =   "999999",	-- gray color used by all non problem status
+	purple = "9900CC",	-- unused
 }
 
 function get_status()
@@ -58,25 +28,28 @@ function get_status_resume()
 	status = select_status("all")
 
 	host_alert = {   
-		{ name= "up", 			status = HOST_UP,			num = 0, color = "green" },
-		{ name= "down", 		status = HOST_DOWN,			num = 0, color = "red" },
-		{ name= "unreachable",  status = HOST_UNREACHABLE,	num = 0, color = "yellow" },
-		{ name= "pending",	 	status = 0,					num = 0, color = "blue" }
+		{ name= "NORMAL",	status = HOST_UP,		num = 0, color = "green" },
+		{ name= "CRITICO", 	status = HOST_DOWN,		num = 0, color = "red" },
+		{ name= "DESCONHECIDO",	status = HOST_UNREACHABLE,	num = 0, color = "gray" },
+		{ name= "PENDENTE", 	status = 0,			num = 0, color = "blue" },
+		{ name= "DESABILITADO",	status = HOST_DISABLE,		num = 0, color = "orange" }
 	}
 
 	service_alert = {
-		{ name= "ok", 			status = STATE_OK,			num = 0, color = "green" },
-		{ name= "warning", 		status = STATE_WARNING,		num = 0, color = "orange" },
-		{ name= "critial", 		status = STATE_CRITICAL,	num = 0, color = "red" },
-		{ name= "unknown", 		status = STATE_UNKNOWN,		num = 0, color = "yellow" },
-		{ name= "pending",		status = 0,					num = 0, color = "blue" }
+		{ name= "NORMAL",	status = STATE_OK,		num = 0, color = "green" },
+		{ name= "ANORMAL", 	status = STATE_WARNING,		num = 0, color = "yellow" },
+		{ name= "CRITICO", 	status = STATE_CRITICAL,	num = 0, color = "red" },
+		{ name= "DESCONHECIDO",	status = STATE_UNKNOWN,		num = 0, color = "gray" },
+		{ name= "PENDENTE",	status = 0,			num = 0, color = "blue" },
+		{ name= "DESABILITADO",	status = STATE_DISABLE,		num = 0, color = "orange" }
 	}
 
 	applic_alert = {   
-		{ name= "up", 		status = APPLIC_UP,			color = "green" },
-		{ name= "down", 	status = APPLIC_DOWN,		color = "red" },
-		{ name= "warning",  status = APPLIC_WARNING,	color = "yellow" },
-		{ name= "pending",	status = APPLIC_PENDING,	color = "blue" }
+		{ name= "NORMAL",	status = APPLIC_UP,		color = "green" },
+		{ name= "CRITICO", 	status = APPLIC_DOWN,		color = "red" },
+		{ name= "ANORMAL",	status = APPLIC_WARNING,	color = "yellow" },
+		{ name= "PENDENTE",	status = APPLIC_PENDING,	color = "blue" },
+		{ name= "DESABILITADO",	status = APPLIC_DISABLE,	color = "orange" }
 	}
 
 	if status == nil then
@@ -87,7 +60,7 @@ function get_status_resume()
 			if v.has_been_checked == 1 then
 				host_alert[v.current_state+1].num = host_alert[v.current_state+1].num + 1
 			else
-				host_alert[4].num = host_alert[4].num + 1			-- pending hosts
+				host_alert[4].num = host_alert[4].num + 1	-- pending hosts
 			end
 			total_hosts = total_hosts + 1
 		end
@@ -133,18 +106,16 @@ function get_applications_resume(apls)
 		for j, ap_h in ipairs(ap.hosts) do
 			for l, z in ipairs(status.hoststatus) do
 				if ( z.host_name == ap_h ) then
-					-- ------------------
 					host_status = z.current_state
-					--if app_status == APPLIC_UP or app_status == APPLIC_PENDING or app_status == APPLIC_WARNING then
-						if host_status == HOST_DOWN or host_status == HOST_UNREACHEBLE then
-							app_status = APPLIC_DOWN
-							table.insert(hosts_list, {z.host_name, z.plugin_output} )
-							-- [[ DEBUG ]] print("hosts_list: " .. ap.name..":"..z.host_name)
-						elseif host_status == HOST_PENDING then
-							app_status = APPLIC_PENDING
-						end
-					--end
-					-- ------------------
+
+					if host_status == HOST_DOWN or host_status == HOST_UNREACHABLE then
+						app_status = APPLIC_DOWN
+						table.insert(hosts_list, {z.host_name, z.plugin_output} )
+					elseif host_status == HOST_PENDING and app_status ~= APPLIC_DOWN then
+						app_status = APPLIC_PENDING
+					elseif host_status == HOST_DISABLE and app_status ~= APPLIC_DOWN then
+						app_status = APPLIC_DISABLE
+					end
 				end
 			end
 		end
@@ -153,28 +124,24 @@ function get_applications_resume(apls)
 		for k, ap_s in ipairs(ap.services) do
 			for l, z in ipairs(status.servicestatus) do
 				if (( z.host_name == ap_s[2] ) and ( z.service_description == ap_s[1] )) then
-					-- ------------------
 					service_status = z.current_state
-					--if app_status == APPLIC_UP or app_status == APPLIC_WARNING or app_status == APPLIC_PENDING then
-						if service_status == STATE_CRITICAL or service_status == STATE_UNKOWN then
-							app_status = APPLIC_DOWN
-							table.insert(services_list, {z.host_name, z.service_description, z.plugin_output })
-							-- [[ DEBUG ]] print("services_list: "..ap.name..":"..z.host_name.." , "..z.service_description)
-						elseif service_status == STATE_PENDING then
-							app_status = APPLIC_PENDING
-							table.insert(services_list, {z.host_name, z.service_description, z.plugin_output })
-						elseif service_status == STATE_WARNING then
-							app_status = APPLIC_WARNING
-							table.insert(services_list, {z.host_name, z.service_description, z.plugin_output })
-						end
-					--end
-					-- ------------------
+
+					if service_status == STATE_CRITICAL or service_status == STATE_UNKNOWN then
+						app_status = APPLIC_DOWN
+						table.insert(services_list, {z.host_name, z.service_description, z.plugin_output })
+					elseif service_status == STATE_PENDING and app_status ~= APPLIC_DOWN then
+						app_status = APPLIC_PENDING
+					elseif service_status == STATE_WARNING and app_status ~= APPLIC_DOWN then
+						app_status = APPLIC_WARNING
+					elseif service_status == STATE_DISABLE and app_status ~= APPLIC_DOWN then
+						app_status = APPLIC_DISABLE
+					end
 				end
 			end
 		end
 
 		app_resume = { name = ap.name, status = app_status, 
-					hosts_down = hosts_list, services_down = services_list }
+				hosts_down = hosts_list, services_down = services_list }
 		table.insert(resume, app_resume)
 	end
 

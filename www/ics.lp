@@ -1,7 +1,8 @@
-#!/usr/bin/env cgilua.cgi
+#!/usr/bin/env /usr/local/bin/cgilua.cgi
 
 <?lua
 require "v_monitor_inc"
+require "v_monitor"
 require "v_gviz"
 require "c_monitor"
 require "m_dbs"
@@ -9,20 +10,41 @@ require "db_ics_profile"
 require "v_monitor_html"
 require "v_auth"
 require "m_users"
+require "m_disableds"
+require "m_import_csv"
+
 
 local auth = checkauth_redirect()
 local u = get_user(auth)
 
+ickey  = cgilua.QUERY.ickey
+enable = cgilua.QUERY.enable
 
-ickey = cgilua.QUERY.ickey
+-- Change "active_checks_enabled" of ickey on monitor cfg files
+if enable and u.name == "admin" then
+	if enable == "0" then
+		insert_disableds(ickey)
+	elseif enable == "1" then
+		delete_disableds(ickey)
+	end
+
+	config = get_import_config()
+	make_cfg_file()
+	s = os.capture("mv -f "..config.object_dir.."/*.cfg "..config.object_dir.."/..")
+	s = os.capture("/etc/init.d/itvision_monitor restart")
+	s = os.capture("sleep 2")
+	local url = '../ics.lp'
+	local args = { ickey = ickey }
+	cgilua.redirect(url, args)
+end
 
 local found
 local ic = ic_get_table(1, ickey)
 local t_hosts, t_servs, h_alert, s_alert, status
 local state_color, state_name, state_plugin
-t_hosts, t_servs, h_alert, s_alert, status = get_status_resume()
+local t_hosts, t_servs, h_alert, s_alert, status = get_status_resume()
 	
--- procura a chave me hosts
+-- procura a chave em hosts
 for i, s in ipairs(status.hoststatus) do
 	if s.host_name == ic[1] then
 		found = true
@@ -30,6 +52,7 @@ for i, s in ipairs(status.hoststatus) do
 		state_name   = h_alert[s.current_state+1].name
 		state_cmd    = s.check_command
 		state_plugin = s.plugin_output
+		state_enable = s.active_checks_enabled
 	end
 end
 
@@ -41,15 +64,22 @@ if not found then
 			state_name   = s_alert[s.current_state+1].name
 			state_cmd    = s.check_command
 			state_plugin = s.plugin_output
+			state_enable = s.active_checks_enabled
 		end
 	end
 end
 
+if state_enable == 0 then
+	state_color = "#FF6600"
+end
+
 print(html_header)
 print(do_html_menui(u.name))
+print(html_confirm_window)
 print(html_body)
-print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>".. ic[3] .."</h1>")
 
+
+print("\n\t\t\t\t<h1><a name=\"intro\" id=\"intro\"></a>".. ic[3] .."</h1>")
 print("\t\t\t</div>")
 print("\t\t\t<div id=\"content\">")
 -- -------------------------------------------------
@@ -156,8 +186,13 @@ print("\t\t\t<div id=\"content\">")
 		print("\t\t\t</TR>")
 
 	print("\t\t</TABLE>")
-	print("\t<br>")
+
+	if u.name == "admin" then
+		print(www_enable_ic(ickey, state_enable))
+	end
+--	print("\t<br>")
 -- -------------------------------------------------
+
 
 -- -------------------------------------------------
 print("\t\t\t</div>")
@@ -210,7 +245,6 @@ print("\n\t<h2><a name=\"intro\" id=\"intro\"></a>informa&ccedil;&otilde;es extr
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		print("\t\t\t</TR>")
 
---[[
 		print("\t\t\t<TR>"); 
 		i = 25 --  extra1
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
@@ -237,6 +271,7 @@ print("\n\t<h2><a name=\"intro\" id=\"intro\"></a>informa&ccedil;&otilde;es extr
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		print("\t\t\t</TR>")
+--[[
 ]]--
 
 

@@ -51,7 +51,6 @@ function www_hosts(selfunc)
 	t_hosts, t_servs, status = get_status_resume()
 	
 	print(html_content_type)
-
 	print(html_header)
 	
 	-- HOSTS
@@ -142,6 +141,26 @@ function www_period(ref, params, period)
 		res = res .. ' |'
 	end
 	res = res .. "</h6>"
+
+	return res
+end
+
+function www_enable_ic(ic, enable)
+
+	if enable == 1 then
+		question = "Confirma a desabilita&ccedil;&atilde;o do IC?"
+		label = "desabilitar"
+		enable = 0
+	else
+		question = "Confirma a habilita&ccedil;&atilde;o do IC?"
+		label = "habilitar"
+		enable = 1
+	end
+	local url = url or 'ics.lp?ickey='..ickey..'&enable='..enable
+
+	res = "<form>"
+	res = res .. "<input type=\"button\" onclick=\"confirmation('"..question.."','"..url.."')\" value=\""..label.."\">"
+	res = res .. "</form>"
 
 	return res
 end

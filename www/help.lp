@@ -1,4 +1,4 @@
-#!/usr/bin/env cgilua.cgi
+#!/usr/bin/env /usr/local/bin/cgilua.cgi
 
 <?lua
 require "v_monitor_inc"
@@ -10,12 +10,13 @@ require "m_users"
 local auth = checkauth_redirect()
 local u = get_user(auth)
 
-
 print(html_header)
 print(do_html_menui(u.name))
 print(html_body)
 print("\n<h1><a name=\"intro\" id=\"intro\"></a>introdu&ccedil;&atilde;o</h1></div>")
 ?>
+
+
 ITVision - [monitor] &eacute; um sistema de monitora&ccedil;&atilde;o e emiss&atilde;o de 
 alertas para infra-estruturas computacionais compostas por equipamentos de rede, servidores 
 e servi&ccedil;os. Sua monitora&ccedil;&atilde;o  &eacute; feita atrav&eacute;s de componentes
@@ -29,26 +30,13 @@ a monitora&ccedil;&atilde;o seja feita com base no funcionamento de um grupo de 
 servi&ccedil;os que comp&otilde;e
 
 
-
 <?lua
 print("<div id=\"mainbar\">")
 print("\n<h1><a name=\"intro\" id=\"intro\"></a>documenta&ccedil;&atilde;o</h1></div>")
 ?>
-Para ter acesso a documenta&ccedil;&atilde;o, baixe o arquivo pdf neste <a href="manual/Manual_ITVision_Geral.pdf">link</a>.
+Para ter acesso a documenta&ccedil;&atilde;o, baixe o arquivo pdf neste <a href="manual/Manual_ITVision.0.2.8-1.pdf">link</a>.
 <br>
 <br>
-
-<?lua
---print("<div id=\"mainbar\">")
---print("\n<h1><a name=\"intro\" id=\"intro\"></a>navera&ccedil;&atilde;o</h1></div>")
-?>
-<!--
-nonon non o no no non nonono nonnnoo non 
-nonon non o no no non nonono nonnnoo non 
-nonon non o no no non nonono nonnnoo non 
-nonon non o no no non nonono nonnnoo non 
-nonon non o no no non nonono nonnnoo non 
--->
 
 
 <?lua

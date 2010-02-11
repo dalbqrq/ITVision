@@ -1,4 +1,4 @@
-#!/usr/bin/env cgilua.cgi
+#!/usr/bin/env /usr/local/bin/cgilua.cgi
 
 <?lua
 require "m_io_util"
@@ -6,6 +6,7 @@ require "v_monitor_inc"
 require "v_monitor_html"
 require "v_auth"
 require "m_users"
+require "c_util"
 
 local auth = checkauth_redirect()
 local u = get_user(auth)
@@ -34,13 +35,26 @@ if ( cmd ) then
 	if ( cmd == "reboot" ) then
 		os.execute("reboot")
 		print("O sistema ir&aacute reinicializa imediatamente...")
+
 	elseif ( cmd == "shutdown" ) then
 		os.execute("poweroff")
 		print("O sistema ir&aacute se desligar imediatamente...")
+
+	elseif ( cmd == "reinit" ) then
+		-- Nagios restart requires sudo password!
+		-- Using my own script to start (but the init.d to stop!)
+		s = os.capture("/etc/init.d/itvision_monitor restart")
+		print("<p>")
+		--print(s)
+		--print("check sudoers!")
+		print("<p>")
+		print("O sistema ir&aacute reiniciar o sub-sistema monitor...")
+
 	elseif ( cmd == "backup" ) then
 		os.execute(bkp_filename)
 		--cgilua.redirect('../backup_download.lp')
 		print("O backup do sistema foi realizado em "..date_time)
+
 	end
 end
 
