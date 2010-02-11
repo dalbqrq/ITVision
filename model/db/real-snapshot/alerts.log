@@ -1,0 +1,974 @@
+2009-11-04 07:15:01|1257326101|[Infra] NC|WARNING||IOS+IMPRENSA OFICIAL+PING WARNING - Packet loss = 37%, RTA = 2.02 ms
+2009-11-04 07:16:02|1257326162|[Infra] NC|UP||
+2009-11-04 07:18:01|1257326281|[Infra] NC|WARNING||IOS+IMPRENSA OFICIAL+PING WARNING - Packet loss = 37%, RTA = 1.97 ms
+2009-11-04 07:19:01|1257326341|[Infra] NC|UP||
+2009-11-04 08:05:01|1257329101|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|IOS+QUISSAMÃ+PING CRITICAL - Packet loss = 100%
+2009-11-04 09:01:01|1257332461|[Infra] SEEDUC|DOWN|SWCM2501+(Host Check Timed Out)|
+2009-11-04 09:02:01|1257332521|[Infra] SEEDUC|UP||
+2009-11-05 02:23:01|1257394981|SEEDUC|DOWN|OI_WINSRV+(Host Check Timed Out)|
+2009-11-05 03:32:01|1257399121|SEEDUC|UP||
+2009-11-05 09:23:01|1257420181|Internet|DOWN||HTTP+registro.br+CRITICAL - Socket timeout after 10 seconds/HTTP+yahoo.com+CRITICAL - Socket timeout after 10 seconds
+2009-11-05 09:24:02|1257420242|[Infra] Internet|DOWN|ROT_OI_LINK1+(Host Check Timed Out)|
+2009-11-05 09:25:01|1257420301|[Infra] Internet|UP||
+2009-11-05 09:32:01|1257420721|Internet|UP||
+2009-12-01 20:33:02|1259706782|DNS Externo|UP||
+2009-12-01 20:33:02|1259706782|DNS Interno|UP||
+2009-12-01 20:33:02|1259706782|[Infra] Datacenter|UP||
+2009-12-01 20:33:02|1259706782|[Infra] NC|UP||
+2009-12-01 20:33:02|1259706782|[Infra] Palacio|UP||
+2009-12-01 20:35:01|1259706901|[Infra] Servidores Windows|DOWN|VERONDICA+CRITICAL - Host Unreachable (10.10.1.100)|
+2009-12-01 20:59:01|1259708341|[Infra] NC|DOWN|FESP+(Host Check Timed Out)|IOS+FESP+PING CRITICAL - Packet loss = 100%
+2009-12-01 21:28:02|1259710082|[Infra] NC|UP||
+2009-12-01 22:11:01|1259712661|DNS Interno|DOWN||DNS+MELRO+CRITICAL - Plugin timed out while executing system call
+2009-12-01 22:12:02|1259712722|DNS Interno|UP||
+2009-12-02 04:07:01|1259734021|[Infra] NC|DOWN||IOS+QUISSAMÃ+PING CRITICAL - Packet loss = 100%
+2009-12-02 04:08:01|1259734081|[Infra] NC|UP||
+2009-12-02 07:12:01|1259745121|[Infra] NC|WARNING||IOS+IMPRENSA OFICIAL+PING WARNING - Packet loss = 44%, RTA = 3.13 ms
+2009-12-02 07:13:02|1259745182|[Infra] NC|UP||
+2009-12-02 07:35:01|1259746501|[Infra] NC|WARNING||IOS+IMPRENSA OFICIAL+PING WARNING - Packet loss = 37%, RTA = 1.76 ms
+2009-12-02 07:36:01|1259746561|[Infra] NC|UP||
+2009-12-02 07:50:01|1259747401|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 511.77 ms
+2009-12-02 07:52:01|1259747521|[Infra] NC|UP||
+2009-12-02 08:32:01|1259749921|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 676.03 ms
+2009-12-02 08:33:01|1259749981|[Infra] NC|UP||
+2009-12-02 08:37:01|1259750221|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 505.61 ms
+2009-12-02 08:38:02|1259750282|[Infra] NC|UP||
+2009-12-02 09:14:01|1259752441|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 16%, RTA = 613.05 ms
+2009-12-02 09:16:01|1259752561|[Infra] NC|UP||
+2009-12-02 09:28:01|1259753281|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 37%, RTA = 455.71 ms
+2009-12-02 09:29:01|1259753341|[Infra] NC|UP||
+2009-12-02 09:33:01|1259753581|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 561.67 ms
+2009-12-02 09:34:01|1259753641|[Infra] NC|UP||
+2009-12-02 10:34:01|1259757241|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 504.68 ms
+2009-12-02 10:35:01|1259757301|[Infra] NC|UP||
+2009-12-02 12:54:01|1259765641|[Infra] NC|WARNING||IOS+ROT_SERPRO2+PING WARNING - Packet loss = 37%, RTA = 38.63 ms
+2009-12-02 12:55:01|1259765701|[Infra] NC|UP||
+2009-12-02 17:44:02|1259783042|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 535.04 ms
+2009-12-02 17:45:01|1259783101|[Infra] NC|UP||
+2009-12-02 17:49:01|1259783341|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 520.77 ms
+2009-12-02 17:50:01|1259783401|[Infra] NC|UP||
+2009-12-02 17:52:01|1259783521|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 625.18 ms
+2009-12-02 17:53:01|1259783581|[Infra] NC|UP||
+2009-12-02 19:01:01|1259787661|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 16%, RTA = 581.24 ms
+2009-12-02 19:02:01|1259787721|[Infra] NC|UP||
+2009-12-02 19:18:01|1259788681|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 547.79 ms
+2009-12-02 19:19:01|1259788741|[Infra] NC|UP||
+2009-12-03 03:25:02|1259817902|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|IOS+QUISSAMÃ+PING CRITICAL - Packet loss = 100%
+2009-12-03 04:01:01|1259820061|[Infra] NC|UP||
+2009-12-03 09:01:01|1259838061|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 595.30 ms
+2009-12-03 09:03:01|1259838181|[Infra] NC|UP||
+2009-12-03 09:15:01|1259838901|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 508.45 ms
+2009-12-03 09:16:01|1259838961|[Infra] NC|UP||
+2009-12-03 09:54:02|1259841242|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 525.96 ms
+2009-12-03 09:55:01|1259841301|[Infra] NC|UP||
+2009-12-03 10:15:01|1259842501|[Infra] Servidores Linux|DOWN|ABUTRE+CRITICAL - Host Unreachable (10.12.44.2)|
+2009-12-03 10:37:01|1259843821|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 575.66 ms
+2009-12-03 10:38:02|1259843882|[Infra] NC|UP||
+2009-12-03 10:48:01|1259844481|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 0%, RTA = 641.76 ms
+2009-12-03 10:49:01|1259844541|[Infra] NC|UP||
+2009-12-03 11:03:01|1259845381|[Infra] Servidores Windows|UP||
+2009-12-03 11:15:01|1259846101|[Infra] SEEDUC|DOWN|APCM2601+(Host Check Timed Out)/APCM2801+(Host Check Timed Out)|
+2009-12-03 11:17:01|1259846221|[Infra] SEEDUC|UP||
+2009-12-03 11:23:01|1259846581|[Infra] SEEDUC|DOWN|APCM2601+(Host Check Timed Out)/APCM2801+(Host Check Timed Out)/APCM2902+(Host Check Timed Out)|
+2009-12-03 11:28:01|1259846881|[Infra] SEEDUC|UP||
+2009-12-03 11:35:01|1259847301|Internet|DOWN||HTTP+registro.br+CRITICAL - Socket timeout after 10 seconds
+2009-12-03 11:35:01|1259847301|[Infra] Internet|DOWN|ROT_OI_LINK1+(Host Check Timed Out)|
+2009-12-03 11:38:01|1259847481|Internet|UP||
+2009-12-03 11:39:02|1259847542|[Infra] Servidores Windows|DOWN|Mandarim+(Host Check Timed Out)|
+2009-12-03 11:40:01|1259847601|[Infra] Servidores Windows|UP||
+2009-12-03 11:41:01|1259847661|[Infra] Internet|UP||
+2009-12-03 11:53:02|1259848382|[Infra] Servidores Linux|UP||
+2009-12-03 12:11:01|1259849461|[Infra] NC|WARNING||IOS+FESP+PING WARNING - Packet loss = 16%, RTA = 572.48 ms
+2009-12-03 12:12:01|1259849521|[Infra] NC|UP||
+2009-12-03 12:44:01|1259851441|[Infra] NC|WARNING||IOS+IMPRENSA OFICIAL+PING WARNING - Packet loss = 37%, RTA = 4.39 ms
+2009-12-03 12:45:02|1259851502|[Infra] NC|UP||
+2009-12-03 14:37:02|1259858222|[Infra] Correio|DOWN||HTTP+Guara+CRITICAL - Socket timeout after 10 seconds
+2009-12-03 14:40:02|1259858402|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2009-12-03 15:31:01|1259861461|[Infra] Servidores Windows|UP||
+2009-12-03 15:32:01|1259861521|[Infra] Correio|UP||
+2009-12-03 15:54:02|1259862842|[Infra] Servidores Windows|DOWN|Maritaca+(Host Check Timed Out)/Soldado+(Host Check Timed Out)|
+2009-12-03 15:55:01|1259862901|[Infra] Servidores Windows|UP||
+2009-12-03 18:31:01|1259872261|[Infra] NC|DOWN|CEDERJ MANGUEIRA+(Host Check Timed Out)|
+2009-12-03 19:21:01|1259875261|[Infra] NC|UP||
+2009-12-04 06:36:02|1259915762|Internet|DOWN|google.com+(Host Check Timed Out)/registro.br+(Host Check Timed Out)|HTTP+google.com+CRITICAL - Socket timeout after 10 seconds/HTTP+registro.br+CRITICAL - Socket timeout after 10 seconds
+2009-12-04 06:58:02|1259917082|Correio|DOWN||Servidor SMTP+Load Balance+CRITICAL - Socket timeout after 10 seconds
+2009-12-04 06:58:02|1259917082|[Infra] Correio|DOWN||SMTP+Gralha+CRITICAL - Socket timeout after 10 seconds
+2009-12-04 07:22:01|1259918521|Correio|UP||
+2009-12-04 07:22:01|1259918521|[Infra] Correio|UP||
+2009-12-04 07:35:01|1259919301|Internet|UP||
+2009-12-04 08:07:02|1259921222|Internet|DOWN|google.com+(Host Check Timed Out)/registro.br+(Host Check Timed Out)|HTTP+google.com+CRITICAL - Socket timeout after 10 seconds/HTTP+registro.br+CRITICAL - Socket timeout after 10 seconds
+2009-12-04 08:12:01|1259921521|Internet|UP||
+2009-12-04 08:21:01|1259922061|Internet|DOWN|google.com+(Host Check Timed Out)/registro.br+(Host Check Timed Out)|HTTP+google.com+CRITICAL - Socket timeout after 10 seconds/HTTP+registro.br+CRITICAL - Socket timeout after 10 seconds
+2009-12-04 08:56:02|1259924162|Internet|UP||
+2009-12-04 10:31:02|1259929862|SEEDUC|DOWN|Bigua+(Host Check Timed Out)|
+2009-12-04 10:32:01|1259929921|SEEDUC|UP||
+2009-12-04 13:06:02|1259939162|Web Sites|DOWN||HTTP+POLICIA CIVIL+CRITICAL - Socket timeout after 10 seconds
+2009-12-04 13:08:01|1259939281|Web Sites|UP||
+2009-12-04 13:37:01|1259941021|[Infra] Palacio|DOWN|AP_CAOA+(Host Check Timed Out)/ROT_CAOA+CRITICAL - Time to live exceeded (10.4.23.69)/SW_CAOA+CRITICAL - Time to live exceeded (10.4.23.70)|
+2009-12-04 13:38:01|1259941081|[Infra] Palacio|UP||
+2009-12-04 14:10:02|1259943002|[Infra] Servidores Windows|DOWN|Saira-bkp+(Host Check Timed Out)|
+2009-12-04 14:13:02|1259943182|[Infra] Servidores Windows|UP||
+2009-12-04 17:48:01|1259956081|[Infra] NC|DOWN|FESP+(Host Check Timed Out)|
+2009-12-04 18:42:02|1259959322|[Infra] NC|UP||
+2009-12-06 14:28:01|1260116881|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2009-12-06 23:52:01|1260150721|[Infra] NC|UP||
+2009-12-07 01:35:01|1260156901|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 01:40:02|1260157202|[Infra] Datacenter|UP||
+2009-12-07 01:44:01|1260157441|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 02:08:01|1260158881|[Infra] Datacenter|UP||
+2009-12-07 02:12:02|1260159122|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 02:13:01|1260159181|[Infra] Datacenter|UP||
+2009-12-07 02:16:01|1260159361|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 02:30:01|1260160201|[Infra] Datacenter|UP||
+2009-12-07 02:34:01|1260160441|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 03:35:01|1260164101|[Infra] Datacenter|UP||
+2009-12-07 03:39:02|1260164342|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 03:54:02|1260165242|[Infra] Datacenter|UP||
+2009-12-07 03:58:02|1260165482|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 04:02:01|1260165721|[Infra] Datacenter|UP||
+2009-12-07 04:06:01|1260165961|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 05:03:01|1260169381|[Infra] Datacenter|UP||
+2009-12-07 05:07:01|1260169621|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 05:30:01|1260171001|[Infra] Datacenter|UP||
+2009-12-07 05:34:02|1260171242|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 05:35:01|1260171301|[Infra] Datacenter|UP||
+2009-12-07 05:38:01|1260171481|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 05:54:01|1260172441|[Infra] Datacenter|UP||
+2009-12-07 05:58:02|1260172682|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 06:41:01|1260175261|[Infra] Datacenter|UP||
+2009-12-07 06:49:01|1260175741|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 06:55:02|1260176102|[Infra] Datacenter|UP||
+2009-12-07 06:59:01|1260176341|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 07:00:01|1260176401|[Infra] Datacenter|UP||
+2009-12-07 07:07:01|1260176821|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 07:11:01|1260177061|[Infra] Datacenter|UP||
+2009-12-07 07:14:01|1260177241|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 07:20:01|1260177601|[Infra] Datacenter|UP||
+2009-12-07 07:24:01|1260177841|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 07:34:01|1260178441|[Infra] Datacenter|UP||
+2009-12-07 07:38:01|1260178681|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 07:39:01|1260178741|[Infra] Datacenter|UP||
+2009-12-07 07:43:02|1260178982|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 08:10:01|1260180601|[Infra] Datacenter|UP||
+2009-12-07 08:14:01|1260180841|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 08:17:01|1260181021|[Infra] Datacenter|UP||
+2009-12-07 08:20:01|1260181201|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 08:21:01|1260181261|[Infra] Datacenter|UP||
+2009-12-07 08:30:01|1260181801|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 08:44:01|1260182641|[Infra] Datacenter|UP||
+2009-12-07 08:48:01|1260182881|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 08:49:02|1260182942|[Infra] Datacenter|UP||
+2009-12-07 08:52:01|1260183121|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 08:55:02|1260183302|[Infra] Datacenter|UP||
+2009-12-07 08:59:01|1260183541|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 09:08:01|1260184081|[Infra] Datacenter|UP||
+2009-12-07 09:12:01|1260184321|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 09:52:01|1260186721|[Infra] Datacenter|UP||
+2009-12-07 09:55:01|1260186901|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 09:58:01|1260187081|[Infra] Datacenter|UP||
+2009-12-07 10:04:01|1260187441|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 10:05:02|1260187502|[Infra] Datacenter|UP||
+2009-12-07 10:09:01|1260187741|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 10:10:02|1260187802|[Infra] Datacenter|UP||
+2009-12-07 10:13:02|1260187982|[Infra] Datacenter|DOWN|R2BL00+(Host Check Timed Out)/R2BL01+(Host Check Timed Out)/R2BL02+(Host Check Timed Out)/R2BL03+(Host Check Timed Out)/R2BL04+(Host Check Timed Out)/R2BL05+(Host Check Timed Out)/R2BL06+(Host Check Timed Out)/R2BL07+(Host Check Timed Out)|
+2009-12-07 10:17:01|1260188221|[Infra] Datacenter|UP||
+2009-12-07 10:25:01|1260188701|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 11:21:01|1260192061|[Infra] Datacenter|UP||
+2009-12-07 11:24:01|1260192241|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 11:32:02|1260192722|[Infra] Datacenter|UP||
+2009-12-07 11:35:01|1260192901|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 11:57:01|1260194221|[Infra] Serpro|DOWN|CABOCLINHO1+(Host Check Timed Out)|
+2009-12-07 12:04:01|1260194641|[Infra] Datacenter|UP||
+2009-12-07 12:08:01|1260194881|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 12:08:01|1260194881|[Infra] Serpro|UP||
+2009-12-07 12:10:02|1260195002|Web Sites|DOWN||HTTP+POLICIA CIVIL+CRITICAL - Socket timeout after 10 seconds
+2009-12-07 12:12:01|1260195121|Web Sites|UP||
+2009-12-07 12:37:01|1260196621|[Infra] Datacenter|UP||
+2009-12-07 12:41:02|1260196862|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 12:48:03|1260197283|[Infra] Datacenter|UP||
+2009-12-07 12:52:22|1260197542|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 13:12:05|1260198725|[Infra] Servidores Windows|DOWN|Uirapuru+(Host Check Timed Out)|
+2009-12-07 13:14:10|1260198850|[Infra] Servidores Windows|UP||
+2009-12-07 13:18:05|1260199085|[Infra] Datacenter|UP||
+2009-12-07 13:18:05|1260199085|[Infra] Servidores Windows|DOWN|Uirapuru+(Host Check Timed Out)|
+2009-12-07 13:19:04|1260199144|[Infra] Servidores Windows|UP||
+2009-12-07 13:25:08|1260199508|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 13:28:20|1260199700|[Infra] Datacenter|UP||
+2009-12-07 13:32:21|1260199941|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 13:39:20|1260200360|[Infra] Datacenter|UP||
+2009-12-07 13:43:10|1260200590|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 13:59:02|1260201542|[Infra] Datacenter|UP||
+2009-12-07 14:03:01|1260201781|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 14:20:02|1260202802|[Infra] Datacenter|UP||
+2009-12-07 14:24:01|1260203041|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 14:30:01|1260203401|[Infra] Datacenter|UP||
+2009-12-07 14:34:01|1260203641|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 14:45:01|1260204301|[Infra] Datacenter|UP||
+2009-12-07 14:48:01|1260204481|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 14:51:01|1260204661|[Infra] Datacenter|UP||
+2009-12-07 14:54:01|1260204841|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 15:10:01|1260205801|[Infra] Datacenter|UP||
+2009-12-07 15:14:01|1260206041|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 15:20:02|1260206402|[Infra] Datacenter|UP||
+2009-12-07 15:23:01|1260206581|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 15:25:02|1260206702|[Infra] Datacenter|UP||
+2009-12-07 15:28:02|1260206882|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 15:35:01|1260207301|[Infra] NC|DOWN|SEPLAG+(Host Check Timed Out)|
+2009-12-07 15:37:01|1260207421|[Infra] NC|UP||
+2009-12-07 15:41:02|1260207662|[Infra] Datacenter|UP||
+2009-12-07 15:44:02|1260207842|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 15:47:01|1260208021|[Infra] Datacenter|UP||
+2009-12-07 15:51:02|1260208262|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 16:23:01|1260210181|[Infra] Datacenter|UP||
+2009-12-07 16:27:01|1260210421|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 16:38:02|1260211082|[Infra] NC|DOWN|RIO DAS FLORES+(Host Check Timed Out)|
+2009-12-07 16:48:01|1260211681|[Infra] Serpro|DOWN|FALCAO+(Host Check Timed Out)|
+2009-12-07 16:49:02|1260211742|[Infra] Servidores Windows|DOWN|Falcao+CRITICAL - Host Unreachable (200.20.29.4)|
+2009-12-07 16:51:01|1260211861|[Infra] Servidores Windows|UP||
+2009-12-07 16:52:02|1260211922|[Infra] Serpro|UP||
+2009-12-07 17:08:01|1260212881|[Infra] Palacio|DOWN|ROT_1Mb+(Host Check Timed Out)|
+2009-12-07 17:09:01|1260212941|[Infra] Palacio|UP||
+2009-12-07 17:16:01|1260213361|[Infra] Datacenter|UP||
+2009-12-07 17:20:01|1260213601|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 17:27:02|1260214022|[Infra] Datacenter|UP||
+2009-12-07 17:31:01|1260214261|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 18:58:02|1260219482|[Infra] Datacenter|UP||
+2009-12-07 19:02:02|1260219722|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 19:04:02|1260219842|[Infra] Datacenter|UP||
+2009-12-07 19:08:02|1260220082|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 19:19:01|1260220741|[Infra] NC|UP||
+2009-12-07 19:53:01|1260222781|[Infra] Datacenter|UP||
+2009-12-07 19:57:01|1260223021|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 20:11:01|1260223861|[Infra] Datacenter|UP||
+2009-12-07 20:14:01|1260224041|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 20:25:02|1260224702|[Infra] Datacenter|UP||
+2009-12-07 20:29:01|1260224941|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 21:25:01|1260228301|[Infra] Datacenter|UP||
+2009-12-07 21:29:01|1260228541|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 21:31:01|1260228661|[Infra] Datacenter|UP||
+2009-12-07 21:35:01|1260228901|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 21:42:01|1260229321|[Infra] Datacenter|UP||
+2009-12-07 21:46:01|1260229561|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 22:15:01|1260231301|[Infra] Datacenter|UP||
+2009-12-07 22:19:01|1260231541|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 22:20:01|1260231601|[Infra] Datacenter|UP||
+2009-12-07 22:24:02|1260231842|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 22:33:01|1260232381|[Infra] Datacenter|UP||
+2009-12-07 22:36:01|1260232561|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 22:44:02|1260233042|[Infra] Datacenter|UP||
+2009-12-07 22:48:01|1260233281|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-07 23:28:01|1260235681|[Infra] Datacenter|UP||
+2009-12-07 23:31:01|1260235861|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 00:08:01|1260238081|[Infra] Datacenter|UP||
+2009-12-08 00:14:01|1260238441|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 00:30:01|1260239401|[Infra] Datacenter|UP||
+2009-12-08 00:34:02|1260239642|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 00:35:01|1260239701|[Infra] Datacenter|UP||
+2009-12-08 00:38:01|1260239881|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 00:52:01|1260240721|[Infra] Datacenter|UP||
+2009-12-08 00:56:01|1260240961|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 01:10:01|1260241801|[Infra] Datacenter|UP||
+2009-12-08 01:14:01|1260242041|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 01:59:02|1260244742|[Infra] Datacenter|UP||
+2009-12-08 02:02:01|1260244921|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 03:03:01|1260248581|[Infra] Datacenter|UP||
+2009-12-08 03:07:01|1260248821|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 03:16:01|1260249361|[Infra] Datacenter|UP||
+2009-12-08 03:20:01|1260249601|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 03:34:01|1260250441|[Infra] Datacenter|UP||
+2009-12-08 03:37:01|1260250621|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 03:43:01|1260250981|[Infra] Datacenter|UP||
+2009-12-08 03:47:01|1260251221|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 03:56:01|1260251761|[Infra] Datacenter|UP||
+2009-12-08 04:00:01|1260252001|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 04:09:01|1260252541|[Infra] Datacenter|UP||
+2009-12-08 04:12:02|1260252722|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 04:31:01|1260253861|[Infra] Datacenter|UP||
+2009-12-08 04:35:01|1260254101|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 04:46:01|1260254761|[Infra] Datacenter|UP||
+2009-12-08 04:49:01|1260254941|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 05:02:01|1260255721|[Infra] Datacenter|UP||
+2009-12-08 05:06:01|1260255961|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 05:20:02|1260256802|[Infra] Datacenter|UP||
+2009-12-08 05:24:01|1260257041|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 05:26:02|1260257162|[Infra] Datacenter|UP||
+2009-12-08 05:33:01|1260257581|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 05:47:02|1260258422|[Infra] Datacenter|UP||
+2009-12-08 05:50:01|1260258601|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 06:06:01|1260259561|[Infra] Datacenter|UP||
+2009-12-08 06:10:02|1260259802|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 06:23:01|1260260581|[Infra] Datacenter|UP||
+2009-12-08 06:26:01|1260260761|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 06:32:02|1260261122|[Infra] Datacenter|UP||
+2009-12-08 06:36:01|1260261361|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 07:04:01|1260263041|[Infra] Datacenter|UP||
+2009-12-08 07:08:01|1260263281|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 07:15:01|1260263701|[Infra] Datacenter|UP||
+2009-12-08 07:19:01|1260263941|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 08:04:02|1260266642|[Infra] Datacenter|UP||
+2009-12-08 08:07:02|1260266822|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 08:30:02|1260268202|[Infra] Datacenter|UP||
+2009-12-08 08:33:01|1260268381|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 08:34:01|1260268441|[Infra] Datacenter|UP||
+2009-12-08 08:38:01|1260268681|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 09:00:01|1260270001|[Infra] Datacenter|UP||
+2009-12-08 09:04:01|1260270241|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 09:34:01|1260272041|[Infra] Datacenter|UP||
+2009-12-08 09:38:01|1260272281|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 10:02:01|1260273721|[Infra] Datacenter|UP||
+2009-12-08 10:06:01|1260273961|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 10:46:02|1260276362|[Infra] Datacenter|UP||
+2009-12-08 10:50:01|1260276601|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 11:12:01|1260277921|[Infra] Datacenter|UP||
+2009-12-08 11:19:01|1260278341|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 11:38:02|1260279482|[Infra] Datacenter|UP||
+2009-12-08 11:41:01|1260279661|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 12:53:02|1260283982|[Infra] Datacenter|UP||
+2009-12-08 13:00:01|1260284401|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 13:02:02|1260284522|Internet|DOWN|rederio.br+(Host Check Timed Out)|HTTP+rederio.br+CRITICAL - Socket timeout after 10 seconds
+2009-12-08 13:02:02|1260284522|[Infra] Datacenter|UP||
+2009-12-08 13:03:01|1260284581|[Infra] Internet|DOWN|ROT_CBPF+(Host Check Timed Out)|
+2009-12-08 13:09:01|1260284941|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 13:10:02|1260285002|[Infra] Internet|UP||
+2009-12-08 13:11:01|1260285061|Internet|UP||
+2009-12-08 13:27:02|1260286022|[Infra] Datacenter|UP||
+2009-12-08 13:30:02|1260286202|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 13:36:02|1260286562|[Infra] Datacenter|UP||
+2009-12-08 13:40:02|1260286802|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 13:45:02|1260287102|[Infra] Datacenter|UP||
+2009-12-08 13:48:01|1260287281|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 13:51:02|1260287462|[Infra] Datacenter|UP||
+2009-12-08 13:54:01|1260287641|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 13:56:01|1260287761|[Infra] Servidores Windows|DOWN|Calopsita+(Host Check Timed Out)|
+2009-12-08 13:57:01|1260287821|[Infra] Servidores Windows|UP||
+2009-12-08 14:00:01|1260288001|[Infra] Servidores Windows|DOWN|Calopsita+(Host Check Timed Out)/Uirapuru+(Host Check Timed Out)|
+2009-12-08 14:02:01|1260288121|[Infra] Servidores Linux|DOWN|Savacu+(Host Check Timed Out)|
+2009-12-08 14:05:02|1260288302|Internet|DOWN||HTTP+google.com+CRITICAL - Socket timeout after 10 seconds/HTTP+yahoo.com+CRITICAL - Socket timeout after 10 seconds
+2009-12-08 14:05:02|1260288302|[Infra] Servidores Windows|UP||
+2009-12-08 14:06:01|1260288361|[Infra] Servidores Linux|UP||
+2009-12-08 14:08:01|1260288481|Internet|UP||
+2009-12-08 14:12:01|1260288721|[Infra] Servidores Linux|DOWN|Savacu+(Host Check Timed Out)|
+2009-12-08 14:13:02|1260288782|[Infra] Datacenter|UP||
+2009-12-08 14:13:02|1260288782|[Infra] Servidores Linux|UP||
+2009-12-08 14:17:01|1260289021|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 14:19:01|1260289141|[Infra] Datacenter|UP||
+2009-12-08 14:23:02|1260289382|[Infra] Datacenter|DOWN|SUNRack-2+(Host Check Timed Out)|
+2009-12-08 14:33:01|1260289981|[Infra] Datacenter|UP||
+2009-12-08 14:50:01|1260291001|[Infra] Datacenter|DOWN|R2BL00+(Host Check Timed Out)/R2BL01+(Host Check Timed Out)/R2BL02+(Host Check Timed Out)/R2BL03+(Host Check Timed Out)/R2BL04+(Host Check Timed Out)/R2BL05+(Host Check Timed Out)/R2BL06+(Host Check Timed Out)/R2BL07+(Host Check Timed Out)|
+2009-12-08 15:02:01|1260291721|[Infra] Datacenter|UP||
+2009-12-08 15:21:01|1260292861|[Infra] Datacenter|DOWN|R2BL00+(Host Check Timed Out)/R2BL01+(Host Check Timed Out)/R2BL02+(Host Check Timed Out)/R2BL03+(Host Check Timed Out)/R2BL04+(Host Check Timed Out)/R2BL05+(Host Check Timed Out)/R2BL06+(Host Check Timed Out)/R2BL07+(Host Check Timed Out)|
+2009-12-08 15:24:01|1260293041|[Infra] Datacenter|UP||
+2009-12-08 15:32:02|1260293522|[Infra] Datacenter|DOWN|R2BL00+(Host Check Timed Out)/R2BL01+(Host Check Timed Out)/R2BL02+(Host Check Timed Out)/R2BL03+(Host Check Timed Out)/R2BL04+(Host Check Timed Out)/R2BL05+(Host Check Timed Out)/R2BL06+(Host Check Timed Out)/R2BL07+(Host Check Timed Out)|
+2009-12-08 15:46:01|1260294361|[Infra] Servidores Windows|DOWN|Suiriri+(Host Check Timed Out)|
+2009-12-08 15:49:01|1260294541|[Infra] Servidores Windows|UP||
+2009-12-08 17:19:01|1260299941|[Infra] Datacenter|UP||
+2009-12-08 21:00:01|1260313201|[Infra] NC|DOWN|ROT_SIAFEM_I+(Host Check Timed Out)|
+2009-12-08 21:04:01|1260313441|[Infra] NC|UP||
+2009-12-09 01:48:02|1260330482|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2009-12-09 02:28:01|1260332881|[Infra] NC|UP||
+2009-12-09 03:26:01|1260336361|SEEDUC|DOWN|OI_WINSRV+(Host Check Timed Out)|
+2009-12-09 03:50:01|1260337801|SEEDUC|UP||
+2009-12-09 11:45:01|1260366301|[Infra] NC|DOWN|IMPRENSA OFICIAL+CRITICAL - Time to live exceeded (10.10.212.128)/PETRÓPOLIS+(Host Check Timed Out)/BARRA DO PIRAÍ+CRITICAL - Time to live exceeded (10.3.178.193)|
+2009-12-09 11:48:01|1260366481|[Infra] NC|UP||
+2009-12-09 13:07:01|1260371221|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-09 13:08:01|1260371281|SEEDUC|UP||
+2009-12-09 13:30:02|1260372602|SEEDUC|DOWN|TECHNE_SEEDUCBD+(Host Check Timed Out)|
+2009-12-09 15:38:02|1260380282|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-09 15:39:01|1260380341|[Infra] Palacio|UP||
+2009-12-09 17:50:01|1260388201|[Infra] NC|DOWN|DER+(Host Check Timed Out)|
+2009-12-09 18:46:01|1260391561|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-09 18:50:01|1260391801|[Infra] Datacenter|UP||
+2009-12-09 18:54:01|1260392041|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-09 19:08:01|1260392881|[Infra] Datacenter|UP||
+2009-12-09 19:12:01|1260393121|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-09 21:13:02|1260400382|[Infra] NC|UP||
+2009-12-09 22:03:01|1260403381|[Infra] Datacenter|UP||
+2009-12-09 22:07:01|1260403621|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-09 22:48:02|1260406082|[Infra] Datacenter|UP||
+2009-12-09 22:52:01|1260406321|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-09 23:48:01|1260409681|[Infra] Datacenter|UP||
+2009-12-09 23:52:01|1260409921|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 01:44:01|1260416641|[Infra] Datacenter|UP||
+2009-12-10 01:48:01|1260416881|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 02:18:02|1260418682|[Infra] Datacenter|UP||
+2009-12-10 02:22:01|1260418921|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 02:52:01|1260420721|[Infra] Datacenter|UP||
+2009-12-10 02:55:01|1260420901|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 03:04:01|1260421441|INTRAGOV|DOWN|Cajubi+(Host Check Timed Out)/Tejo+(Host Check Timed Out)/Cajubi_c+(Host Check Timed Out)/Tejo_c+(Host Check Timed Out)|
+2009-12-10 03:04:02|1260421442|SEPLAG|DOWN|Coleira+(Host Check Timed Out)|
+2009-12-10 03:07:01|1260421621|SEPLAG|UP||
+2009-12-10 03:09:01|1260421741|[Infra] Datacenter|UP||
+2009-12-10 03:13:01|1260421981|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 03:45:01|1260423901|[Infra] Datacenter|UP||
+2009-12-10 03:48:01|1260424081|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 04:10:01|1260425401|INTRAGOV|UP||
+2009-12-10 04:29:01|1260426541|[Infra] Datacenter|UP||
+2009-12-10 04:36:01|1260426961|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 05:58:02|1260431882|[Infra] Datacenter|UP||
+2009-12-10 06:02:01|1260432121|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 06:26:02|1260433562|[Infra] Datacenter|UP||
+2009-12-10 06:29:02|1260433742|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 08:08:01|1260439681|[Infra] Datacenter|UP||
+2009-12-10 08:12:02|1260439922|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 09:06:01|1260443161|[Infra] Datacenter|UP||
+2009-12-10 09:10:01|1260443401|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 10:28:01|1260448081|[Infra] Datacenter|UP||
+2009-12-10 10:32:02|1260448322|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 10:33:01|1260448381|[Infra] Datacenter|UP||
+2009-12-10 10:36:01|1260448561|[Infra] Datacenter|DOWN|SUNRack-3+(Host Check Timed Out)|
+2009-12-10 12:12:01|1260454321|[Infra] Datacenter|UP||
+2009-12-10 13:04:01|1260457441|SEEDUC|UP||
+2009-12-10 14:46:01|1260463561|DNS Interno|DOWN|MELRO+(Host Check Timed Out)|DNS+MELRO+CRITICAL - Plugin timed out while executing system call
+2009-12-10 14:52:01|1260463921|DNS Interno|UP||
+2009-12-10 19:04:01|1260479041|[Infra] NC|DOWN|IMPRENSA OFICIAL+(Host Check Timed Out)/PETRÓPOLIS+(Host Check Timed Out)/BARRA DO PIRAÍ+CRITICAL - Time to live exceeded (10.3.178.193)|
+2009-12-10 19:12:01|1260479521|[Infra] Servidores Windows|DOWN|Rosella+(Host Check Timed Out)|
+2009-12-10 20:53:01|1260485581|[Infra] NC|UP||
+2009-12-10 21:29:02|1260487742|[Infra] NC|DOWN|IMPRENSA OFICIAL+CRITICAL - Time to live exceeded (10.10.212.128)/BARRA DO PIRAÍ+(Host Check Timed Out)|
+2009-12-10 21:35:02|1260488102|[Infra] NC|UP||
+2009-12-10 21:59:01|1260489541|[Infra] Palacio|DOWN|AP_CAOA+(Host Check Timed Out)|
+2009-12-11 00:04:01|1260497041|[Infra] Palacio|UP||
+2009-12-11 00:48:02|1260499682|[Infra] Servidores Windows|UP||
+2009-12-11 09:36:02|1260531362|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-11 09:38:02|1260531482|[Infra] Palacio|UP||
+2009-12-11 10:49:02|1260535742|[Infra] NC|DOWN|94_FM+(Host Check Timed Out)|
+2009-12-11 10:50:01|1260535801|[Infra] NC|UP||
+2009-12-11 11:28:01|1260538081|[Infra] NC|DOWN|IMPRENSA OFICIAL+(Host Check Timed Out)/PETRÓPOLIS+CRITICAL - Time to live exceeded (10.10.121.16)/BARRA DO PIRAÍ+CRITICAL - Time to live exceeded (10.3.178.193)|
+2009-12-11 12:44:01|1260542641|[Infra] NC|UP||
+2009-12-11 18:03:01|1260561781|[Infra] Servidores Windows|DOWN|Calafate+(Host Check Timed Out)|
+2009-12-11 19:41:01|1260567661|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-11 19:42:01|1260567721|SEEDUC|UP||
+2009-12-11 21:15:01|1260573301|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-11 21:54:01|1260575641|SEEDUC|UP||
+2009-12-11 23:40:01|1260582001|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-11 23:44:01|1260582241|SEEDUC|UP||
+2009-12-12 03:17:02|1260595022|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-12 03:21:02|1260595262|SEEDUC|UP||
+2009-12-12 06:07:01|1260605221|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2009-12-12 08:39:01|1260614341|[Infra] NC|UP||
+2009-12-12 13:45:01|1260632701|[Infra] Serpro|DOWN|JACU+CRITICAL - Host Unreachable (200.20.29.5)|
+2009-12-12 18:34:01|1260650041|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-12 18:48:01|1260650881|SEEDUC|UP||
+2009-12-12 19:27:02|1260653222|Internet|DOWN||HTTP+rederio.br+Connection refused
+2009-12-12 19:27:02|1260653222|[Infra] Internet|DOWN|ROT_CBPF+CRITICAL - Time to live exceeded (200.20.96.70)|
+2009-12-12 19:28:01|1260653281|[Infra] Internet|UP||
+2009-12-12 19:42:01|1260654121|Internet|UP||
+2009-12-13 08:58:01|1260701881|[Infra] Internet|DOWN|ROT_CBPF+(Host Check Timed Out)|
+2009-12-13 08:59:02|1260701942|[Infra] Internet|UP||
+2009-12-13 10:08:02|1260706082|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2009-12-13 15:08:02|1260724082|[Infra] NC|UP||
+2009-12-13 18:23:01|1260735781|DNS Interno|DOWN||DNS+JABURU+CRITICAL - Plugin timed out while executing system call
+2009-12-13 18:23:01|1260735781|[Infra] Internet|DOWN|ROT_CBPF+CRITICAL - Time to live exceeded (200.20.96.70)|
+2009-12-13 18:24:01|1260735841|DNS Interno|UP||
+2009-12-13 18:25:01|1260735901|[Infra] Internet|UP||
+2009-12-14 09:29:01|1260790141|Internet|DOWN||HTTP+yahoo.com+CRITICAL - Socket timeout after 10 seconds
+2009-12-14 09:29:01|1260790141|[Infra] Serpro|UP||
+2009-12-14 09:33:02|1260790382|Internet|UP||
+2009-12-14 09:51:02|1260791462|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-14 09:55:02|1260791702|[Infra] Palacio|UP||
+2009-12-14 09:55:02|1260791702|[Infra] Servidores Windows|UP||
+2009-12-14 10:13:01|1260792781|Web Sites|WARNING||HTTP+POLICIA MILITAR+HTTP WARNING: HTTP/1.1 404 Object Not Found
+2009-12-14 10:27:02|1260793622|[Infra] Internet|DOWN|ROT_OI_LINK2+(Host Check Timed Out)|
+2009-12-14 10:27:02|1260793622|[Infra] Servidores Windows|DOWN|Manon+(Host Check Timed Out)/Periquito+(Host Check Timed Out)|
+2009-12-14 10:28:01|1260793681|[Infra] Internet|UP||
+2009-12-14 10:31:02|1260793862|Internet|DOWN||HTTP+registro.br+CRITICAL - Socket timeout after 10 seconds
+2009-12-14 10:31:02|1260793862|[Infra] Collocation|DOWN|Periquito+(Host Check Timed Out)|
+2009-12-14 10:32:01|1260793921|[Infra] Collocation|UP||
+2009-12-14 10:32:01|1260793921|[Infra] Servidores Linux|DOWN|Asa Branca+(Host Check Timed Out)|
+2009-12-14 10:34:01|1260794041|[Infra] Servidores Windows|UP||
+2009-12-14 10:35:01|1260794101|[Infra] Servidores Linux|UP||
+2009-12-14 10:36:01|1260794161|[Infra] Internet|DOWN|ROT_CBPF+(Host Check Timed Out)|
+2009-12-14 10:37:01|1260794221|[Infra] Servidores Windows|DOWN|Rosella+(Host Check Timed Out)|
+2009-12-14 10:38:02|1260794282|Internet|UP||
+2009-12-14 10:38:02|1260794282|[Infra] Internet|UP||
+2009-12-14 10:38:02|1260794282|[Infra] Servidores Linux|DOWN|Asa Branca+(Host Check Timed Out)|
+2009-12-14 10:39:01|1260794341|[Infra] Servidores Linux|UP||
+2009-12-14 10:40:01|1260794401|[Infra] Collocation|DOWN|Periquito+(Host Check Timed Out)|
+2009-12-14 10:42:02|1260794522|Internet|DOWN||HTTP+rederio.br+CRITICAL - Socket timeout after 10 seconds
+2009-12-14 10:43:01|1260794581|[Infra] Internet|DOWN|ROT_OI_LINK2+(Host Check Timed Out)/ROT_CBPF+(Host Check Timed Out)|
+2009-12-14 10:44:01|1260794641|Internet|UP||
+2009-12-14 10:44:01|1260794641|[Infra] Collocation|UP||
+2009-12-14 10:45:01|1260794701|[Infra] Servidores Windows|UP||
+2009-12-14 10:46:01|1260794761|[Infra] Internet|UP||
+2009-12-14 14:53:01|1260809581|[Infra] Palacio|DOWN|ROT_1Mb+CRITICAL - Time to live exceeded (10.10.212.193)|
+2009-12-14 15:07:01|1260810421|[Infra] Palacio|UP||
+2009-12-14 15:39:02|1260812342|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-14 15:45:01|1260812701|SEEDUC|UP||
+2009-12-14 16:41:01|1260816061|[Infra] NC|DOWN|94_FM+(Host Check Timed Out)|
+2009-12-14 17:15:01|1260818101|[Infra] NC|UP||
+2009-12-14 18:05:01|1260821101|[Infra] Servidores Windows|DOWN|Caure+(Host Check Timed Out)|
+2009-12-14 18:06:01|1260821161|[Infra] Servidores Windows|UP||
+2009-12-14 20:09:01|1260828541|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-14 20:28:01|1260829681|SEEDUC|UP||
+2009-12-14 20:48:01|1260830881|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-14 21:20:01|1260832801|SEEDUC|UP||
+2009-12-14 22:33:02|1260837182|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-14 22:34:01|1260837241|SEEDUC|UP||
+2009-12-15 11:09:02|1260882542|[Infra] Servidores Windows|DOWN|Albatroz+CRITICAL - Host Unreachable (10.12.44.26)|
+2009-12-15 11:18:01|1260883081|[Infra] Servidores Windows|UP||
+2009-12-15 15:41:01|1260898861|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-15 15:50:01|1260899401|SEEDUC|UP||
+2009-12-15 16:39:02|1260902342|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-15 16:59:02|1260903542|SEPLAG|DOWN|Torom+(Host Check Timed Out)|
+2009-12-15 16:59:02|1260903542|[Infra] Servidores Windows|DOWN|Torom+(Host Check Timed Out)|
+2009-12-15 17:02:01|1260903721|SEPLAG|UP||
+2009-12-15 17:02:01|1260903721|[Infra] Servidores Windows|UP||
+2009-12-15 17:09:01|1260904141|SEEDUC|UP||
+2009-12-15 17:27:02|1260905222|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-15 17:28:01|1260905281|SEEDUC|UP||
+2009-12-16 00:44:02|1260931442|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2009-12-16 03:08:01|1260940081|Internet|DOWN|yahoo.com+(Host Check Timed Out)|
+2009-12-16 03:09:01|1260940141|Internet|UP||
+2009-12-16 03:09:02|1260940142|[Infra] NC|UP||
+2009-12-16 09:59:01|1260964741|[Infra] Servidores Windows|DOWN|Albatroz+CRITICAL - Host Unreachable (10.12.44.26)|
+2009-12-16 10:04:01|1260965042|[Infra] Servidores Windows|UP||
+2009-12-16 12:39:01|1260974341|[Infra] Servidores Windows|DOWN|Tiesangue 2+(Host Check Timed Out)|
+2009-12-16 18:23:02|1260994982|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 18:32:02|1260995522|[Infra] Palacio|UP||
+2009-12-16 18:36:01|1260995761|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 18:50:01|1260996601|[Infra] Palacio|UP||
+2009-12-16 19:07:01|1260997621|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 19:08:02|1260997682|[Infra] Palacio|UP||
+2009-12-16 19:20:01|1260998401|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 19:30:01|1260999001|[Infra] Palacio|UP||
+2009-12-16 19:36:01|1260999361|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 19:43:01|1260999781|Web Sites|UP||
+2009-12-16 20:07:02|1261001222|[Infra] Palacio|UP||
+2009-12-16 20:38:01|1261003081|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 20:54:01|1261004041|[Infra] Palacio|UP||
+2009-12-16 21:20:01|1261005601|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 21:24:01|1261005841|[Infra] Palacio|UP||
+2009-12-16 21:52:01|1261007521|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 22:00:02|1261008002|[Infra] Palacio|UP||
+2009-12-16 22:09:02|1261008542|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 22:11:02|1261008662|[Infra] Palacio|UP||
+2009-12-16 22:59:01|1261011541|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 23:00:02|1261011602|[Infra] Palacio|UP||
+2009-12-16 23:33:02|1261013582|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 23:36:02|1261013762|[Infra] Palacio|UP||
+2009-12-16 23:41:02|1261014062|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-16 23:42:01|1261014121|[Infra] Palacio|UP||
+2009-12-17 12:59:01|1261061941|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-17 13:06:02|1261062362|[Infra] Palacio|UP||
+2009-12-17 14:39:01|1261067941|SEEDUC|DOWN|Netprinter+(Host Check Timed Out)|
+2009-12-17 14:41:02|1261068062|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2009-12-17 14:42:01|1261068121|SEEDUC|UP||
+2009-12-17 16:16:02|1261073762|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-17 16:17:01|1261073821|[Infra] Palacio|UP||
+2009-12-17 16:22:02|1261074122|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-17 16:31:02|1261074662|[Infra] Palacio|UP||
+2009-12-17 16:36:01|1261074961|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-17 16:37:01|1261075021|[Infra] Palacio|UP||
+2009-12-17 16:45:02|1261075502|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-17 16:46:01|1261075561|[Infra] Palacio|UP||
+2009-12-17 17:49:01|1261079341|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-17 17:50:02|1261079402|[Infra] Palacio|UP||
+2009-12-17 21:50:01|1261093801|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-17 21:51:01|1261093861|[Infra] Palacio|UP||
+2009-12-17 22:56:01|1261097761|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-17 23:00:02|1261098002|[Infra] Palacio|UP||
+2009-12-17 23:04:01|1261098241|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-17 23:05:01|1261098301|[Infra] Palacio|UP||
+2009-12-18 02:58:01|1261112281|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-18 03:01:01|1261112461|[Infra] Palacio|UP||
+2009-12-18 03:18:01|1261113481|[Infra] Palacio|DOWN|ROT_RIOSOLIDARIO+(Host Check Timed Out)|
+2009-12-18 03:19:01|1261113541|[Infra] Palacio|UP||
+2009-12-18 07:55:01|1261130101|[Infra] NC|UP||
+2009-12-18 13:45:01|1261151101|[Infra] NC|DOWN|94_FM+(Host Check Timed Out)|
+2009-12-18 15:01:01|1261155661|[Infra] NC|UP||
+2009-12-18 23:46:02|1261187162|[Infra] NC|DOWN|ROT_SIAFEM_I+(Host Check Timed Out)|
+2009-12-18 23:54:02|1261187642|[Infra] NC|UP||
+2009-12-19 10:04:01|1261224241|[Infra] NC|DOWN|CEDERJ MANGUEIRA+CRITICAL - Time to live exceeded (200.20.40.1)|
+2009-12-19 10:08:02|1261224482|[Infra] NC|UP||
+2009-12-19 10:28:01|1261225681|[Infra] NC|DOWN|CEDERJ MANGUEIRA+CRITICAL - Time to live exceeded (200.20.40.1)|
+2009-12-19 12:50:01|1261234201|[Infra] NC|UP||
+2009-12-19 20:56:01|1261263361|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2009-12-19 23:16:02|1261271762|[Infra] NC|UP||
+2009-12-20 10:34:01|1261312441|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2009-12-22 11:14:01|1261487641|[Infra] NC|UP||
+2009-12-22 15:58:01|1261504681|[Infra] Servidores Windows|UP||
+2009-12-23 13:40:01|1261582801|Correio|DOWN|Load Balance+(Host Check Timed Out)/Load Balance+(Host Check Timed Out)|Usuario IMAP+Load Balance+CRITICAL - Socket timeout after 10 seconds/Servidor SMTP+Load Balance+CRITICAL - Socket timeout after 10 seconds/Usuario POP3S+Load Balance+CRITICAL - Socket timeout after 10 seconds/Usuario IMAPS+Load Balance+CRITICAL - Socket timeout after 10 seconds/Usuario HTTP+Load Balance+CRITICAL - Socket timeout after 10 seconds/Usuario HTTPS+Load Balance+CRITICAL - Socket timeout after 10 seconds
+2009-12-23 13:40:02|1261582802|Web Sites|DOWN|AGENDA+(Host Check Timed Out)/CODIN+(Host Check Timed Out)/CONSUMIDOR+(Host Check Timed Out)/IMPRENSA+(Host Check Timed Out)/POLICIA CIVIL+(Host Check Timed Out)/POLICIA MILITAR+(Host Check Timed Out)/GOVERNO+(Host Check Timed Out)/PROCON+(Host Check Timed Out)/CASA CIVIL+(Host Check Timed Out)/SEGOV+(Host Check Timed Out)|HTTP+AGENDA+CRITICAL - Socket timeout after 10 seconds/HTTP+CODIN+CRITICAL - Socket timeout after 10 seconds/HTTP+CONSUMIDOR+CRITICAL - Socket timeout after 10 seconds/HTTP+IMPRENSA+CRITICAL - Socket timeout after 10 seconds/HTTP+POLICIA CIVIL+CRITICAL - Socket timeout after 10 seconds/HTTP+POLICIA MILITAR+CRITICAL - Socket timeout after 10 seconds/HTTP+GOVERNO+CRITICAL - Socket timeout after 10 seconds/HTTP+PROCON+CRITICAL - Socket timeout after 10 seconds/HTTP+CASA CIVIL+CRITICAL - Socket timeout after 10 seconds/HTTP+SEGOV+CRITICAL - Socket timeout after 10 seconds
+2009-12-23 13:40:05|1261582805|[Infra] Correio|DOWN|Gralha+(Host Check Timed Out)/Andorinha+(Host Check Timed Out)/Corruira+(Host Check Timed Out)/Guara+(Host Check Timed Out)/ANDORINHA+(Host Check Timed Out)/Load Balance+(Host Check Timed Out)|SMTP+Gralha+CRITICAL - Socket timeout after 10 seconds/SMTP+ANDORINHA+CRITICAL - Socket timeout after 10 seconds/HTTP+Corruira+CRITICAL - Socket timeout after 10 seconds/HTTP+Guara+CRITICAL - Socket timeout after 10 seconds/IMAP+Gralha+CRITICAL - Socket timeout after 10 seconds/IMAP+ANDORINHA+CRITICAL - Socket timeout after 10 seconds
+2009-12-23 13:42:01|1261582921|INTRAGOV|DOWN|Agachada+(Host Check Timed Out)/Apuim+(Host Check Timed Out)/Cajubi+(Host Check Timed Out)/Tejo+(Host Check Timed Out)/Cajubi_c+(Host Check Timed Out)/Tejo_c+(Host Check Timed Out)|
+2009-12-23 13:42:02|1261582922|[Infra] CIC|DOWN|FLAUTIM+(Host Check Timed Out)/JACAMIM+(Host Check Timed Out)|
+2009-12-23 13:42:02|1261582922|[Infra] Collocation|DOWN|Apuim+(Host Check Timed Out)/Pinguim+(Host Check Timed Out)|
+2009-12-23 13:42:02|1261582922|[Infra] Servidores Linux|DOWN|Cravina+(Host Check Timed Out)/Pinguim+(Host Check Timed Out)|
+2009-12-23 13:42:02|1261582922|[Infra] Servidores Windows|DOWN|FLAUTIM+(Host Check Timed Out)/JACAMIM+(Host Check Timed Out)/Agachada+(Host Check Timed Out)/Apuim+(Host Check Timed Out)/Gralha+(Host Check Timed Out)/Andorinha+(Host Check Timed Out)/Corruira+(Host Check Timed Out)/Guara+(Host Check Timed Out)/ANDORINHA+(Host Check Timed Out)/Brejal+(Host Check Timed Out)/Caure+(Host Check Timed Out)/Feitor+(Host Check Timed Out)/Harpia+(Host Check Timed Out)/Irauna+(Host Check Timed Out)/Martim_Pescador+(Host Check Timed Out)|
+2009-12-23 13:44:01|1261583041|INTRAGOV|UP||
+2009-12-23 13:44:01|1261583041|[Infra] CIC|UP||
+2009-12-23 13:44:01|1261583041|[Infra] Collocation|UP||
+2009-12-23 13:44:01|1261583041|[Infra] Correio|UP||
+2009-12-23 13:44:02|1261583042|[Infra] Servidores Linux|UP||
+2009-12-23 13:44:02|1261583042|[Infra] Servidores Windows|UP||
+2009-12-23 13:46:01|1261583161|Correio|UP||
+2009-12-23 13:46:01|1261583161|Web Sites|UP||
+2009-12-23 14:48:01|1261586881|[Infra] Palacio|DOWN|ROT_1Mb+(Host Check Timed Out)|
+2009-12-23 15:08:01|1261588081|[Infra] Palacio|UP||
+2009-12-25 11:42:01|1261748521|[Infra] NC|DOWN|94_FM+(Host Check Timed Out)|
+2009-12-25 11:46:02|1261748762|[Infra] NC|UP||
+2009-12-25 14:30:01|1261758601|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2009-12-25 16:52:02|1261767122|[Infra] NC|UP||
+2009-12-25 21:50:01|1261785001|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2009-12-25 22:16:01|1261786561|[Infra] NC|UP||
+2009-12-27 20:00:01|1261951201|[Infra] NC|DOWN|RIO DAS FLORES+(Host Check Timed Out)|
+2009-12-27 21:46:02|1261957562|[Infra] NC|UP||
+2009-12-28 02:26:01|1261974361|[Infra] Palacio|DOWN|AP_CAOA+(Host Check Timed Out)|
+2009-12-28 03:18:01|1261977481|[Infra] Palacio|UP||
+2009-12-28 12:28:01|1262010481|[Infra] Datacenter|DOWN|R1BL06+(Host Check Timed Out)|
+2009-12-28 12:34:01|1262010841|[Infra] Datacenter|UP||
+2009-12-28 15:02:02|1262019722|Internet|DOWN|rederio.br+(Host Check Timed Out)|HTTP+google.com+CRITICAL - Socket timeout after 10 seconds/HTTP+registro.br+CRITICAL - Socket timeout after 10 seconds/HTTP+rederio.br+CRITICAL - Socket timeout after 10 seconds
+2009-12-28 15:02:02|1262019722|[Infra] Servidores Linux|DOWN|BAIETA+(Host Check Timed Out)|
+2009-12-28 15:02:02|1262019722|[Infra] Servidores Windows|DOWN|Calopsita+(Host Check Timed Out)/Uirapuru+(Host Check Timed Out)|
+2009-12-28 15:06:01|1262019961|[Infra] Servidores Linux|UP||
+2009-12-28 15:06:01|1262019961|[Infra] Servidores Windows|UP||
+2009-12-28 15:18:01|1262020681|Internet|UP||
+2009-12-28 15:32:01|1262021521|Internet|DOWN|google.com+(Host Check Timed Out)/rederio.br+(Host Check Timed Out)|HTTP+registro.br+CRITICAL - Socket timeout after 10 seconds/HTTP+rederio.br+CRITICAL - Socket timeout after 10 seconds/HTTP+yahoo.com+CRITICAL - Socket timeout after 10 seconds
+2009-12-28 15:32:02|1262021522|[Infra] Servidores Linux|DOWN|BAIETA+(Host Check Timed Out)|
+2009-12-28 15:34:01|1262021641|[Infra] Servidores Windows|DOWN|Flamingo+(Host Check Timed Out)/Uirapuru+(Host Check Timed Out)|
+2009-12-28 15:40:02|1262022002|[Infra] Servidores Windows|UP||
+2009-12-28 15:44:01|1262022241|Internet|UP||
+2009-12-28 15:44:01|1262022241|[Infra] Servidores Linux|UP||
+2009-12-28 16:10:01|1262023801|Internet|DOWN|google.com+(Host Check Timed Out)|HTTP+registro.br+CRITICAL - Socket timeout after 10 seconds
+2009-12-28 16:14:02|1262024042|[Infra] Servidores Linux|DOWN|VIVI+(Host Check Timed Out)|
+2009-12-28 16:16:02|1262024162|Internet|UP||
+2009-12-28 16:16:02|1262024162|[Infra] Servidores Linux|UP||
+2009-12-28 19:50:02|1262037002|[Infra] NC|DOWN|ROT_SIAFEM_I+(Host Check Timed Out)|
+2009-12-28 20:00:01|1262037601|[Infra] NC|UP||
+2009-12-29 01:46:01|1262058361|[Infra] NC|DOWN|SESDEC+CRITICAL - Time to live exceeded (200.20.33.1)|
+2009-12-29 01:48:01|1262058481|[Infra] NC|UP||
+2009-12-29 16:16:01|1262110561|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2009-12-29 16:16:01|1262110561|[Infra] NC|DOWN|94_FM+(Host Check Timed Out)|
+2009-12-29 16:44:01|1262112241|SEEDUC|UP||
+2009-12-29 16:56:02|1262112962|SEEDUC|DOWN|Guara+(Host Check Timed Out)|
+2009-12-29 17:20:01|1262114401|SEEDUC|UP||
+2009-12-30 06:52:02|1262163122|[Infra] Servidores Windows|DOWN|Pisco+(Host Check Timed Out)|
+2009-12-30 10:02:02|1262174522|[Infra] NC|UP||
+2009-12-30 10:58:01|1262177881|[Infra] Servidores Windows|UP||
+2010-01-01 09:48:01|1262346481|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2010-01-01 10:38:01|1262349481|[Infra] NC|UP||
+2010-01-01 16:30:01|1262370601|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-01 16:30:01|1262370601|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-01 16:38:02|1262371082|[Infra] Servidores Windows|UP||
+2010-01-01 16:40:01|1262371201|[Infra] Correio|UP||
+2010-01-03 05:22:02|1262503322|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2010-01-03 10:02:01|1262520121|[Infra] NC|UP||
+2010-01-04 10:40:01|1262608801|[Infra] NC|DOWN|94_FM+(Host Check Timed Out)|
+2010-01-04 10:42:01|1262608921|[Infra] NC|UP||
+2010-01-04 19:18:01|1262639881|DNS Interno|DOWN||DNS+VEMVEM+CRITICAL - Plugin timed out while executing system call
+2010-01-04 19:20:02|1262640002|DNS Interno|UP||
+2010-01-05 19:32:02|1262727122|[Infra] NC|DOWN|ROT_SIAFEM_I+(Host Check Timed Out)|
+2010-01-05 19:40:01|1262727601|[Infra] NC|UP||
+2010-01-06 15:50:02|1262800202|[Infra] Servidores Linux|DOWN|ABUTRE+CRITICAL - Host Unreachable (10.12.44.2)|
+2010-01-06 16:20:02|1262802002|[Infra] Servidores Linux|UP||
+2010-01-06 16:58:02|1262804282|[Infra] Servidores Linux|DOWN|ABUTRE+CRITICAL - Host Unreachable (10.12.44.2)|
+2010-01-06 17:16:01|1262805361|[Infra] Servidores Linux|UP||
+2010-01-06 17:26:01|1262805961|[Infra] Servidores Linux|DOWN|ABUTRE+CRITICAL - Host Unreachable (10.12.44.2)|
+2010-01-06 22:44:01|1262825041|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-06 22:44:01|1262825041|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-06 23:52:01|1262829121|[Infra] Servidores Windows|UP||
+2010-01-06 23:54:01|1262829241|[Infra] Correio|UP||
+2010-01-07 00:04:01|1262829841|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-07 00:04:02|1262829842|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-07 00:06:01|1262829961|[Infra] Correio|UP||
+2010-01-07 00:06:01|1262829961|[Infra] Servidores Windows|UP||
+2010-01-07 11:40:02|1262871602|[Infra] Servidores Linux|UP||
+2010-01-07 16:10:02|1262887802|[Infra] CAERJ|DOWN|SWCA0701+(Host Check Timed Out)|
+2010-01-07 16:10:02|1262887802|[Infra] SEEDUC|DOWN|SWCA0701+(Host Check Timed Out)/SWCM0702+(Host Check Timed Out)/SWCM0703+(Host Check Timed Out)|
+2010-01-07 17:16:01|1262891761|[Infra] Serpro|DOWN|JACU+(Host Check Timed Out)|
+2010-01-07 17:16:01|1262891761|[Infra] Servidores Windows|DOWN|JACU+(Host Check Timed Out)|
+2010-01-07 17:56:01|1262894161|[Infra] CAERJ|UP||
+2010-01-07 17:56:01|1262894161|[Infra] SEEDUC|UP||
+2010-01-07 18:06:01|1262894761|[Infra] Serpro|UP||
+2010-01-07 18:06:01|1262894761|[Infra] Servidores Windows|UP||
+2010-01-07 19:00:01|1262898001|[Infra] CAERJ|DOWN|SWCA0701+(Host Check Timed Out)|
+2010-01-07 19:00:02|1262898002|[Infra] SEEDUC|DOWN|SWCA0701+(Host Check Timed Out)/SWCM0702+(Host Check Timed Out)/SWCM0703+(Host Check Timed Out)|
+2010-01-07 19:10:01|1262898601|[Infra] CAERJ|UP||
+2010-01-07 19:10:01|1262898601|[Infra] SEEDUC|UP||
+2010-01-07 19:32:01|1262899921|[Infra] Serpro|DOWN|JACU+(Host Check Timed Out)|
+2010-01-07 19:32:01|1262899921|[Infra] Servidores Windows|DOWN|JACU+(Host Check Timed Out)|
+2010-01-07 20:12:01|1262902321|[Infra] Serpro|UP||
+2010-01-07 20:12:01|1262902321|[Infra] Servidores Windows|UP||
+2010-01-07 22:16:01|1262909761|Internet|DOWN|registro.br+(Host Check Timed Out)|HTTP+registro.br+CRITICAL - Socket timeout after 10 seconds
+2010-01-07 22:22:02|1262910122|Internet|UP||
+2010-01-08 16:02:02|1262973722|[Infra] CAERJ|DOWN|SWCM1301+(Host Check Timed Out)|
+2010-01-08 16:04:02|1262973842|[Infra] CAERJ|UP||
+2010-01-08 17:28:01|1262978881|[Infra] CAERJ|DOWN|SWCM1301+(Host Check Timed Out)|
+2010-01-08 17:32:01|1262979121|[Infra] CAERJ|UP||
+2010-01-08 18:38:01|1262983081|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2010-01-08 19:22:01|1262985721|SEEDUC|UP||
+2010-01-08 20:06:02|1262988362|SEEDUC|DOWN|TECHNE_WEB+(Host Check Timed Out)|
+2010-01-08 20:52:01|1262991121|SEEDUC|UP||
+2010-01-08 21:34:01|1262993641|[Infra] NC|DOWN|SEPLAG+(Host Check Timed Out)/SEPLAG+(Host Check Timed Out)|
+2010-01-09 06:38:01|1263026281|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-09 06:38:02|1263026282|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-09 07:28:02|1263029282|[Infra] Correio|UP||
+2010-01-09 07:28:02|1263029282|[Infra] Servidores Windows|UP||
+2010-01-09 07:46:01|1263030361|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-09 07:46:02|1263030362|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-09 07:52:01|1263030721|[Infra] Correio|UP||
+2010-01-09 07:52:01|1263030721|[Infra] Servidores Windows|UP||
+2010-01-09 07:58:02|1263031082|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-09 07:58:02|1263031082|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-09 08:14:01|1263032041|[Infra] Servidores Windows|UP||
+2010-01-09 08:16:02|1263032162|[Infra] Correio|UP||
+2010-01-09 10:40:01|1263040801|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-09 10:40:02|1263040802|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-09 10:48:01|1263041281|[Infra] Correio|UP||
+2010-01-09 10:48:01|1263041281|[Infra] Servidores Windows|UP||
+2010-01-09 10:54:02|1263041642|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+CRITICAL - Socket timeout after 10 seconds
+2010-01-09 10:54:02|1263041642|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-09 10:56:01|1263041761|[Infra] Correio|UP||
+2010-01-09 10:56:02|1263041762|[Infra] Servidores Windows|UP||
+2010-01-09 11:04:01|1263042241|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-09 11:04:01|1263042241|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-09 11:36:01|1263044161|[Infra] Correio|UP||
+2010-01-09 11:36:01|1263044161|[Infra] Servidores Windows|UP||
+2010-01-09 11:42:01|1263044521|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-09 11:42:01|1263044521|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-09 12:02:01|1263045721|[Infra] Correio|UP||
+2010-01-09 12:02:01|1263045721|[Infra] Servidores Windows|UP||
+2010-01-09 12:36:01|1263047761|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-09 12:36:01|1263047761|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-09 12:42:02|1263048122|[Infra] Servidores Windows|UP||
+2010-01-09 12:44:01|1263048241|[Infra] Correio|UP||
+2010-01-09 12:54:01|1263048841|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-09 12:54:01|1263048841|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-09 13:10:02|1263049802|[Infra] Correio|UP||
+2010-01-09 13:10:02|1263049802|[Infra] Servidores Windows|UP||
+2010-01-11 01:58:01|1263182281|[Infra] Serpro|DOWN|CABOCLINHO1+(Host Check Timed Out)|
+2010-01-11 07:08:01|1263200881|[Infra] NC|UP||
+2010-01-11 07:52:01|1263203521|[Infra] Servidores Windows|DOWN|Sururina+CRITICAL - Host Unreachable (200.20.28.131)|
+2010-01-11 07:56:02|1263203762|[Infra] Palacio|DOWN|AP_CAOA+(Host Check Timed Out)|
+2010-01-11 08:08:01|1263204481|[Infra] Serpro|UP||
+2010-01-11 08:28:01|1263205681|[Infra] Servidores Windows|UP||
+2010-01-11 09:04:02|1263207842|[Infra] NC|DOWN|SEPLAG+(Host Check Timed Out)/SEPLAG+(Host Check Timed Out)|
+2010-01-11 09:10:02|1263208202|[Infra] NC|UP||
+2010-01-11 12:58:01|1263221881|[Infra] Correio|DOWN|Guara+(Host Check Timed Out)|HTTP+Guara+Connection refused
+2010-01-11 12:58:01|1263221881|[Infra] Servidores Windows|DOWN|Guara+(Host Check Timed Out)|
+2010-01-11 13:22:01|1263223321|[Infra] Correio|UP||
+2010-01-11 13:22:01|1263223321|[Infra] Servidores Windows|UP||
+2010-01-11 13:38:02|1263224282|[Infra] CAERJ|DOWN|SWCA2303+(Host Check Timed Out)|
+2010-01-11 14:36:02|1263227762|[Infra] SEEDUC|DOWN|SWCA0701+(Host Check Timed Out)/SWCM0702+(Host Check Timed Out)/SWCM0703+(Host Check Timed Out)|
+2010-01-11 14:46:02|1263228362|[Infra] SEEDUC|UP||
+2010-01-11 14:58:01|1263229081|[Infra] PROXY|DOWN||PROXY+IBIS+Connection refused
+2010-01-11 15:00:01|1263229201|[Infra] PROXY|WARNING||PROXY+IBIS+HTTP WARNING: HTTP/1.0 400 Bad Request
+2010-01-11 15:00:02|1263229202|[Infra] SEEDUC|DOWN|SWCA0701+(Host Check Timed Out)/SWCM0702+(Host Check Timed Out)/SWCM0703+(Host Check Timed Out)|
+2010-01-11 15:02:01|1263229321|[Infra] SEEDUC|UP||
+2010-01-11 17:40:02|1263238802|[Infra] NC|DOWN|SEPLAG+(Host Check Timed Out)/SEPLAG+(Host Check Timed Out)|
+2010-01-11 17:42:01|1263238921|[Infra] NC|UP||
+2010-01-11 20:38:02|1263249482|[Infra] NC|DOWN|ROT_SIAFEM_I+(Host Check Timed Out)|
+2010-01-11 20:46:02|1263249962|[Infra] NC|UP||
+2010-01-11 22:02:02|1263254522|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2010-01-11 23:28:02|1263259682|[Infra] NC|UP||
+2010-01-12 03:34:01|1263274441|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2010-01-12 06:20:02|1263284402|[Infra] NC|UP||
+2010-01-12 08:06:01|1263290761|[Teste M-CLIPPING]|DOWN|www.videoclipping.com.br+(Host Check Timed Out)|
+2010-01-12 14:00:01|1263312001|Web Sites|WARNING||HTTP+CONSUMIDOR+HTTP WARNING: HTTP/1.1 403 Access Forbidden
+2010-01-12 14:02:02|1263312122|Web Sites|UP||
+2010-01-12 14:06:01|1263312361|[Teste] M-CLIPPING|DOWN|www.videoclipping.com.br+(Host Check Timed Out)|
+2010-01-12 14:22:01|1263313321|[Teste] M-CLIPPING|DOWN|www.videoclipping.com.br+(Host Check Timed Out)/www.clipnaweb.com.br+(Host Check Timed Out)|
+2010-01-12 14:30:01|1263313801|[Teste] M-CLIPPING|DOWN|www.videoclipping.com.br+(Host Check Timed Out)/www.clipnaweb.com.br+(Host Check Timed Out)|
+2010-01-12 14:56:01|1263315361|[Infra] Collocation|DOWN|Perdiz+(Host Check Timed Out)|
+2010-01-12 14:56:01|1263315361|[Infra] Servidores Windows|DOWN|Perdiz+(Host Check Timed Out)|
+2010-01-12 14:58:01|1263315481|[Infra] Collocation|UP||
+2010-01-12 14:58:01|1263315481|[Infra] Servidores Windows|UP||
+2010-01-12 15:06:01|1263315961|[Infra] Collocation|DOWN|Perdiz+(Host Check Timed Out)|
+2010-01-12 15:06:01|1263315961|[Infra] Servidores Windows|DOWN|Perdiz+(Host Check Timed Out)|
+2010-01-12 15:30:01|1263317401|Web Sites|WARNING||HTTP+CONSUMIDOR+HTTP WARNING: HTTP/1.1 403 Access Forbidden
+2010-01-12 16:58:02|1263322682|[Infra] NC|DOWN|ROT_SIAFEM_I+CRITICAL - Host Unreachable (130.1.1.5)/ROT_SIAFEM_II+CRITICAL - Host Unreachable (130.1.1.100)|
+2010-01-12 17:42:01|1263325321|[Infra] NC|UP||
+2010-01-12 19:40:02|1263332402|[Infra] NC|DOWN|ROT_SIAFEM_I+(Host Check Timed Out)|
+2010-01-12 19:42:01|1263332521|[Infra] NC|UP||
+2010-01-12 22:22:01|1263342121|[Infra] NC|DOWN|RIO DAS FLORES+(Host Check Timed Out)/BARRA DO PIRAÍ+(Host Check Timed Out)|
+2010-01-12 22:32:02|1263342722|[Infra] NC|UP||
+2010-01-12 22:50:01|1263343801|[Infra] PROXY|UP||
+2010-01-13 07:18:01|1263374281|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2010-01-13 11:56:01|1263390961|[Infra] Collocation|UP||
+2010-01-13 13:56:02|1263398162|[Infra] Palacio|UP||
+2010-01-13 14:26:02|1263399962|[Teste] M-CLIPPING|DOWN|www.videoclipping.com.br+(Host Check Timed Out)/www.clipnaweb.com.br+(Host Check Timed Out)|
+2010-01-13 14:34:01|1263400441|[Infra] NC|UP||
+2010-01-13 15:36:02|1263404162|[Infra] Servidores Windows|UP||
+2010-01-13 16:10:02|1263406202|[Infra] CAERJ|UP||
+2010-01-13 17:12:01|1263409921|Web Sites|UP||
+2010-01-13 20:52:01|1263423121|[Infra] NC|DOWN|ROT_SIAFEM_I+(Host Check Timed Out)|
+2010-01-13 21:00:01|1263423601|[Infra] NC|UP||
+2010-01-13 22:36:02|1263429362|[Infra] Palacio|DOWN|AP_CAOA+(Host Check Timed Out)|
+2010-01-14 08:22:01|1263464521|[Infra] Palacio|UP||
+2010-01-14 09:30:01|1263468601|[Infra] CAERJ|DOWN|SWCM1501+(Host Check Timed Out)|
+2010-01-14 09:34:01|1263468841|INTRAGOV|DOWN|Cajubi_c+(Host Check Timed Out)|
+2010-01-14 09:38:01|1263469081|INTRAGOV|UP||
+2010-01-14 11:44:01|1263476641|[Infra] NC|DOWN|CEDERJ MANGUEIRA+CRITICAL - Time to live exceeded (200.20.40.1)|
+2010-01-14 11:58:01|1263477481|[Infra] CAERJ|UP||
+2010-01-14 16:26:01|1263493561|[Infra] NC|UP||
+2010-01-14 16:48:02|1263494882|[Infra] Palacio|DOWN|ROLINHA+(Host Check Timed Out)|
+2010-01-14 16:52:01|1263495121|[Infra] Palacio|UP||
+2010-01-14 17:36:01|1263497761|[Infra] Servidores Windows|DOWN|Sabia+(Host Check Timed Out)|
+2010-01-14 17:38:01|1263497881|[Infra] Servidores Windows|UP||
+2010-01-14 18:00:01|1263499201|[Infra] Servidores Windows|DOWN|Suiriri+(Host Check Timed Out)|
+2010-01-14 18:28:04|1263500884|[Infra] Servidores Windows|UP||
+2010-01-14 18:34:02|1263501242|[Infra] Servidores Windows|DOWN|Suiriri+(Host Check Timed Out)|
+2010-01-14 21:34:01|1263512041|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2010-01-15 02:48:02|1263530882|[Infra] Servidores Windows|UP||
+2010-01-15 03:06:02|1263531962|[Infra] NC|UP||
+2010-01-15 04:40:01|1263537601|[Infra] NC|DOWN|PETRÓPOLIS+(Host Check Timed Out)/QUISSAMÃ+(Host Check Timed Out)|
+2010-01-15 07:52:01|1263549121|[Infra] NC|UP||
+2010-01-15 09:56:01|1263556561|[Infra] NC|DOWN|CEDERJ MANGUEIRA+CRITICAL - Time to live exceeded (200.20.40.1)|
+2010-01-15 10:04:01|1263557041|[Infra] NC|UP||
+2010-01-15 13:30:02|1263569402|[Infra] Palacio|DOWN|AP_CAOA+(Host Check Timed Out)|
+2010-01-15 16:32:01|1263580321|[Infra] NC|DOWN|CEDERJ MANGUEIRA+CRITICAL - Time to live exceeded (200.20.40.1)|
+2010-01-15 16:48:02|1263581282|[Infra] NC|UP||
+2010-01-15 18:20:01|1263586801|[Infra] Palacio|UP||
+2010-01-15 19:22:01|1263590521|[Infra] Servidores Windows|DOWN|Cegonha+(Host Check Timed Out)|
+2010-01-15 19:24:01|1263590641|[Infra] Servidores Windows|UP||
+2010-01-16 14:20:02|1263658802|SEEDUC|DOWN|OI_WINSRV+(Host Check Timed Out)|
+2010-01-16 14:30:02|1263659402|SEEDUC|UP||
+2010-01-17 06:58:02|1263718682|[Infra] NC|DOWN|SETRANS+(Host Check Timed Out)|
+2010-01-17 07:04:02|1263719042|[Infra] NC|UP||
+2010-01-17 07:10:01|1263719401|[Infra] NC|DOWN|SETRANS+(Host Check Timed Out)|
+2010-01-17 07:12:01|1263719521|[Infra] NC|UP||
+2010-01-17 07:22:02|1263720122|[Infra] NC|DOWN|SETRANS+(Host Check Timed Out)|
+2010-01-17 07:24:02|1263720242|[Infra] NC|UP||
+2010-01-18 11:12:01|1263820321|[Infra] Serpro|DOWN|FALCAO+CRITICAL - Host Unreachable (200.20.29.4)|
+2010-01-18 11:12:01|1263820321|[Infra] Servidores Windows|DOWN|Falcao+CRITICAL - Host Unreachable (200.20.29.4)|
+2010-01-18 11:18:01|1263820681|[Infra] Serpro|UP||
+2010-01-18 11:18:01|1263820681|[Infra] Servidores Windows|UP||
+2010-01-18 11:38:01|1263821881|[Infra] Servidores Windows|DOWN|Trincaferro+(Host Check Timed Out)|
+2010-01-18 20:30:02|1263853802|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2010-01-18 22:18:01|1263860281|[Infra] NC|UP||
+2010-01-18 23:06:01|1263863161|[Infra] NC|DOWN|ROT_SIAFEM_I+(Host Check Timed Out)|
+2010-01-18 23:16:01|1263863761|[Infra] NC|UP||
+2010-01-19 10:46:01|1263905161|[Infra] PROXY|DOWN||PROXY+IBIS+Connection refused
+2010-01-19 10:54:01|1263905641|[Infra] PROXY|UP||
+2010-01-19 11:00:01|1263906001|[Infra] PROXY|DOWN||PROXY+IBIS+Connection refused
+2010-01-19 11:08:01|1263906481|[Infra] PROXY|UP||
+2010-01-19 11:16:02|1263906962|[Infra] PROXY|DOWN||PROXY+IBIS+Connection refused
+2010-01-19 14:40:02|1263919202|[Infra] NC|DOWN|ROT_AGETRANSP+(Host Check Timed Out)|
+2010-01-19 15:06:01|1263920761|[Infra] NC|UP||
+2010-01-19 15:16:01|1263921361|[Infra] PROXY|UP||
+2010-01-19 15:18:01|1263921481|[Infra] NC|DOWN|ROT_AGETRANSP+(Host Check Timed Out)|
+2010-01-19 15:22:01|1263921721|[Infra] PROXY|DOWN||PROXY+IBIS+Connection refused
+2010-01-19 15:28:01|1263922081|[Infra] NC|UP||
+2010-01-19 15:44:01|1263923041|[Infra] PROXY|UP||
+2010-01-19 15:58:02|1263923882|[Infra] PROXY|DOWN||PROXY+IBIS+Connection refused
+2010-01-19 16:16:02|1263924962|[Infra] Palacio|DOWN|AP_SAOA+(Host Check Timed Out)|
+2010-01-19 16:20:01|1263925201|[Infra] PROXY|UP||
+2010-01-19 16:28:02|1263925682|[Infra] PROXY|DOWN||PROXY+IBIS+Connection refused
+2010-01-19 16:52:01|1263927121|[Infra] Servidores Windows|UP||
+2010-01-19 16:54:01|1263927241|[Infra] PROXY|UP||
+2010-01-19 17:02:01|1263927721|[Infra] Palacio|UP||
+2010-01-19 18:12:01|1263931921|[Infra] NC|DOWN|RIO DAS FLORES+(Host Check Timed Out)|
+2010-01-19 23:54:01|1263952441|[Infra] Palacio|DOWN|AP_SAOA+(Host Check Timed Out)/AP_SAOA_RESTAURANTE+(Host Check Timed Out)|
+2010-01-20 10:22:02|1263990122|[Infra] NC|UP||
+2010-01-20 20:00:01|1264024801|[Infra] NC|DOWN|POUPA_TEMPO_S_J_MERITI+(Host Check Timed Out)|
+2010-01-20 22:48:02|1264034882|[Infra] NC|UP||
+2010-01-21 03:38:01|1264052281|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2010-01-21 03:50:02|1264053002|[Infra] NC|UP||
+2010-01-21 10:34:02|1264077242|[Infra] PROXY|DOWN||PROXY+IBIS+Connection refused
+2010-01-21 14:24:01|1264091041|[Infra] Servidores Windows|DOWN|mineirinho+(Host Check Timed Out)|
+2010-01-21 14:28:01|1264091281|[Infra] Servidores Windows|UP||
+2010-01-21 16:18:02|1264097882|[Infra] Servidores Windows|DOWN|Trincaferro+(Host Check Timed Out)|
+2010-01-21 16:42:01|1264099321|[Infra] Servidores Windows|UP||
+2010-01-21 21:16:01|1264115761|[Infra] NC|DOWN|ROT_SIAFEM_I+(Host Check Timed Out)|
+2010-01-21 21:24:01|1264116241|[Infra] NC|UP||
+2010-01-22 02:56:02|1264136162|INTRAGOV|DOWN|Tejo+(Host Check Timed Out)|
+2010-01-22 02:56:02|1264136162|SEPLAG|DOWN|Coleira+(Host Check Timed Out)|
+2010-01-22 02:58:02|1264136282|INTRAGOV|UP||
+2010-01-22 02:58:02|1264136282|SEPLAG|UP||
+2010-01-22 03:04:01|1264136641|INTRAGOV|DOWN|Cajubi+(Host Check Timed Out)/Cajubi_c+(Host Check Timed Out)|
+2010-01-22 03:22:01|1264137721|[Teste] M-CLIPPING|UP||
+2010-01-22 04:00:01|1264140001|INTRAGOV|UP||
+2010-01-22 08:54:01|1264157641|[Infra] Servidores Windows|DOWN|Perdiz+(Host Check Timed Out)|
+2010-01-22 08:58:01|1264157881|[Infra] Servidores Windows|UP||
+2010-01-22 11:40:01|1264167601|[Infra] Servidores Windows|DOWN|Albatroz+CRITICAL - Host Unreachable (10.12.44.26)|
+2010-01-22 14:44:01|1264178641|[Infra] Servidores Windows|UP||
+2010-01-22 16:34:01|1264185241|[Infra] NC|DOWN|RIO DAS FLORES+(Host Check Timed Out)|
+2010-01-22 16:58:02|1264186682|[Infra] Palacio|UP||
+2010-01-23 03:10:01|1264223401|SEEDUC|DOWN|OI_WINSRV+(Host Check Timed Out)|
+2010-01-23 03:44:01|1264225441|SEEDUC|UP||
+2010-01-23 08:18:01|1264241881|[Infra] Serpro|DOWN|JACU+CRITICAL - Host Unreachable (200.20.29.5)|
+2010-01-23 08:18:01|1264241881|[Infra] Servidores Windows|DOWN|JACU+CRITICAL - Host Unreachable (200.20.29.5)|
+2010-01-23 08:44:01|1264243441|[Infra] NC|UP||
+2010-01-23 09:26:01|1264245961|[Infra] Serpro|UP||
+2010-01-23 09:26:01|1264245961|[Infra] Servidores Windows|UP||
+2010-01-23 23:20:02|1264296002|[Infra] Serpro|DOWN|JACU+CRITICAL - Host Unreachable (200.20.29.5)|
+2010-01-23 23:20:02|1264296002|[Infra] Servidores Windows|DOWN|JACU+CRITICAL - Host Unreachable (200.20.29.5)|
+2010-01-24 00:50:01|1264301401|[Infra] Servidores Windows|UP||
+2010-01-24 00:54:01|1264301641|[Infra] Serpro|UP||
+2010-01-24 11:12:01|1264338721|[Infra] Serpro|DOWN|FALCAO+CRITICAL - Host Unreachable (200.20.29.4)/JACU+CRITICAL - Host Unreachable (200.20.29.5)|
+2010-01-24 11:12:01|1264338721|[Infra] Servidores Windows|DOWN|JACU+CRITICAL - Host Unreachable (200.20.29.5)|
+2010-01-24 12:14:02|1264342442|[Infra] Servidores Windows|UP||
+2010-01-24 12:18:02|1264342682|[Infra] Serpro|UP||
+2010-01-24 14:58:01|1264352281|[Infra] Serpro|DOWN|JACU+CRITICAL - Host Unreachable (200.20.29.5)|
+2010-01-24 14:58:02|1264352282|[Infra] Servidores Windows|DOWN|JACU+CRITICAL - Host Unreachable (200.20.29.5)|
+2010-01-24 17:08:02|1264360082|[Infra] Servidores Windows|UP||
+2010-01-24 17:14:02|1264360442|[Infra] Serpro|UP||
+2010-01-24 20:46:01|1264373161|[Infra] Serpro|DOWN|FALCAO+CRITICAL - Host Unreachable (200.20.29.4)|
+2010-01-24 20:50:02|1264373402|[Infra] Serpro|UP||
+2010-01-25 10:32:02|1264422722|[Infra] Palacio|DOWN|AP_SAOA+(Host Check Timed Out)/AP_SAOA_RESTAURANTE+(Host Check Timed Out)|
+2010-01-25 11:24:01|1264425841|[Infra] Serpro|DOWN|FALCAO+CRITICAL - Host Unreachable (200.20.29.4)|
+2010-01-25 11:40:02|1264426802|[Infra] Serpro|UP||
+2010-01-25 11:44:01|1264427041|[Infra] Palacio|UP||
+2010-01-25 11:46:01|1264427161|[Infra] Servidores Windows|DOWN|mineirinho+(Host Check Timed Out)|
+2010-01-25 16:04:02|1264442642|[Infra] NC|DOWN|94_FM+(Host Check Timed Out)|
+2010-01-25 20:32:01|1264458721|[Infra] Palacio|DOWN|AP_SAOA+(Host Check Timed Out)|
+2010-01-26 08:42:02|1264502522|[Infra] Palacio|UP||
+2010-01-27 11:44:01|1264599841|[Infra] CAERJ|DOWN|SWCM1301+(Host Check Timed Out)|
+2010-01-27 12:10:01|1264601401|[Infra] CAERJ|UP||
+2010-01-27 14:18:02|1264609082|[Infra] NC|UP||
+2010-01-27 16:12:02|1264615922|[Infra] Palacio|DOWN|ROT_1Mb+(Host Check Timed Out)|
+2010-01-27 16:18:02|1264616282|[Infra] Palacio|UP||
+2010-01-27 19:16:02|1264626962|Web Sites|DOWN||HTTP+POLICIA CIVIL+CRITICAL - Socket timeout after 10 seconds
+2010-01-27 19:18:02|1264627082|Web Sites|UP||
+2010-01-28 12:36:02|1264689362|[Infra] CAERJ|DOWN|SWCM1301+(Host Check Timed Out)|
+2010-01-28 14:32:01|1264696321|[Infra] CAERJ|UP||
+2010-01-28 15:06:01|1264698361|[Infra] NC|DOWN|ROT_SIAFEM_I+(Host Check Timed Out)|
+2010-01-28 15:24:01|1264699441|[Infra] NC|UP||
+2010-01-28 17:36:01|1264707361|[Infra] Servidores Linux|DOWN|TUINDA+(Host Check Timed Out)|
+2010-01-29 00:20:01|1264731601|[Infra] Servidores Linux|UP||
+2010-01-29 07:58:02|1264759082|[Infra] NC|DOWN|RIO DAS FLORES+(Host Check Timed Out)|
+2010-01-29 08:06:01|1264759561|[Infra] NC|UP||
+2010-01-29 09:24:02|1264764242|[Infra] Serpro|DOWN|JACU+CRITICAL - Host Unreachable (200.20.29.5)|
+2010-01-29 09:26:02|1264764362|[Infra] Serpro|UP||
+2010-01-29 14:28:01|1264782481|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2010-01-29 15:02:01|1264784521|[Infra] NC|UP||
+2010-01-29 16:16:01|1264788961|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)/ROT_AGETRANSP+(Host Check Timed Out)|
+2010-01-29 16:18:01|1264789081|[Infra] NC|UP||
+2010-01-29 19:50:02|1264801802|[Infra] NC|DOWN|QUISSAMÃ+(Host Check Timed Out)|
+2010-01-29 20:10:01|1264803001|[Infra] NC|UP||
+2010-01-30 08:26:01|1264847161|[Infra] CAERJ|DOWN|SWCA1501+(Host Check Timed Out)/SWCM1501+(Host Check Timed Out)|
+2010-01-30 14:08:01|1264867681|[Infra] CAERJ|UP||
+2010-01-30 23:12:02|1264900322|[Infra] NC|DOWN|ROT_AGETRANSP+(Host Check Timed Out)|
+2010-01-30 23:14:01|1264900441|[Infra] NC|UP||
+2010-01-30 23:56:01|1264902961|[Infra] NC|DOWN|ROT_AGETRANSP+(Host Check Timed Out)|
+2010-01-30 23:58:02|1264903082|[Infra] NC|UP||
+2010-01-31 00:26:02|1264904762|[Infra] NC|DOWN|ROT_AGETRANSP+CRITICAL - Time to live exceeded (10.9.38.129)|
+2010-01-31 00:28:02|1264904882|[Infra] NC|UP||
+2010-02-01 02:56:02|1265000162|M-CLIPPING|DOWN|www.videoclipping.com.br+(Host Check Timed Out)/www.clipnaweb.com.br+(Host Check Timed Out)|
+2010-02-01 04:12:01|1265004721|[Infra] NC|DOWN|ROT_AGETRANSP+(Host Check Timed Out)|
+2010-02-01 04:14:01|1265004841|[Infra] NC|UP||
+2010-02-01 05:16:01|1265008561|[Infra] NC|DOWN|POUPA_TEMPO_S_J_MERITI+(Host Check Timed Out)|
+2010-02-01 05:34:01|1265009641|[Infra] NC|UP||
+2010-02-01 05:40:01|1265010001|[Infra] NC|DOWN|POUPA_TEMPO_S_J_MERITI+(Host Check Timed Out)|
+2010-02-01 05:44:02|1265010242|[Infra] NC|UP||
+2010-02-01 06:14:02|1265012042|[Infra] NC|DOWN|ROT_AGETRANSP+(Host Check Timed Out)|
+2010-02-01 07:14:01|1265015641|[Infra] NC|UP||
+2010-02-01 07:26:01|1265016361|[Infra] NC|DOWN|ROT_AGETRANSP+(Host Check Timed Out)|
+2010-02-01 07:30:06|1265016606|[Infra] NC|UP||
+2010-02-01 07:44:01|1265017441|[Infra] NC|DOWN|ROT_AGETRANSP+(Host Check Timed Out)|
+2010-02-01 07:50:01|1265017801|[Infra] NC|UP||
+2010-02-01 08:24:01|1265019841|[Infra] NC|DOWN|ROT_AGETRANSP+(Host Check Timed Out)|
+2010-02-01 08:28:02|1265020082|[Infra] NC|UP||
+2010-02-01 12:44:02|1265035442|M-CLIPPING|UP||
+2010-02-01 23:24:02|1265073842|[Infra] Correio|DOWN||HTTP+Corruira+Connection refused
+2010-02-01 23:46:02|1265075162|[Infra] Correio|UP||
+2010-02-02 10:10:01|1265112601|[Infra] Datacenter|DOWN|R2BL04+(Host Check Timed Out)|
+2010-02-02 10:12:01|1265112721|[Infra] Datacenter|UP||
+2010-02-02 12:24:01|1265120641|[Infra] Servidores Linux|DOWN|Asa Branca+(Host Check Timed Out)|
+2010-02-02 12:56:01|1265122561|[Infra] Servidores Linux|UP||
+2010-02-02 15:58:02|1265133482|[Infra] NC|DOWN|SEDEIS+(Host Check Timed Out)|
+2010-02-02 18:58:01|1265144281|[Infra] NC|UP||
+2010-02-02 21:52:01|1265154721|[Infra] NC|DOWN|ROT_AGETRANSP+(Host Check Timed Out)|
+2010-02-02 21:54:01|1265154841|[Infra] NC|UP||
+2010-02-03 14:56:01|1265216161|[Infra] Servidores Windows|UP||
+2010-02-03 15:50:01|1265219401|[Infra] Servidores Windows|DOWN|Curica+CRITICAL - Host Unreachable (200.20.28.135)|
+2010-02-03 19:08:01|1265231281|[Infra] NC|DOWN|RIO DAS FLORES+(Host Check Timed Out)|

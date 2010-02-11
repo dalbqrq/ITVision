@@ -1,0 +1,9 @@
+Nome ;localidade;depto;tel;tel;cel;email;sms;turno;aplicacoes;
+Jose Antonio;VERTO;TECH;2121329900;-;02194336088;jantonio@verto.com.br;02194336088@clarotorpedo.com.br;-;'[Infra] Palacio','[Infra] Serpro','[Infra] Maracana','Internet','Correio','DNS Interno','[Infra] CAERJ','[Infra] NC','[Infra] PROXY' , 'M-CLIPPING';
+Jose Augusto Cardoso;VERTO;TECH;-;-;-;jcardoso@verto.com.br;-;-;'[Infra] Palacio','[Infra] Serpro','[Infra] Maracana','Internet','Correio','DNS Interno','[Infra] CAERJ','[Infra] NC';
+Paulo Coelho;PRODERJ;;;-;-;pccoelho@proderj.rj.gov.br;-;-;'Internet','Correio','DNS Interno','DNS Externo','Web Sites';
+Sergio Chiapetta;PRODERJ;;;-;-;schiapett@proderj.rj.gov.br;-;-;'[Infra] Palacio','[Infra] Serpro','[Infra] Maracana','Internet','Correio','DNS Interno','[Infra] CAERJ','[Infra] NC' , 'M-CLIPPING';
+GPG;Palacio;;;-;-;gpg@proderj.rj.gov.br;-;-;'[Infra] Palacio';
+MClip;PRODERJ;;;-;-;mclipping-clipadora-alertas@proderj.rj.gov.br;-;-;'M-CLIPPING';
+Daniel de Albuquerque;VERTO;TECH;2125295081;-;-;daniel.dalb@gmail.com;-;-;'[Infra] Palacio','[Infra] Serpro','[Infra] Maracana','Internet','Correio','DNS Interno','[Infra] CAERJ','[Infra] NC','[Infra] PROXY';
+CEOP;CEOP;PRODERJ;-;-;-;itvision@proderj.rj.gov.br;-;-;'Correio' , 'DNS Externo' , 'DNS Interno' , '[Infra] CAERJ' , '[Infra] CIC' , '[Infra] Collocation' , '[Infra] Correio' , '[Infra] Datacenter' , '[Infra] Discado' , '[Infra] Internet' , '[Infra] Maracana' , '[Infra] NC' , '[Infra] Palacio' , '[Infra] PROXY' , '[Infra] SEEDUC' , '[Infra] Serpro' , '[Infra] Servidores Linux' , '[Infra] Servidores Windows' , 'Internet' , 'INTRAGOV' , 'SEEDUC' , 'SEPLAG' , 'Web Sites' , 'M-CLIPPING';
