@@ -46,7 +46,7 @@ function compare_app_state2(old_state, new_state)
 		for j,o  in ipairs(old_state) do		-- for each new application state, iteracts throuth old states
 
 			--print(n.name, o.name)
-			if n.name == o.name then			-- if application found on old_state table...
+			if n.name == o.name then		-- if application found on old_state table...
 				found = true
 				if n.status == o.status then	-- state hasn't changed
 					--print(n.name..' state HASN\'T changed')
@@ -59,9 +59,11 @@ function compare_app_state2(old_state, new_state)
 						n.attempts = 0
 					elseif n.status == APPLIC_PENDING then
 						n.attempts = 0
+					elseif n.status == APPLIC_DISABLE then
+						n.attempts = 0
 					end
 
-				else							-- else, if state has changed
+				else				-- else, if state has changed
 					--print(n.name..' state HAS changed', o.status, n.status)
 					-- from 'pending' status
 					if o.status == APPLIC_PENDING and n.status == APPLIC_UP then
@@ -72,19 +74,19 @@ function compare_app_state2(old_state, new_state)
 						n.attempts = 0
 					elseif o.status == APPLIC_PENDING and n.status == APPLIC_WARNING then
 						n.attempts = 0
+					elseif o.status == APPLIC_PENDING and n.status == APPLIC_DISABLE then
+						log_dispatcher(n)
+						n.attempts = 0
 
 					-- from 'up' to 'down'
 					elseif o.status == APPLIC_UP and n.status == APPLIC_DOWN then
 						n.attempts = o.attempts + 1
-						--print(n.attempts, o.attempts)
 
 						if n.attempts >= daemon_conf.max_check_attempts then
-							--print('hi')
 							alert_dispatcher(n)
 							log_dispatcher(n)
 							n.attempts = 0
 						else
-							--print('ho')
 							n.status = APPLIC_UP -- don't change the status
 						end
 
@@ -93,15 +95,25 @@ function compare_app_state2(old_state, new_state)
 						log_dispatcher(n)
 						n.attempts = 0
 
+					-- from 'up' to 'disable'
+					elseif o.status == APPLIC_UP and n.status == APPLIC_DISABLE then
+						log_dispatcher(n)
+						n.attempts = 0
+
 					-- from 'down' to 'up'
 					elseif o.status == APPLIC_DOWN and n.status == APPLIC_UP then
-						--print('down to up')
-						alert_dispatcher(n,o) -- pass 'old_state' to show what came up
+						alert_dispatcher(n,o) -- passing 'old_state' to show what came up
 						log_dispatcher(n)
 						n.attempts = 0
 
 					-- from 'down' to 'warning'
 					elseif o.status == APPLIC_DOWN and n.status == APPLIC_WARNING then
+						log_dispatcher(n)
+						n.attempts = 0
+
+					-- from 'down' to 'disable'
+					elseif o.status == APPLIC_DOWN and n.status == APPLIC_DISABLE then
+						alert_dispatcher(n,o) -- passing 'old_state' to show what came up
 						log_dispatcher(n)
 						n.attempts = 0
 
@@ -120,6 +132,28 @@ function compare_app_state2(old_state, new_state)
 							n.attempts = 0
 						else
 							n.status = APPLIC_WARNING -- don't change the status
+						end
+
+					-- from 'warning' to 'disable'
+					elseif o.status == APPLIC_WARNING and n.status == APPLIC_DISABLE then
+						log_dispatcher(n)
+						n.attempts = 0
+
+					-- from 'disable' to 'up'
+					elseif o.status == APPLIC_DISABLE and n.status == APPLIC_UP then
+						log_dispatcher(n)
+						n.attempts = 0
+
+					-- from 'disable' to 'down'
+					elseif o.status == APPLIC_DISABLE and n.status == APPLIC_DOWN then
+						n.attempts = o.attempts + 1
+
+						if n.attempts >= daemon_conf.max_check_attempts then
+							alert_dispatcher(n)
+							log_dispatcher(n)
+							n.attempts = 0
+						else
+							n.status = APPLIC_DISABLE -- don't change the status
 						end
 					end
 				end
@@ -192,20 +226,22 @@ function alert_dispatcher(app, old)
 		state = 'PENDING'
 	end
 ]]--
-	if app.status == 0 then
+	if app.status == APPLIC_UP then
 		state = 'NORMALIZADO'
-	elseif app.status == 1 then
+	elseif app.status == APPLIC_DOWN then
 		state = 'CRITICO'
-	elseif app.status == 2 then
+	elseif app.status == APPLIC_WARNING then
 		state = 'ANORMAL'
-	elseif app.status == 3 then
+	elseif app.status == APPLIC_PENDING then
 		state = 'PENDENTE DE VERIFICACAO'
+	elseif app.status == APPLIC_DISABLE then
+		state = 'NORMALIZADO'
 	end
 
 	-- [[ DEBUG ]] print ('ALERT BY EMAIL FOR APP: '..app.name..' WITH STATUS: '..state)
 
 
-	if app.status == 0 then -- this is a DOWN to UP change, so show what hosts/services came up
+	if app.status == APPLIC_UP or app.status == APPLIC_DISABLE then -- this is a DOWN to UP change, so show what hosts/services came up
 		hosts_down = old.hosts_down
 		services_down = old.services_down
 	else
@@ -284,6 +320,8 @@ function log_dispatcher(app)
 		state = 'WARNING'
 	elseif app.status == 3 then
 		state = 'PENDING'
+	elseif app.status == 4 then
+		state = 'DISABLE'
 	end
 
 	-- [[ DEBUG ]] print ('LOG FOR APP: '..app.name..' WITH STATUS: '..state)
