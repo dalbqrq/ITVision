@@ -33,7 +33,7 @@ end
 
 -- Transform an array of strings into CSV 
 function toCSV (t, sep)
-	sep = sep or ','     -- ny default, use 'semi-colon' (,) as field delimiter instead of 'comma' (;)
+	sep = sep or ','     -- by default, use 'comma' (,) as field delimiter instead of 'semi-colon' (;)
 	local s = ""
 	local p
 

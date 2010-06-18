@@ -1,21 +1,22 @@
 #!/usr/bin/env /usr/local/bin/cgilua.cgi
 
 <?lua
-require "v_monitor_inc"
-require "v_monitor"
-require "v_gviz"
-require "c_monitor"
-require "m_dbs"
-require "db_ics_profile"
-require "v_monitor_html"
 require "v_auth"
+require "v_monitor"
+require "v_monitor_inc"
+require "v_gviz"
+require "v_monitor_html"
+require "db_ics_profile"
+require "m_dbs"
 require "m_users"
 require "m_disableds"
 require "m_import_csv"
+require "c_monitor"
 
 
 local auth = checkauth_redirect()
 local u = get_user(auth)
+
 
 ickey  = cgilua.QUERY.ickey
 enable = cgilua.QUERY.enable
@@ -171,16 +172,43 @@ print("\t\t\t<div id=\"content\">")
 		i = 2 -- sn
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
-		i = 16 -- usuario reponsavel
+		i = 7 --patrimonio
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		print("\t\t\t</TR>")
 
 		print("\t\t\t<TR>"); 
-		i = 7 --patrimonio
+		i = 16 -- usuario reponsavel
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		i = 17 -- inicio reposabilidade
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
+		print("\t\t\t</TR>")
+
+		print("\t\t\t<TR>"); 
+		i = 35 -- telefone
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
+		i = 36 -- celular
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
+		print("\t\t\t</TR>")
+
+		print("\t\t\t<TR>"); 
+		i = 34 -- Email
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
+		i = 37 -- Relevancia
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
+		print("\t\t\t</TR>")
+
+		print("\t\t\t<TR>"); 
+		i = 22 -- status corrente
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
+		i = 38 -- Circuito
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		print("\t\t\t</TR>")
@@ -228,10 +256,10 @@ print("\n\t<h2><a name=\"intro\" id=\"intro\"></a>informa&ccedil;&otilde;es extr
 		print("\t\t\t</TR>")
 
 		print("\t\t\t<TR>"); 
-		i = 22 -- status corrente
+		i = 23 -- status agendado
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
-		i = 23 -- status agendado
+		i = 11 --versoes
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		print("\t\t\t</TR>")
@@ -240,38 +268,41 @@ print("\n\t<h2><a name=\"intro\" id=\"intro\"></a>informa&ccedil;&otilde;es extr
 		i = 19 -- licenca
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b><b>" .. ic_profile[i] .. "</b></TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
-		i = 11 --versoes
+		i = 25 --  extra1
+--[[
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
+]]--
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b></TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		print("\t\t\t</TR>")
+--[[
 
 		print("\t\t\t<TR>"); 
-		i = 25 --  extra1
-		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
-		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		i = 26 -- extra2
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
-		print("\t\t\t</TR>")
-
-		print("\t\t\t<TR>"); 
 		i = 27 -- extra3
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
+		print("\t\t\t</TR>")
+
+		print("\t\t\t<TR>"); 
 		i = 28 -- extra4
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
+		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
+		i = 29 -- extra5
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		print("\t\t\t</TR>")
 
 		print("\t\t\t<TR>"); 
-		i = 29 -- extra5
+		i = 30 -- extra6
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		i = 30 -- extra6
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\"><b>" .. ic_profile[i] .. "</TD>")
 		print("\t\t\t\t<TD BGCOLOR=\"#f2f2f2\">" .. ic[i] .. "</TD>")
 		print("\t\t\t</TR>")
---[[
 ]]--
 
 
